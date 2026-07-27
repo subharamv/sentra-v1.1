@@ -1,0 +1,90 @@
+.circular-gallery {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: grab;
+    position: relative;
+    /* GPU acceleration */
+    will-change: transform;
+    transform: translateZ(0);
+    /* Optimize compositing */
+    contain: layout style paint;
+    /* Reduce repaints */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.circular-gallery:active {
+    cursor: grabbing;
+}
+
+.circular-gallery canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* GPU acceleration for canvas */
+    will-change: transform;
+    transform: translateZ(0);
+    /* Optimize rendering */
+    image-rendering: optimizeSpeed;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    /* Prevent layout shifts */
+    contain: layout style paint size;
+}
+
+.circular-gallery-wrapper {
+    margin: 2rem 0;
+    /* Optimize container */
+    contain: layout style;
+    /* Prevent unnecessary reflows */
+    position: relative;
+}
+
+/* Performance optimizations for mobile */
+@media (max-width: 768px) {
+    .circular-gallery-wrapper {
+        margin: 1rem 0;
+    }
+    
+    .circular-gallery {
+        height: 400px !important;
+        /* Reduce quality on mobile for better performance */
+        image-rendering: optimizeSpeed;
+    }
+    
+    .circular-gallery canvas {
+        /* Lower DPI on mobile to improve performance */
+        image-rendering: pixelated;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: crisp-edges;
+    }
+}
+
+@media (max-width: 480px) {
+    .circular-gallery {
+        height: 300px !important;
+    }
+    
+    .circular-gallery canvas {
+        /* Further optimize for small screens */
+        image-rendering: pixelated;
+    }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    .circular-gallery {
+        /* Disable animations for accessibility */
+        animation: none;
+        transition: none;
+    }
+}
+
+/* High refresh rate display optimization */
+@media (min-resolution: 120dpi) {
+    .circular-gallery canvas {
+        image-rendering: auto;
+        image-rendering: -webkit-optimize-contrast;
+    }
+}

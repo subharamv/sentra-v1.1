@@ -1,0 +1,1137 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sentra delivers IoT structural monitoring solutions across Railways, Bridges, Buildings, Dams, Mining, Ports, Construction, and Industrial sectors." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Industries — SENTRA — Smart Structural Monitoring" />
+  <meta property="og:description" content="Sentra delivers IoT structural monitoring solutions across Railways, Bridges, Buildings, Dams, Mining, Ports, Construction, and Industrial sectors." />
+  <meta property="og:url" content="https://sentratech.in/industries.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://sentratech.in/image/branding/sentra.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Industries — SENTRA — Smart Structural Monitoring" />
+  <meta name="twitter:description" content="IoT structural monitoring solutions for Railways, Bridges, Buildings, Dams, Mining, Ports, Construction, and Industrial sectors." />
+  <meta name="twitter:image" content="https://sentratech.in/image/branding/sentra.webp" />
+  <meta name="twitter:site" content="@sentratech" />
+  <meta name="twitter:image:width" content="1200" />
+  <meta name="twitter:image:height" content="630" />
+  <title>Industries — SENTRA — Smart Structural Monitoring</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./css/chatbot.css">
+  <link rel="icon" href="/image/branding/favicon.webp" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" sizes="180x180" href="/image/branding/favicon.webp">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <link rel="canonical" href="https://sentratech.in/industries.html">
+
+  <style>
+    /* ══════════════════════════════════════════
+       INDUSTRIES PAGE — Scoped Styles
+    ══════════════════════════════════════════ */
+
+    .visually-hidden {
+      position: absolute; width: 1px; height: 1px;
+      margin: -1px; padding: 0; overflow: hidden;
+      clip: rect(0,0,0,0); border: 0;
+    }
+
+    /* ── HERO ── */
+    .ind-hero {
+      position: relative;
+      min-height: 65vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      padding: 56px 24px 60px;
+    }
+    .ind-hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('./image/industries_heo_section.webp');
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.06);
+      transition: transform 8s ease-out;
+    }
+    .ind-hero-bg.is-visible { transform: scale(1); }
+    .ind-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        160deg,
+        rgba(0,0,0,0.88) 0%,
+        rgba(0,0,0,0.72) 50%,
+        rgba(0,0,0,0.55) 100%
+      );
+    }
+    .ind-hero-noise {
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.4;
+      pointer-events: none;
+    }
+    .ind-hero-content {
+      position: relative; z-index: 2;
+      max-width: 780px;
+      animation: indFadeUp 0.85s cubic-bezier(0.22,1,0.36,1) both;
+    }
+    @keyframes indFadeUp {
+      from { opacity: 0; transform: translateY(32px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .ind-hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: rgba(244,129,32,0.75);
+      margin-bottom: 20px;
+    }
+    .ind-hero-eyebrow::before,
+    .ind-hero-eyebrow::after {
+      content: '';
+      display: block;
+      width: 28px; height: 1px;
+      background: rgba(244,129,32,0.45);
+    }
+    .ind-hero-title {
+      font-size: clamp(42px, 7vw, 80px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+    .ind-hero-title .accent { color: #f48120; }
+    .ind-hero-subtitle {
+      font-size: clamp(15px, 1.8vw, 18px);
+      color: rgba(255,255,255,0.52);
+      line-height: 1.75;
+      max-width: 620px;
+      margin: 0 auto 36px;
+    }
+    .ind-hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+    .ind-hero-tag {
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 50px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      backdrop-filter: blur(6px);
+    }
+    .ind-hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .ind-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 30px;
+      background: #f48120;
+      color: #fff;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+    }
+    .ind-btn-primary:hover {
+      background: #e2711a;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(244,129,32,0.35);
+    }
+    .ind-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 28px;
+      border: 1px solid rgba(255,255,255,0.22);
+      color: rgba(255,255,255,0.8);
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: border-color 0.22s, color 0.22s, background 0.22s;
+      backdrop-filter: blur(6px);
+    }
+    .ind-btn-secondary:hover {
+      border-color: rgba(244,129,32,0.5);
+      color: #f48120;
+      background: rgba(244,129,32,0.07);
+    }
+    .ind-hero-scroll {
+      position: absolute;
+      bottom: 32px; left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+    .ind-hero-scroll span {
+      display: block;
+      width: 2px; height: 44px;
+      background: linear-gradient(to bottom, rgba(244,129,32,0.7), transparent);
+      margin: 0 auto;
+      animation: indScrollPulse 1.8s ease-in-out infinite;
+    }
+    @keyframes indScrollPulse {
+      0%, 100% { opacity: 0.5; transform: scaleY(0.8); }
+      50%       { opacity: 1;   transform: scaleY(1); }
+    }
+
+    body.lightmode .ind-hero-title { color: #fff; }
+    body.lightmode .ind-hero-subtitle { color: rgba(255,255,255,0.6); }
+    body.lightmode .ind-hero-overlay {
+      background: linear-gradient(160deg, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.35) 100%);
+    }
+    body.lightmode .ind-btn-secondary {
+      border-color: rgba(255,255,255,0.35);
+      color: rgba(255,255,255,0.9);
+      background: rgba(0,0,0,0.15);
+    }
+    body.lightmode .ind-btn-secondary:hover {
+      border-color: #f48120;
+      color: #f48120;
+      background: rgba(244,129,32,0.1);
+    }
+    body.lightmode .ind-btn-primary { background: #f48120; color: #fff; }
+
+    /* ── SECTION SHARED ── */
+    .ind-section {
+      padding: 96px 0;
+      position: relative;
+    }
+    body.lightmode .ind-section,
+    body.lightmode .ind-slider-section,
+    body.lightmode .ind-content-section {
+      background: linear-gradient(
+        180deg,
+        rgba(244,129,32,0.04) 0%,
+        rgba(59,130,246,0.03) 30%,
+        transparent 60%
+      );
+    }
+    .ind-section-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .ind-section-header { text-align: center; margin-bottom: 60px; }
+    .ind-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(244,129,32,0.7);
+      margin-bottom: 14px;
+    }
+    .ind-eyebrow i { font-size: 0.6rem; }
+    .ind-section-title {
+      font-size: clamp(28px, 4vw, 46px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.8px;
+      margin-bottom: 14px;
+    }
+    .ind-section-subtitle {
+      font-size: 16px;
+      opacity: 0.5;
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── INDUSTRIES SWIPER ── */
+    .ind-slider-section {
+      padding: 80px 0 96px;
+      overflow: hidden;
+    }
+    .ind-swiper-wrap {
+      position: relative;
+    }
+    .ind-swiper-outer {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 64px; /* room for side arrows */
+    }
+    .ind-swiper {
+      overflow: hidden;
+    }
+    .ind-swiper-slide {
+      height: 480px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
+    }
+    .ind-swiper-slide:hover { transform: translateY(-6px); }
+    .ind-slide-bg {
+      position: absolute; inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.7s cubic-bezier(0.22,1,0.36,1);
+    }
+    .ind-swiper-slide:hover .ind-slide-bg { transform: scale(1.06); }
+    .ind-slide-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        175deg,
+        rgba(0,0,0,0.15) 0%,
+        rgba(0,0,0,0.35) 40%,
+        rgba(0,0,0,0.82) 100%
+      );
+      transition: background 0.35s ease;
+    }
+    .ind-swiper-slide:hover .ind-slide-overlay {
+      background: linear-gradient(
+        175deg,
+        rgba(0,0,0,0.2) 0%,
+        rgba(0,0,0,0.42) 40%,
+        rgba(0,0,0,0.88) 100%
+      );
+    }
+    .ind-slide-content {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 28px 28px 30px;
+    }
+    .ind-slide-number {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: rgba(244,129,32,0.75);
+      margin-bottom: 8px;
+    }
+    .ind-slide-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .ind-slide-desc {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.6;
+      margin-bottom: 18px;
+      max-width: 300px;
+    }
+    .ind-slide-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #f48120;
+      text-decoration: none;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .ind-swiper-slide:hover .ind-slide-link {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .ind-slide-link:hover { color: #ffaa5e; }
+    .ind-slide-badge {
+      position: absolute;
+      top: 20px; right: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 50px;
+      background: rgba(244,129,32,0.18);
+      border: 1px solid rgba(244,129,32,0.3);
+      backdrop-filter: blur(8px);
+      font-size: 11px;
+      font-weight: 600;
+      color: #f48120;
+      letter-spacing: 0.5px;
+    }
+
+    /* Swiper navigation — arrows overlaid on sides, pagination below */
+    .ind-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 20;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(20,20,20,0.55);
+      backdrop-filter: blur(8px);
+      color: rgba(255,255,255,0.75);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      transition: all 0.22s ease;
+      font-size: 14px;
+    }
+    .ind-swiper-prev { left: 8px; }
+    .ind-swiper-next { right: 8px; }
+    .ind-nav-btn:hover {
+      border-color: rgba(244,129,32,0.55);
+      background: rgba(244,129,32,0.18);
+      color: #f48120;
+      transform: translateY(-50%) scale(1.08);
+    }
+    .ind-nav-btn.swiper-button-disabled {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+    /* Pagination dots — injected inside swiper, displayed below */
+    .ind-swiper .swiper-pagination {
+      position: static;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      margin-top: 28px;
+    }
+    .ind-swiper .swiper-pagination-bullet {
+      width: 8px; height: 8px;
+      background: rgba(255,255,255,0.2);
+      opacity: 1;
+      border-radius: 50%;
+      transition: all 0.28s ease;
+      cursor: pointer;
+    }
+    .ind-swiper .swiper-pagination-bullet-active {
+      background: #f48120;
+      width: 26px;
+      border-radius: 4px;
+    }
+
+    body.lightmode .ind-nav-btn {
+      background: rgba(255,255,255,0.82);
+      border-color: rgba(0,0,0,0.1);
+      color: rgba(0,0,0,0.6);
+    }
+    body.lightmode .ind-nav-btn:hover {
+      border-color: rgba(244,129,32,0.5);
+      background: rgba(244,129,32,0.12);
+      color: #f48120;
+    }
+    body.lightmode .ind-swiper .swiper-pagination-bullet {
+      background: rgba(0,0,0,0.18);
+    }
+
+    /* ── STATS ROW ── */
+    .ind-stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 18px;
+      overflow: hidden;
+      margin-bottom: 0;
+    }
+    .ind-stat {
+      padding: 36px 28px;
+      background: rgba(255,255,255,0.02);
+      text-align: center;
+      transition: background 0.22s ease;
+    }
+    .ind-stat:hover { background: rgba(244,129,32,0.05); }
+    .ind-stat-value {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #f48120;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .ind-stat-label {
+      font-size: 12px;
+      opacity: 0.45;
+      font-weight: 500;
+    }
+
+    body.lightmode .ind-stats-row { background: rgba(0,0,0,0.06); }
+    body.lightmode .ind-stat { background: rgba(0,0,0,0.02); }
+    body.lightmode .ind-stat:hover { background: rgba(244,129,32,0.04); }
+
+    @media (max-width: 768px) {
+      .ind-stats-row { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 420px) {
+      .ind-stats-row { grid-template-columns: 1fr; }
+    }
+
+    /* ── BLOGS & CASE STUDIES ── */
+    .ind-content-section {
+      padding: 96px 0;
+    }
+    .ind-content-section-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    .ind-tabs {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 50px;
+      padding: 4px;
+      border: 1px solid rgba(255,255,255,0.07);
+      width: fit-content;
+      margin: 0 auto 48px;
+    }
+    .ind-tab {
+      padding: 9px 22px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.22s ease;
+      color: rgba(255,255,255,0.5);
+      border: none;
+      background: transparent;
+    }
+    .ind-tab.active {
+      background: #f48120;
+      color: #fff;
+    }
+    .ind-tab:not(.active):hover { color: rgba(255,255,255,0.8); }
+
+    body.lightmode .ind-tabs { background: rgba(0,0,0,0.04); border-color: rgba(0,0,0,0.07); }
+    body.lightmode .ind-tab { color: rgba(0,0,0,0.45); }
+    body.lightmode .ind-tab:not(.active):hover { color: rgba(0,0,0,0.75); }
+
+    .ind-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .ind-cs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .ind-tab-panel { display: none; }
+    .ind-tab-panel.active { display: block; }
+
+    .ind-card {
+      border-radius: 18px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .ind-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.18);
+      border-color: rgba(244,129,32,0.15);
+    }
+    .ind-card-img {
+      width: 100%; height: 210px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .ind-card:hover .ind-card-img { transform: scale(1.04); }
+    .ind-card-img-wrap { overflow: hidden; }
+    .ind-card-body { padding: 22px 24px 26px; }
+    .ind-card-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(244,129,32,0.75);
+      margin-bottom: 10px;
+    }
+    .ind-card-title {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    body.lightmode .ind-card-title { color: #111; }
+    .ind-card-excerpt {
+      font-size: 13px;
+      opacity: 0.45;
+      line-height: 1.65;
+      margin-bottom: 18px;
+    }
+    .ind-card-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #f48120;
+    }
+    .ind-card-read-more i { transition: transform 0.22s ease; }
+    .ind-card:hover .ind-card-read-more i { transform: translateX(4px); }
+
+    /* Case study card variation — vertical stacked cards */
+    .ind-cs-card {
+      border-radius: 18px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+    .ind-cs-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.18);
+      border-color: rgba(244,129,32,0.15);
+    }
+    .ind-cs-card-img {
+      width: 100%; height: 200px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .ind-cs-card:hover .ind-cs-card-img { transform: scale(1.04); }
+    .ind-cs-card-img-wrap { overflow: hidden; }
+    .ind-cs-card-body {
+      padding: 24px 26px 28px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .ind-cs-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(244,129,32,0.75);
+      background: rgba(244,129,32,0.08);
+      border: 1px solid rgba(244,129,32,0.15);
+      padding: 4px 10px;
+      border-radius: 50px;
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+    .ind-cs-title {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    body.lightmode .ind-cs-title { color: #111; }
+    .ind-cs-excerpt {
+      font-size: 13px;
+      opacity: 0.45;
+      line-height: 1.65;
+      margin-bottom: 18px;
+    }
+    .ind-cs-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #f48120;
+      text-decoration: none;
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .ind-cs-link i { transition: transform 0.22s ease; }
+    .ind-cs-card:hover .ind-cs-link i { transform: translateX(4px); }
+    body.lightmode .ind-cs-link { border-top-color: rgba(0,0,0,0.06); }
+
+    body.lightmode .ind-card,
+    body.lightmode .ind-cs-card {
+      background: #fff;
+      border-color: rgba(0,0,0,0.07);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    body.lightmode .ind-card:hover,
+    body.lightmode .ind-cs-card:hover {
+      box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+      border-color: rgba(244,129,32,0.2);
+    }
+
+    /* ── NEWSLETTER ── */
+    .section-newsletter-compact { padding: 48px 0 60px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .ind-cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .ind-cs-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .ind-section { padding: 64px 0; }
+      .ind-content-section { padding: 64px 0; }
+      .ind-slider-section { padding: 60px 0 72px; }
+      .ind-cards-grid { grid-template-columns: 1fr; }
+      .ind-cs-card-img { height: 180px; }
+      .ind-hero { min-height: 75vh; padding: 100px 20px 72px; }
+    }
+    @media (max-width: 768px) {
+      .ind-swiper-outer { padding: 0 48px; }
+    }
+    @media (max-width: 640px) {
+      .ind-swiper-outer { padding: 0 40px; }
+      .ind-swiper-slide { height: 400px; }
+      .ind-slide-title { font-size: 19px; }
+      .ind-nav-btn { width: 38px; height: 38px; font-size: 12px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo"><img src="./image/branding/sentra_white_1.svg" alt="Sentra"></div>
+      <div class="preloader-logo-sub">Smart · Secure · Scalable</div>
+      <div class="preloader-counter"><span id="preloader-count">0</span><span class="preloader-percent">%</span></div>
+      <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
+    </div>
+  </div>
+
+
+  <header><div id="header"></div></header>
+  <aside><div id="edit-sidebar"></div></aside>
+  <aside><div id="sidebar"></div></aside>
+
+  <main>
+
+    <!-- ══ 1. HERO ══ -->
+    <section class="ind-hero" id="ind-top">
+      <div class="ind-hero-bg" id="indHeroBg"></div>
+      <div class="ind-hero-overlay"></div>
+      <div class="ind-hero-noise"></div>
+      <div class="ind-hero-content">
+        <div class="ind-hero-eyebrow">Industries We Serve</div>
+        <h1 class="ind-hero-title">
+          Infrastructure<br><span class="accent">Monitoring</span> for Every Sector
+        </h1>
+        <p class="ind-hero-subtitle">
+          From railway networks to deep-sea ports, Sentra's IoT solutions keep critical assets safe, operational, and data-driven around the clock.
+        </p>
+        <div class="ind-hero-tags">
+          <span class="ind-hero-tag">Railways</span>
+          <span class="ind-hero-tag">Bridges &amp; Highways</span>
+          <span class="ind-hero-tag">Buildings</span>
+          <span class="ind-hero-tag">Dams &amp; Reservoirs</span>
+          <span class="ind-hero-tag">Mining</span>
+          <span class="ind-hero-tag">Ports &amp; Marine</span>
+          <span class="ind-hero-tag">Construction</span>
+          <span class="ind-hero-tag">Industrial</span>
+        </div>
+        <div class="ind-hero-actions">
+          <a href="./contact.html" class="ind-btn-primary">Talk to an Expert <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#ind-industries" class="ind-btn-secondary">Explore Industries <i class="fa-solid fa-chevron-down"></i></a>
+        </div>
+      </div>
+      <div class="ind-hero-scroll"><span></span></div>
+    </section>
+
+    <!-- ══ 2. STATS ROW ══ -->
+    <section class="ind-section" style="padding: 56px 0;">
+      <div class="ind-section-inner">
+        <div class="ind-stats-row">
+          <div class="ind-stat">
+            <div class="ind-stat-value">8+</div>
+            <div class="ind-stat-label">Industry Verticals</div>
+          </div>
+          <div class="ind-stat">
+            <div class="ind-stat-value">200+</div>
+            <div class="ind-stat-label">Projects Completed</div>
+          </div>
+          <div class="ind-stat">
+            <div class="ind-stat-value">15+</div>
+            <div class="ind-stat-label">Countries Served</div>
+          </div>
+          <div class="ind-stat">
+            <div class="ind-stat-value">24/7</div>
+            <div class="ind-stat-label">Real-Time Monitoring</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ 3. INDUSTRIES SWIPER ══ -->
+    <section class="ind-slider-section" id="ind-industries">
+      <div class="ind-section-inner">
+        <div class="ind-section-header">
+          <div class="ind-eyebrow"><i class="fa-regular fa-circle-dot"></i> Sectors</div>
+          <h2 class="ind-section-title">Industries We Transform</h2>
+          <p class="ind-section-subtitle">Purpose-built IoT monitoring systems deployed across the world's most demanding infrastructure environments.</p>
+        </div>
+      </div>
+
+      <div class="ind-swiper-wrap">
+        <div class="ind-swiper-outer">
+          <div class="swiper ind-swiper" id="industriesSwiper">
+            <div class="swiper-wrapper">
+
+              <!-- Slide 1: Railway Infrastructure -->
+              <div class="swiper-slide ind-swiper-slide">
+                <div class="ind-slide-bg" style="background-image: url('./image/industries/hero/railway-infrastructure.webp');"></div>
+                <div class="ind-slide-overlay"></div>
+                <div class="ind-slide-badge"><i class="fa-solid fa-train"></i> Railways</div>
+                <div class="ind-slide-content">
+                  <div class="ind-slide-number">01</div>
+                  <div class="ind-slide-title">Railway Infrastructure</div>
+                  <p class="ind-slide-desc">Real-time vibration, tilt, and dynamic load monitoring for tracks, bridges, and rail structures under live traffic.</p>
+                  <a href="./industries/railway-infrastructure-monitoring.html" class="ind-slide-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+
+              <!-- Slide 2: Bridges & Highway Structures -->
+              <div class="swiper-slide ind-swiper-slide">
+                <div class="ind-slide-bg" style="background-image: url('./image/industries/hero/bridge-structure.webp');"></div>
+                <div class="ind-slide-overlay"></div>
+                <div class="ind-slide-badge"><i class="fa-solid fa-bridge"></i> Bridges</div>
+                <div class="ind-slide-content">
+                  <div class="ind-slide-number">02</div>
+                  <div class="ind-slide-title">Bridges &amp; Highway Structures</div>
+                  <p class="ind-slide-desc">Continuous displacement, strain, and inclination monitoring to detect structural degradation before it becomes critical.</p>
+                  <a href="./industries/bridges-highways-monitoring.html" class="ind-slide-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+
+              <!-- Slide 3: Buildings & High-Rise -->
+              <div class="swiper-slide ind-swiper-slide">
+                <div class="ind-slide-bg" style="background-image: url('./image/industries/hero/buildings-skyscrapers.webp');"></div>
+                <div class="ind-slide-overlay"></div>
+                <div class="ind-slide-badge"><i class="fa-solid fa-building"></i> Buildings</div>
+                <div class="ind-slide-content">
+                  <div class="ind-slide-number">03</div>
+                  <div class="ind-slide-title">Buildings &amp; High-Rise</div>
+                  <p class="ind-slide-desc">Settlement monitoring, tilt tracking, and seismic response systems for residential, commercial, and heritage structures.</p>
+                  <a href="./industries/buildings-highrise-monitoring.html" class="ind-slide-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+
+              <!-- Slide 4: Dams & Reservoirs -->
+              <div class="swiper-slide ind-swiper-slide">
+                <div class="ind-slide-bg" style="background-image: url('./image/industries/hero/dam-water.webp');"></div>
+                <div class="ind-slide-overlay"></div>
+                <div class="ind-slide-badge"><i class="fa-solid fa-water"></i> Dams</div>
+                <div class="ind-slide-content">
+                  <div class="ind-slide-number">04</div>
+                  <div class="ind-slide-title">Dams &amp; Reservoirs</div>
+                  <p class="ind-slide-desc">GNSS-based displacement, pore pressure, and seepage monitoring for earthfill, concrete, and masonry dams.</p>
+                  <a href="./industries/dams-reservoirs-monitoring.html" class="ind-slide-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+
+              <!-- Slide 5: Mining & Geotechnical -->
+              <div class="swiper-slide ind-swiper-slide">
+                <div class="ind-slide-bg" style="background-image: url('./image/industries/hero/mining-excavators.webp');"></div>
+                <div class="ind-slide-overlay"></div>
+                <div class="ind-slide-badge"><i class="fa-solid fa-helmet-safety"></i> Mining</div>
+                <div class="ind-slide-content">
+                  <div class="ind-slide-number">05</div>
+                  <div class="ind-slide-title">Mining &amp; Geotechnical</div>
+                  <p class="ind-slide-desc">Slope stability, subsidence, and ground deformation monitoring for open-pit mines, tunnels, and retaining structures.</p>
+                  <a href="./industries/mining-geotechnical-monitoring.html" class="ind-slide-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+
+              <!-- Slide 6: Ports & Marine -->
+              <div class="swiper-slide ind-swiper-slide">
+                <div class="ind-slide-bg" style="background-image: url('./image/industries/hero/port-containers.webp');"></div>
+                <div class="ind-slide-overlay"></div>
+                <div class="ind-slide-badge"><i class="fa-solid fa-anchor"></i> Ports</div>
+                <div class="ind-slide-content">
+                  <div class="ind-slide-number">06</div>
+                  <div class="ind-slide-title">Ports &amp; Marine</div>
+                  <p class="ind-slide-desc">Corrosion tracking, jetty tilt, and structural load monitoring for quays, wharves, and offshore platforms in harsh marine environments.</p>
+                  <a href="./industries/ports-marine-monitoring.html" class="ind-slide-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+
+              <!-- Slide 7: Construction & Tunnelling -->
+              <div class="swiper-slide ind-swiper-slide">
+                <div class="ind-slide-bg" style="background-image: url('./image/industries/hero/construction-tunnelling.webp');"></div>
+                <div class="ind-slide-overlay"></div>
+                <div class="ind-slide-badge"><i class="fa-solid fa-person-digging"></i> Construction</div>
+                <div class="ind-slide-content">
+                  <div class="ind-slide-number">07</div>
+                  <div class="ind-slide-title">Construction &amp; Tunnelling</div>
+                  <p class="ind-slide-desc">Real-time deformation, convergence, and vibration control during deep excavation, tunnelling, and high-rise construction phases.</p>
+                  <a href="./industries/construction-tunnelling-monitoring.html" class="ind-slide-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+
+              <!-- Slide 8: Industrial Facilities -->
+              <div class="swiper-slide ind-swiper-slide">
+                <div class="ind-slide-bg" style="background-image: url('./image/industries/hero/factory-industrial.webp');"></div>
+                <div class="ind-slide-overlay"></div>
+                <div class="ind-slide-badge"><i class="fa-solid fa-industry"></i> Industrial</div>
+                <div class="ind-slide-content">
+                  <div class="ind-slide-number">08</div>
+                  <div class="ind-slide-title">Industrial Facilities</div>
+                  <p class="ind-slide-desc">Asset health, predictive maintenance, and equipment vibration monitoring for power plants, refineries, and process industries.</p>
+                  <a href="./industries/industrial-facilities-monitoring.html" class="ind-slide-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+
+            </div><!-- /.swiper-wrapper -->
+            <div class="swiper-pagination"></div>
+          </div><!-- /.swiper -->
+
+          <button class="ind-nav-btn ind-swiper-prev" aria-label="Previous industry"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="ind-nav-btn ind-swiper-next" aria-label="Next industry"><i class="fa-solid fa-arrow-right"></i></button>
+        </div><!-- /.ind-swiper-outer -->
+      </div>
+    </section>
+
+    <!-- ══ 4. BLOGS & CASE STUDIES ══ -->
+    <section class="ind-content-section" id="ind-insights">
+      <div class="ind-content-section-inner">
+        <div class="ind-section-header">
+          <div class="ind-eyebrow"><i class="fa-regular fa-circle-dot"></i> Insights</div>
+          <h2 class="ind-section-title">Blogs &amp; Case Studies</h2>
+          <p class="ind-section-subtitle">Real-world deployments, expert analysis, and deep-dive articles from Sentra's field engineers and researchers.</p>
+        </div>
+
+        <!-- Tab controls -->
+        <div class="ind-tabs">
+          <button class="ind-tab active" data-tab="blogs">Blogs</button>
+          <button class="ind-tab" data-tab="case-studies">Case Studies</button>
+        </div>
+
+        <!-- Blogs panel -->
+        <div class="ind-tab-panel active" id="tab-blogs">
+          <div class="ind-cards-grid">
+
+            <a href="./blogs/top-5-hidden-structural-damages-bridge-inspection.html" class="ind-card">
+              <div class="ind-card-img-wrap">
+                <img src="./image/blogs/banners/blogs_top-5-hidden-structural-damages-bridge-inspection.webp" alt="Top 5 Hidden Structural Damages" class="ind-card-img" loading="lazy">
+              </div>
+              <div class="ind-card-body">
+                <div class="ind-card-category"><i class="fa-solid fa-bridge"></i> Bridge Safety</div>
+                <div class="ind-card-title">Top 5 Hidden Structural Damages Manual Bridge Inspection Misses</div>
+                <p class="ind-card-excerpt">Bridge inspection plays a critical role in maintaining infrastructure safety. Discover what visual methods routinely miss and how IoT sensors close the gap.</p>
+                <span class="ind-card-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+            <a href="./blogs/structural-health-monitoring.html" class="ind-card">
+              <div class="ind-card-img-wrap">
+                <img src="./image/blogs/banners/blogs_structural-health-monitoring.webp" alt="Structural Health Monitoring" class="ind-card-img" loading="lazy">
+              </div>
+              <div class="ind-card-body">
+                <div class="ind-card-category"><i class="fa-solid fa-wave-square"></i> Structural Health</div>
+                <div class="ind-card-title">Asset Monitoring &amp; Structural Health Monitoring</div>
+                <p class="ind-card-excerpt">Continuous SHM that protects infrastructure, cuts maintenance spend, and prolongs asset life across railways, bridges, and high-rise buildings.</p>
+                <span class="ind-card-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+            <a href="./blogs/real-time-monitoring-solutions-transforming-infrastructure-safety-performance.html" class="ind-card">
+              <div class="ind-card-img-wrap">
+                <img src="./image/blogs/banners/blogs_real-time-monitoring-solutions-transforming-infrastructure-safety-performance.webp" alt="Real-Time Monitoring Solutions" class="ind-card-img" loading="lazy">
+              </div>
+              <div class="ind-card-body">
+                <div class="ind-card-category"><i class="fa-solid fa-satellite-dish"></i> Monitoring</div>
+                <div class="ind-card-title">Real-Time Monitoring Solutions Transforming Infrastructure Safety</div>
+                <p class="ind-card-excerpt">How always-on sensor networks are redefining safety standards and performance benchmarks across critical infrastructure sectors worldwide.</p>
+                <span class="ind-card-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+            <a href="./blogs/advanced-iot-solutions.html" class="ind-card">
+              <div class="ind-card-img-wrap">
+                <img src="./image/blogs/banners/blogs_advanced-iot-solutions.webp" alt="Advanced IoT Solutions" class="ind-card-img" loading="lazy">
+              </div>
+              <div class="ind-card-body">
+                <div class="ind-card-category"><i class="fa-solid fa-microchip"></i> IoT Sensors</div>
+                <div class="ind-card-title">Advanced IoT Solutions for Smart Infrastructure</div>
+                <p class="ind-card-excerpt">Comprehensive IoT implementation with smart sensors and real-time data analytics driving next-generation infrastructure intelligence.</p>
+                <span class="ind-card-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+            <a href="./blogs/fatigue-life-assessment.html" class="ind-card">
+              <div class="ind-card-img-wrap">
+                <img src="./image/blogs/banners/blogs_fatigue-life-assessment.webp" alt="Fatigue Life Assessment" class="ind-card-img" loading="lazy">
+              </div>
+              <div class="ind-card-body">
+                <div class="ind-card-category"><i class="fa-solid fa-chart-line"></i> Fatigue Analysis</div>
+                <div class="ind-card-title">Asset Monitoring &amp; Fatigue Life Assessment</div>
+                <p class="ind-card-excerpt">Extending the service life of structures with IoT-powered monitoring — quantifying fatigue damage accumulation in real time.</p>
+                <span class="ind-card-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+            <a href="./blogs/asset-monitoring-facility-management.html" class="ind-card">
+              <div class="ind-card-img-wrap">
+                <img src="./image/blogs/banners/blogs_asset-monitoring-facility-management.webp" alt="Asset Monitoring" class="ind-card-img" loading="lazy">
+              </div>
+              <div class="ind-card-body">
+                <div class="ind-card-category"><i class="fa-solid fa-building-shield"></i> Facility Management</div>
+                <div class="ind-card-title">Asset Monitoring &amp; Facility Management</div>
+                <p class="ind-card-excerpt">Comprehensive IoT implementation with smart sensors for real-time monitoring and intelligent facility management at scale.</p>
+                <span class="ind-card-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+          </div><!-- /.ind-cards-grid -->
+        </div><!-- /#tab-blogs -->
+
+        <!-- Case Studies panel -->
+        <div class="ind-tab-panel" id="tab-case-studies">
+          <div class="ind-cs-grid">
+
+            <a href="./case-studies/bridgepluse-ai-and-drone-technology-for-bridge-health-monitoring.html" class="ind-cs-card">
+              <div class="ind-cs-card-img-wrap">
+                <img src="./image/case-studies/banners/case_studies_bridgepluse-ai-and-drone-technology-for-bridge-health-monitoring.webp" alt="BridgePulse AI Bridge Health Monitoring" class="ind-cs-card-img" loading="lazy">
+              </div>
+              <div class="ind-cs-card-body">
+                <div class="ind-cs-tag"><i class="fa-solid fa-bridge"></i> Bridge Safety</div>
+                <div class="ind-cs-title">BridgePulse — AI &amp; Drone Technology for Bridge Health Monitoring</div>
+                <p class="ind-cs-excerpt">Impact of IoT sensors and regularized monitoring devices on bridge health programs — a landmark deployment combining AI analytics with edge sensing hardware.</p>
+                <span class="ind-cs-link">Read Case Study <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+            <a href="./case-studies/iot-bridge-monitoring-and-sensor-installation-on-railway-bridges.html" class="ind-cs-card">
+              <div class="ind-cs-card-img-wrap">
+                <img src="./image/case-studies/banners/case_studies_iot-bridge-monitoring-and-sensor-installation-on-railway-bridges.webp" alt="IoT Railway Bridge Monitoring" class="ind-cs-card-img" loading="lazy">
+              </div>
+              <div class="ind-cs-card-body">
+                <div class="ind-cs-tag"><i class="fa-solid fa-train"></i> Railways</div>
+                <div class="ind-cs-title">IoT Bridge Monitoring &amp; Sensor Installation on Railway Bridges</div>
+                <p class="ind-cs-excerpt">24×7 monitoring, instant alerts, and data-driven decisions for safer rail networks — a full sensor deployment spanning multiple railway bridge spans.</p>
+                <span class="ind-cs-link">Read Case Study <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+          </div><!-- /.ind-cs-grid -->
+        </div><!-- /#tab-case-studies -->
+
+      </div>
+    </section>
+
+    <!-- ══ 5. NEWSLETTER ══ -->
+    <div class="section section-newsletter-compact">
+      <div class="hero-container">
+        <div class="newsletter-wrapper-compact">
+          <div class="newsletter-layout-compact">
+            <div class="d-flex flex-column flex-xl-row align-items-xl-center justify-content-between gspace-3">
+              <div class="newsletter-text">
+                <h4>Stay Ahead in Smart Infrastructure</h4>
+                <p>Get exclusive insights, case studies, and IoT trends delivered straight to your inbox.</p>
+              </div>
+              <form action="./php/newsletter_process.php" method="POST" id="newsletterForm" class="needs-validation newsletter-form-inline">
+                <div id="newsletter-error" class="alert error hidden compact-alert"><span class="cross-icon"><i class="fa-solid fa-xmark"></i></span><p>Failed. Try again.</p></div>
+                <div class="input-row">
+                  <input type="email" name="newsletter-email" id="newsletter-email" placeholder="Enter your email address" required>
+                  <button class="btn-compact" type="submit"><span>Subscribe</span><span class="btn-detail"><i class="fa-solid fa-arrow-right"></i></span></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer><div id="footer"></div></footer>
+
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/vendor/bootstrap.bundle.min.js"></script>
+  <script src="js/vendor/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/swiper-script.js"></script>
+  <script src="js/submit-form.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+  <script src="./js/chatbot-widget.js"></script>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* Hero bg parallax trigger */
+      var heroBg = document.getElementById('indHeroBg');
+      if (heroBg) {
+        setTimeout(function () { heroBg.classList.add('is-visible'); }, 100);
+      }
+
+      /* Industries Swiper */
+      var industriesSwiper = new Swiper('#industriesSwiper', {
+        slidesPerView: 1.15,
+        spaceBetween: 18,
+        loop: true,
+        speed: 750,
+        grabCursor: true,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true
+        },
+        navigation: {
+          nextEl: '.ind-swiper-next',
+          prevEl: '.ind-swiper-prev'
+        },
+        pagination: {
+          el: '#industriesSwiper .swiper-pagination',
+          clickable: true,
+          dynamicBullets: false
+        },
+        breakpoints: {
+          560:  { slidesPerView: 1.6, spaceBetween: 20 },
+          768:  { slidesPerView: 2.2, spaceBetween: 22 },
+          1024: { slidesPerView: 3,   spaceBetween: 24 }
+        }
+      });
+
+      /* Tab switching */
+      var tabs = document.querySelectorAll('.ind-tab');
+      var panels = document.querySelectorAll('.ind-tab-panel');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var target = tab.getAttribute('data-tab');
+          tabs.forEach(function (t) { t.classList.remove('active'); });
+          panels.forEach(function (p) { p.classList.remove('active'); });
+          tab.classList.add('active');
+          var panel = document.getElementById('tab-' + target);
+          if (panel) panel.classList.add('active');
+        });
+      });
+
+      /* Smooth scroll for hero CTA */
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+          var target = document.querySelector(anchor.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

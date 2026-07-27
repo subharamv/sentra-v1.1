@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <title>Sentra Admin - Login</title>
+    <link rel="icon" type="image/webp" href="../image/branding/favicon.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #f48120;
+            --primary-dark: #d96b10;
+            --bg: #0e0e0e;
+            --bg-card: #1a1a1a;
+            --text: #ffffff;
+            --text-muted: #a3a3a3;
+            --border: #2d2e2f;
+            --danger: #e63946;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .login-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .login-logo { text-align: center; margin-bottom: 32px; }
+        .login-logo .brand-logo { height: 36px; margin-bottom: 20px; }
+        .login-logo h1 {
+            font-size: 28px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), #ffb066);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .login-logo p { color: var(--text-muted); margin-top: 8px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label {
+            display: block; font-size: 14px; font-weight: 500;
+            margin-bottom: 8px; color: var(--text-muted);
+        }
+        .form-group input {
+            width: 100%; padding: 12px 16px;
+            background: var(--bg); border: 1px solid var(--border);
+            border-radius: 8px; color: var(--text); font-size: 14px;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus { outline: none; border-color: var(--primary); }
+        .password-wrapper { position: relative; }
+        .password-wrapper input { padding-right: 44px; }
+        .toggle-password {
+            position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+            background: none; border: none; cursor: pointer;
+            color: var(--text-muted); padding: 8px; display: flex; align-items: center;
+        }
+        .toggle-password:hover { color: var(--text); }
+        .toggle-password svg { width: 18px; height: 18px; }
+        .btn {
+            width: 100%; padding: 12px 24px; border-radius: 8px;
+            font-size: 14px; font-weight: 500; cursor: pointer;
+            border: none; background: var(--primary); color: white;
+            transition: background 0.2s;
+        }
+        .btn:hover { background: var(--primary-dark); }
+        .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+        .error-msg {
+            color: var(--danger); font-size: 13px;
+            margin-top: 8px; display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <div class="login-logo">
+            <img src="../image/branding/sentra_white_1.svg" alt="Sentra" class="brand-logo">
+            <h1>Admin Dashboard</h1>
+            <p>Sign in to access the dashboard</p>
+        </div>
+        <form id="loginForm">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="email" placeholder="admin@sentratech.in" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <button type="button" class="toggle-password" id="togglePassword" aria-label="Show password">
+                        <svg id="eyeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="error-msg" id="errorMsg"></div>
+            <button type="submit" class="btn" id="loginBtn">Sign In</button>
+        </form>
+    </div>
+    <script>
+        const API_BASE = 'https://veronica-sentra-prod.subharam-v.workers.dev';
+
+        const passwordInput = document.getElementById('password');
+        const toggleBtn = document.getElementById('togglePassword');
+        const eyeIcon = document.getElementById('eyeIcon');
+        const eyeOpenPath = '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>';
+        const eyeOffPath = '<path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a18.9 18.9 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 8 11 8a18.9 18.9 0 0 1-2.16 3.19M14.12 14.12a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>';
+
+        toggleBtn.addEventListener('click', () => {
+            const isPassword = passwordInput.type === 'password';
+            passwordInput.type = isPassword ? 'text' : 'password';
+            eyeIcon.innerHTML = isPassword ? eyeOffPath : eyeOpenPath;
+            toggleBtn.setAttribute('aria-label', isPassword ? 'Hide password' : 'Show password');
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('loginBtn');
+            const el = document.getElementById('errorMsg');
+            btn.disabled = true;
+            btn.textContent = 'Signing in...';
+            el.style.display = 'none';
+
+            try {
+                const res = await fetch(API_BASE + '/api/admin/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        email: document.getElementById('email').value,
+                        password: document.getElementById('password').value
+                    })
+                });
+                const data = await res.json();
+
+                if (data.success) {
+                    localStorage.setItem('admin_session', data.sessionId);
+                    window.location.href = 'dashboard.html';
+                } else {
+                    el.textContent = data.error || 'Invalid credentials';
+                    el.style.display = 'block';
+                }
+            } catch (err) {
+                el.textContent = 'Connection error. Please try again.';
+                el.style.display = 'block';
+            }
+
+            btn.disabled = false;
+            btn.textContent = 'Sign In';
+        });
+
+        // Redirect if already logged in
+        if (localStorage.getItem('admin_session')) {
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1837 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge Devices — Rugged IoT Sensors & Data Loggers | Sentra</title>
+    <meta name="description"
+        content="Explore Sentra's edge devices portfolio — rugged sensors, low-power data loggers and gateways for long-term infrastructure monitoring and remote deployments." />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/image/branding/favicon.webp" type="image/png" sizes="16x16">
+    <link rel="icon" type="image/png" sizes="32x32" href="/image/branding/favicon.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/branding/favicon.webp">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/chatbot.css">
+    <link rel="canonical" href="https://sentratech.in/products/edge-devices.html">
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Edge Devices — Rugged IoT Sensors & Data Loggers | Sentra" />
+    <meta property="og:description" content="Rugged edge sensors, data loggers and gateways for reliable structural health monitoring — low power, field-ready and secure." />
+    <meta property="og:url" content="https://sentratech.in/products/edge-devices.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sentra">
+    <meta property="og:image" content="https://sentratech.in/image/branding/sentra.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Edge Devices — Rugged IoT Sensors & Data Loggers | Sentra" />
+    <meta name="twitter:description" content="Rugged edge sensors, data loggers and gateways for reliable structural health monitoring — low power, field-ready and secure." />
+    <meta name="twitter:image" content="https://sentratech.in/image/branding/sentra.webp" />
+    <meta name="twitter:site" content="@sentratech" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Edge Devices & Data Loggers",
+      "description": "Design, supply and integration of rugged edge devices — vibrating wire sensors, tiltmeters, GNSS, data loggers and IoT gateways for continuous infrastructure monitoring.",
+      "brand": { "@type": "Brand", "name": "Sentra" },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://sentratech.in/products/edge-devices.html"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://sentratech.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://sentratech.in/products.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Edge Devices — Rugged IoT Sensors & Data Loggers",
+          "item": "https://sentratech.in/products/edge-devices.html"
+        }
+      ]
+    }
+    </script>
+    
+</head>
+
+<style>
+/* ── Carousel width & image size overrides ── */
+#carousel-slider {
+    max-width: 720px;
+    --carousel-aspect-ratio: 16/9;
+}
+
+#carousel-slider .carousel-slide img {
+    object-fit: contain;
+    background: #fff;
+}
+
+@media (max-width: 768px) {
+    #carousel-slider {
+        max-width: 100%;
+        --carousel-aspect-ratio: 5/4;
+    }
+}
+
+/* ── Page-level overrides ── */
+.visually-hidden {
+    position: absolute; width: 1px; height: 1px;
+    margin: -1px; padding: 0; overflow: hidden;
+    clip: rect(0,0,0,0); border: 0;
+}
+
+/* ══ HERO ══ */
+.ed-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 1.5rem 3.5rem;
+    background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(244,129,32,0.18) 0%, transparent 70%);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    text-align: center;
+}
+
+.ed-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+}
+
+.ed-hero-inner {
+    position: relative;
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.ed-hero h1 {
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0;
+    background: linear-gradient(135deg, #fff 40%, rgba(244,129,32,0.9) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.ed-hero p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 660px;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.ed-hero-btns {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.ed-hero-stats {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.75rem;
+}
+
+.ed-hero-stat {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(244,129,32,0.35);
+    background: rgba(244,129,32,0.08);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+}
+
+.ed-hero-stat i { color: var(--accent-color); font-size: 0.7rem; }
+
+body.lightmode .ed-hero {
+    background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(244,129,32,0.12) 0%, transparent 70%);
+    border-bottom-color: rgba(0,0,0,0.08);
+}
+body.lightmode .ed-hero::before {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+}
+body.lightmode .ed-hero h1 {
+    background: linear-gradient(135deg, #111 40%, #f48120 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+body.lightmode .ed-hero-stat {
+    border-color: rgba(244,129,32,0.3);
+    background: rgba(244,129,32,0.07);
+    color: #222;
+}
+
+/* ══ BENTO BENEFITS ══ */
+.ed-bento-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.7fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+}
+
+.ed-bc {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.03);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ed-bc:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+/* Card positions */
+.ed-bc--a { grid-column: 1; grid-row: 1; }    /* High scalability text */
+.ed-bc--b { grid-column: 2/4; grid-row: 1; }  /* +1000 devices image */
+.ed-bc--c { grid-column: 1/3; grid-row: 2; }  /* +25 yr battery featured */
+.ed-bc--d { grid-column: 3; grid-row: 2; }    /* Low maintenance text */
+.ed-bc--e { grid-column: 1; grid-row: 3; }    /* Rapid deployment */
+.ed-bc--f { grid-column: 2; grid-row: 3; }    /* Expert support */
+.ed-bc--g { grid-column: 3; grid-row: 3; }    /* Easy troubleshooting */
+
+/* Text-only card body */
+.ed-bc-body {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    height: 100%;
+}
+
+.ed-bc-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: rgba(244,129,32,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.ed-bc-body h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.ed-bc-body h3.large { font-size: 1.3rem; }
+
+.ed-bc-body p {
+    font-size: 0.82rem;
+    margin: 0;
+    line-height: 1.6;
+    opacity: 0.6;
+}
+
+/* Stat accent */
+.ed-bc-stat {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--accent-color);
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+/* Image card */
+.ed-bc--b {
+    position: relative;
+    min-height: 240px;
+}
+
+.ed-bc--b .ed-bc-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.55;
+    transition: opacity 0.3s ease;
+}
+
+.ed-bc--b:hover .ed-bc-img { opacity: 0.7; }
+
+.ed-bc--b .ed-bc-body {
+    position: relative;
+    z-index: 1;
+    justify-content: flex-end;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%);
+    padding: 2rem;
+}
+
+.ed-bc--b .ed-bc-stat { font-size: 3.5rem; color: #fff; }
+.ed-bc--b h3 { font-size: 1.4rem; color: #fff; opacity: 1; }
+
+/* Featured battery card */
+.ed-bc--c {
+    background: linear-gradient(135deg, rgba(0,120,200,0.18) 0%, rgba(0,60,120,0.35) 50%, rgba(244,129,32,0.12) 100%);
+    border-color: rgba(0,120,200,0.2);
+    min-height: 260px;
+}
+
+.ed-bc--c .ed-bc-body {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    height: 100%;
+}
+
+.ed-bc--c .ed-bc-left { flex: 0 0 auto; }
+.ed-bc--c .ed-bc-right { flex: 1; }
+.ed-bc--c .ed-bc-stat { font-size: 4.5rem; color: #3aabff; letter-spacing: -0.04em; }
+.ed-bc--c .ed-bc-stat small { font-size: 1.6rem; font-weight: 700; display: block; color: rgba(255,255,255,0.7); }
+.ed-bc--c h3 { font-size: 1.3rem; color: #fff; margin-top: 0.25rem; }
+.ed-bc--c p { color: rgba(255,255,255,0.6); font-size: 0.83rem; }
+
+/* Lightmode bento */
+body.lightmode .ed-bc {
+    border-color: rgba(0,0,0,0.08);
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+body.lightmode .ed-bc-icon { background: rgba(244,129,32,0.1); }
+body.lightmode .ed-bc--c { background: linear-gradient(135deg, #dbeeff 0%, #bbd8ff 50%, #ffeedd 100%); }
+body.lightmode .ed-bc--c .ed-bc-stat { color: #0078c8; }
+body.lightmode .ed-bc--c h3 { color: #111; }
+body.lightmode .ed-bc--c p { color: rgba(0,0,0,0.55); }
+
+@media (max-width: 991px) {
+    .ed-bento-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    .ed-bc--a { grid-column: 1; grid-row: 1; }
+    .ed-bc--b { grid-column: 2; grid-row: 1; min-height: 200px; }
+    .ed-bc--c { grid-column: 1/3; grid-row: 2; }
+    .ed-bc--c .ed-bc-body { flex-direction: column; gap: 1rem; }
+    .ed-bc--d { grid-column: 1; grid-row: 3; }
+    .ed-bc--e { grid-column: 2; grid-row: 3; }
+    .ed-bc--f { grid-column: 1; grid-row: 4; }
+    .ed-bc--g { grid-column: 2; grid-row: 4; }
+}
+
+@media (max-width: 575px) {
+    .ed-bento-grid { grid-template-columns: 1fr; }
+    .ed-bc--b { grid-column: 1; grid-row: 2; }
+    .ed-bc--c { grid-column: 1; grid-row: 3; }
+    .ed-bc--d { grid-column: 1; grid-row: 4; }
+    .ed-bc--e { grid-column: 1; grid-row: 5; }
+    .ed-bc--f { grid-column: 1; grid-row: 6; }
+    .ed-bc--g { grid-column: 1; grid-row: 7; }
+}
+
+/* ══ SPEC BAR ══ */
+.ed-spec-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.ed-spec-item {
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+    background: rgba(255,255,255,0.02);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.ed-spec-item:hover { background: rgba(244,129,32,0.06); }
+
+.ed-spec-num {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--accent-color);
+    letter-spacing: -0.03em;
+    line-height: 1;
+}
+
+.ed-spec-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    opacity: 0.55;
+}
+
+.ed-spec-desc { font-size: 0.78rem; opacity: 0.5; }
+
+body.lightmode .ed-spec-bar { background: rgba(0,0,0,0.06); border-color: rgba(0,0,0,0.06); }
+body.lightmode .ed-spec-item { background: #fff; }
+body.lightmode .ed-spec-label { color: #555; opacity: 1; }
+body.lightmode .ed-spec-desc { color: #888; opacity: 1; }
+body.dark-mode .ed-spec-label { color: #fff; opacity: 1; }
+body.dark-mode .ed-spec-desc { color: rgba(255,255,255,0.65); opacity: 1; }
+
+@media (max-width: 767px) {
+    .ed-spec-bar { grid-template-columns: 1fr 1fr; }
+    .ed-spec-item:nth-child(1),
+    .ed-spec-item:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.06); }
+}
+
+/* ══ FEATURES GRID ══ */
+.ed-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.ed-feat-card {
+    border-radius: 14px;
+    padding: 1.75rem;
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ed-feat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: inset 0 3px 0 0 var(--accent-color), 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.ed-feat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(244,129,32,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+.ed-feat-card h4 { font-size: 0.95rem; font-weight: 700; margin: 0; }
+.ed-feat-card p { font-size: 0.8rem; margin: 0; line-height: 1.6; opacity: 0.6; }
+
+body.lightmode .ed-feat-card { border-color: rgba(0,0,0,0.08); background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+body.lightmode .ed-feat-icon { background: rgba(244,129,32,0.08); }
+
+@media (max-width: 991px) { .ed-features-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 575px) { .ed-features-grid { grid-template-columns: 1fr; } }
+
+/* ══ APPLICATIONS ══ */
+.ed-app-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.ed-app-card {
+    border-radius: 14px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.02);
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.ed-app-card:hover {
+    border-color: rgba(244,129,32,0.35);
+    background: rgba(244,129,32,0.04);
+}
+
+.ed-app-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(244,129,32,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.ed-app-card h5 { font-size: 0.9rem; font-weight: 700; margin: 0 0 0.3rem; }
+.ed-app-card p { font-size: 0.77rem; margin: 0; line-height: 1.55; opacity: 0.55; }
+
+body.lightmode .ed-app-card { border-color: rgba(0,0,0,0.08); background: #fff; }
+body.lightmode .ed-app-icon { background: rgba(244,129,32,0.08); }
+
+@media (max-width: 767px) { .ed-app-grid { grid-template-columns: 1fr; } }
+
+/* ══ INDUSTRY CHIPS ══ */
+.ed-industry-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+}
+
+.ed-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.03);
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.65);
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.ed-chip:hover {
+    border-color: var(--accent-color);
+    background: rgba(244,129,32,0.08);
+    color: var(--accent-color);
+}
+
+.ed-chip i { font-size: 0.62rem; color: var(--accent-color); }
+
+body.lightmode .ed-chip { border-color: rgba(0,0,0,0.09); background: #f2f2f2; color: #444; }
+body.lightmode .ed-chip:hover { border-color: var(--accent-color); background: rgba(244,129,32,0.07); color: var(--accent-color); }
+
+/* ══ RELATED PRODUCTS ══ */
+.ed-related-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-top: 0.5rem;
+    border-radius: 9px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ── List column ── */
+.ed-products-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+.ed-pl-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.48rem 0.65rem;
+    text-decoration: none;
+    color: inherit;
+    font-size: 0.79rem;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    transition: background 0.14s ease, color 0.14s ease, padding-left 0.15s ease;
+}
+
+.ed-pl-item:last-child { border-bottom: none; }
+
+.ed-pl-item.ed-pl-active,
+.ed-pl-item:hover {
+    background: rgba(244,129,32,0.09);
+    color: var(--accent-color);
+    padding-left: 1rem;
+}
+
+.ed-pl-arrow {
+    font-size: 0.46rem;
+    color: var(--accent-color);
+    flex-shrink: 0;
+    transition: transform 0.14s ease;
+}
+
+.ed-pl-item.ed-pl-active .ed-pl-arrow,
+.ed-pl-item:hover .ed-pl-arrow { transform: translateX(3px); }
+
+/* ── Preview column ── */
+.ed-related-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 0.55rem 0.7rem;
+    gap: 0.55rem;
+    background: rgba(255,255,255,0.015);
+}
+
+.ed-rp-img-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.ed-rp-img-wrap {
+    overflow: hidden;
+}.ed-rp-img-wrap img { width: 95%; max-width: 460px; height: auto; max-height: 440px; object-fit: contain; transition: opacity 0.18s ease, transform 0.35s ease; transform: scale(1.25); }
+
+.ed-rp-img-wrap img:hover {
+    transform: scale(1.35);
+}
+
+.ed-rp-img-wrap img.ed-rp-fade {
+    opacity: 0;
+    transform: scale(0.88);
+}
+
+.ed-rp-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 0.22rem;
+    width: 100%;
+}
+
+.ed-rp-tag {
+    display: block;
+    font-size: 0.57rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 2px 5px;
+    border-radius: 4px;
+    background: rgba(244,129,32,0.1);
+    color: var(--accent-color);
+    border: 1px solid rgba(244,129,32,0.18);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ed-rp-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.22rem;
+    width: 100%;
+    font-size: 0.61rem;
+    font-weight: 700;
+    color: #111;
+    background: #fff;
+    border-radius: 6px;
+    padding: 5px 6px;
+    text-decoration: none;
+    transition: background 0.18s ease, transform 0.14s ease, color 0.18s ease;
+    white-space: nowrap;
+}
+
+.ed-rp-cta:hover { background: rgba(255,255,255,0.85); transform: translateY(-1px); color: #111; }
+
+body.lightmode .ed-related-wrap { border-color: rgba(0,0,0,0.07); }
+body.lightmode .ed-products-list { border-right-color: rgba(0,0,0,0.07); }
+body.lightmode .ed-pl-item { border-bottom-color: rgba(0,0,0,0.05); }
+body.lightmode .ed-pl-item.ed-pl-active,
+body.lightmode .ed-pl-item:hover { background: rgba(244,129,32,0.07); }
+body.lightmode .ed-related-preview { background: rgba(0,0,0,0.02); }
+
+body.lightmode .ed-rp-cta { background: #111; color: #fff; }
+body.lightmode .ed-rp-cta:hover { background: #333; color: #fff; }
+
+/* ══ SIDEBAR PANEL ══ */
+.ed-sidebar-panel {
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.02);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ed-sidebar-panel-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.ed-sidebar-panel-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+}
+
+body.lightmode .ed-sidebar-panel { border-color: rgba(0,0,0,0.08); background: #fff; }
+body.lightmode .ed-sidebar-panel-title::after { background: rgba(0,0,0,0.08); }
+
+/* ══ CTA BANNER ══ */
+.ed-cta-banner {
+    border-radius: 20px;
+    padding: 4rem 3rem;
+    background: linear-gradient(135deg, rgba(244,129,32,0.15) 0%, rgba(244,129,32,0.05) 50%, rgba(0,0,0,0) 100%);
+    border: 1px solid rgba(244,129,32,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.ed-cta-banner::before {
+    content: "";
+    position: absolute;
+    right: -60px;
+    top: -60px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(244,129,32,0.12) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.ed-cta-left { flex: 1; }
+.ed-cta-left h3 { font-size: 1.5rem; font-weight: 800; margin: 0 0 0.75rem; }
+.ed-cta-left p { font-size: 0.9rem; opacity: 0.65; margin: 0; line-height: 1.6; max-width: 520px; }
+
+.ed-cta-btns {
+    display: flex;
+    gap: 0.75rem;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+body.lightmode .ed-cta-banner { background: linear-gradient(135deg, rgba(244,129,32,0.1) 0%, #fff 100%); }
+
+@media (max-width: 767px) {
+    .ed-cta-banner { flex-direction: column; align-items: flex-start; padding: 2.5rem 2rem; }
+    .ed-cta-btns { justify-content: flex-start; }
+}
+
+/* ══ GET A QUOTE BUTTON ══ */
+.btn-quote {
+    background-color: #f48120 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.btn-quote .btn-title span {
+    color: #fff !important;
+}
+
+.btn-quote .icon-circle {
+    background-color: rgba(255,255,255,0.22) !important;
+    color: #fff !important;
+}
+
+.btn-quote:hover {
+    background-color: #fff !important;
+    box-shadow: 0 8px 24px rgba(244,129,32,0.25) !important;
+}
+
+.btn-quote:hover .btn-title span {
+    color: #f48120 !important;
+}
+
+.btn-quote:hover .icon-circle {
+    background-color: #f48120 !important;
+    color: #fff !important;
+}
+
+/* Lightmode — same intent, same colors */
+body.lightmode .btn-quote {
+    background-color: #f48120 !important;
+    border: none !important;
+}
+
+body.lightmode .btn-quote:hover {
+    background-color: #fff !important;
+    box-shadow: 0 8px 24px rgba(244,129,32,0.2) !important;
+}
+
+body.lightmode .btn-quote:hover .btn-title span { color: #f48120 !important; }
+
+/* ══ CTA BANNER — VIEW CASE STUDY BUTTON ══ */
+.ed-cta-btns .btn.btn-primary {
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+.ed-cta-btns .btn.btn-primary .btn-title span {
+    color: #111111 !important;
+}
+.ed-cta-btns .btn.btn-primary .icon-circle {
+    background-color: rgba(0,0,0,0.1) !important;
+    color: #111111 !important;
+}
+.ed-cta-btns .btn.btn-primary:hover {
+    background-color: rgba(255,255,255,0.88) !important;
+}
+
+body.lightmode .ed-cta-btns .btn.btn-primary {
+    background-color: #111111 !important;
+    border-color: #111111 !important;
+}
+body.lightmode .ed-cta-btns .btn.btn-primary .btn-title span {
+    color: #ffffff !important;
+}
+body.lightmode .ed-cta-btns .btn.btn-primary .icon-circle {
+    background-color: rgba(255,255,255,0.15) !important;
+    color: #ffffff !important;
+}
+body.lightmode .ed-cta-btns .btn.btn-primary:hover {
+    background-color: #333333 !important;
+}
+
+/* ══ NEWSLETTER LAYOUT FIX ══ */
+.newsletter-layout .btn {
+    height: 48px;
+    width: fit-content;
+    align-self: center;
+}
+.newsletter-layout .btn-title { padding: 10px 30px; font-size: var(--font-size-sm); }
+.newsletter-layout .icon-circle { width: 42px; height: 42px; }
+
+/* Dark accent */
+[data-bs-theme="dark"] .dark-accent { color: #f48120 !important; }
+.dark-accent { color: #f48120 !important; }
+body.lightmode .dark-accent { color: #2d2e2f !important; }
+</style>
+
+<body class="product-page">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo"><img src="../image/branding/sentra_white_1.svg" alt="Sentra"></div>
+            <div class="preloader-logo-sub">Smart · Secure · Scalable</div>
+            <div class="preloader-counter">
+                <span id="preloader-count">0</span>
+                <span class="preloader-percent">%</span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div id="header"></div>
+    </header>
+
+    <!-- Edit Sidebar -->
+    <aside>
+        <div id="edit-sidebar"></div>
+    </aside>
+
+    <!-- Sidebar -->
+    <aside>
+        <div id="sidebar"></div>
+    </aside>
+
+    <main>
+
+        <!-- ══ HERO ══ -->
+        <section class="ed-hero">
+            <div class="ed-hero-inner">
+                <div class="sub-heading">
+                    <i class="fa-regular fa-circle-dot"></i>
+                    <span>Edge Devices</span>
+                </div>
+                <h1>Rugged IoT Sensors &amp; Data Loggers for Infrastructure Monitoring</h1>
+                <p>Long-range, low-power wireless edge devices engineered for continuous structural health monitoring across bridges, tunnels, dams and industrial facilities — field-ready, IP68-rated, and built to last decades.</p>
+                <div class="ed-hero-btns">
+                    <a href="#carousel-slider" class="btn btn-accent">
+                        <span class="btn-title"><span>Explore Products</span></span>
+                        <span class="icon-circle"><i class="fa-solid fa-arrow-down"></i></span>
+                    </a>
+                    <a href="../contact.html" class="btn btn-accent btn-quote">
+                        <span class="btn-title"><span>Get a Quote</span></span>
+                        <span class="icon-circle"><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                </div>
+                <div class="ed-hero-stats">
+                    <span class="ed-hero-stat"><i class="fa-solid fa-circle-dot"></i> 1000+ Devices / Network</span>
+                    <span class="ed-hero-stat"><i class="fa-solid fa-circle-dot"></i> 25+ Year Battery Life</span>
+                    <span class="ed-hero-stat"><i class="fa-solid fa-circle-dot"></i> IP68 Rated</span>
+                    <span class="ed-hero-stat"><i class="fa-solid fa-circle-dot"></i> 15 km Wireless Range</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ══ PRODUCT CAROUSEL ══ -->
+        <div class="section pb-0">
+            <div class="hero-container">
+                <div class="d-flex flex-column gspace-5">
+
+                    <div id="carousel-slider" aria-roledescription="carousel">
+                        <div class="carousel-slide carousel-active" role="group" aria-roledescription="slide" aria-label="Slide 1 of 10">
+                            <img src="../image/products/Vibrating_Wire_1.webp" alt="Vibrating Wire Sensor">
+                            <div class="carousel-slide-content">
+                                <p>Wireless Data Acquisition</p>
+                                <a class="carousel-view-btn" href="/products/vibrating-wire.html" role="button">
+                                    <div class="d-flex align-items-center"><h2>Vibrating Wire</h2></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-slide carousel-next" role="group" aria-roledescription="slide" aria-label="Slide 2 of 10">
+                            <img src="../image/products/vibrating_wire_rcr_front.webp" alt="Vibrating Wire RCR">
+                            <div class="carousel-slide-content">
+                                <p>Wireless Data Acquisition</p>
+                                <a class="carousel-view-btn" href="/products/vibrating-wire-rcr.html" role="button">
+                                    <div class="d-flex align-items-center"><h2>Vibrating Wire RCR</h2></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 10">
+                            <img src="../image/products/Datalogger_1.webp" alt="Digital Data Logger">
+                            <div class="carousel-slide-content">
+                                <p>Wireless Data Acquisition</p>
+                                <a class="carousel-view-btn" href="/products/digital-data-logger.html" role="button">
+                                    <div class="d-flex align-items-center"><h2>Digital Data Logger</h2></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 4 of 10">
+                            <img src="../image/products/Analog_logger_1.webp" alt="Analog Data Logger">
+                            <div class="carousel-slide-content">
+                                <p>Wireless Data Acquisition</p>
+                                <a class="carousel-view-btn" href="/products/analog-data-logger.html" role="button">
+                                    <div class="d-flex align-items-center"><h2>Analog Data Logger</h2></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 10">
+                            <img src="../image/products/Piconode_1.webp" alt="Piconode Data Logger">
+                            <div class="carousel-slide-content">
+                                <p>Wireless Data Acquisition</p>
+                                <a class="carousel-view-btn" href="/products/piconode-data-logger.html" role="button">
+                                    <div class="d-flex align-items-center"><h2>Piconode Data Logger</h2></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 6 of 10">
+                            <img src="../image/products/tiltmeter_1.webp" alt="Tiltmeter">
+                            <div class="carousel-slide-content">
+                                <p>Wireless Sensors</p>
+                                <a class="carousel-view-btn" href="/products/tiltmeter.html" role="button">
+                                    <div class="d-flex align-items-center"><h2>Tiltmeter</h2></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 7 of 10">
+                            <img src="../image/products/tiltmeter_event_1.webp" alt="Tiltmeter Event Detection">
+                            <div class="carousel-slide-content">
+                                <p>Wireless Sensors</p>
+                                <a class="carousel-view-btn" href="/products/tiltmeter-event-detection.html" role="button">
+                                    <div class="d-flex align-items-center"><h2>Tiltmeter Event Detection</h2></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 8 of 10">
+                            <img src="../image/products/vibration_meter_1.webp" alt="Vibration Meter">
+                            <div class="carousel-slide-content">
+                                <p>Wireless Sensors</p>
+                                <a class="carousel-view-btn" href="/products/vibration-meter.html" role="button">
+                                    <div class="d-flex align-items-center"><h2>Vibration Meter</h2></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 9 of 10">
+                            <img src="../image/products/laser_tilitmeter_1.webp" alt="Laser Tiltmeter">
+                            <div class="carousel-slide-content">
+                                <p>Wireless Sensors</p>
+                                <a class="carousel-view-btn" href="/products/laser-tiltmeter.html" role="button">
+                                    <div class="d-flex align-items-center"><h2>Laser Tiltmeter</h2></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 10 of 10">
+                            <img src="../image/products/GNSSMeter_1.webp" alt="GNSS Meter">
+                            <div class="carousel-slide-content">
+                                <p>Wireless Sensors</p>
+                                <a class="carousel-view-btn" href="/products/gnss-meter.html" role="button">
+                                    <div class="d-flex align-items-center"><h2>GNSS Meter</h2></div>
+                                </a>
+                            </div>
+                        </div>
+                        <button class="carousel-prev-btn" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="carousel-next-btn" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ══ SPEC BAR ══ -->
+        <div class="section pb-0">
+            <div class="hero-container">
+                <div class="ed-spec-bar">
+                    <div class="ed-spec-item">
+                        <span class="ed-spec-num">15<span style="font-size:1.2rem">km</span></span>
+                        <span class="ed-spec-label">Wireless Range</span>
+                        <span class="ed-spec-desc">Long-range LoRaWAN transmission</span>
+                    </div>
+                    <div class="ed-spec-item">
+                        <span class="ed-spec-num">25<span style="font-size:1.2rem">yr</span></span>
+                        <span class="ed-spec-label">Battery Lifespan</span>
+                        <span class="ed-spec-desc">High-energy replaceable cells</span>
+                    </div>
+                    <div class="ed-spec-item">
+                        <span class="ed-spec-num">1000<span style="font-size:1.2rem">+</span></span>
+                        <span class="ed-spec-label">Devices / Network</span>
+                        <span class="ed-spec-desc">Massive scalable mesh support</span>
+                    </div>
+                    <div class="ed-spec-item">
+                        <span class="ed-spec-num">IP68</span>
+                        <span class="ed-spec-label">Protection Rating</span>
+                        <span class="ed-spec-desc">−40°C to +85°C operating range</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ══ BENTO BENEFITS ══ -->
+        <div class="section">
+            <div class="hero-container">
+                <div class="d-flex flex-column gspace-5">
+
+                    <div class="row row-cols-xl-2 row-cols-1 grid-spacer-5 m-0">
+                        <div class="col ps-0 pe-0">
+                            <div class="d-flex flex-column gspace-2 animate-box animated animate__animated" data-animate="animate__fadeInLeft">
+                                <div class="sub-heading">
+                                    <i class="fa-regular fa-circle-dot"></i>
+                                    <span>Why Sentra Edge Devices</span>
+                                </div>
+                                <h2 class="title-heading intro-heading-compact">Benefits Built for the Field</h2>
+                            </div>
+                        </div>
+                        <div class="col ps-0 pe-0">
+                            <div class="d-flex flex-column gspace-2 justify-content-end h-100 animate-box animated animate__animated" data-animate="animate__fadeInRight">
+                                <p class="intro-text-compact">Engineered for unattended long-term deployment in the harshest environments — from underground tunnels to exposed bridges — with minimal maintenance and maximum uptime.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bento Grid -->
+                    <div class="ed-bento-grid animate-box animated animate__animated" data-animate="animate__fadeInUp">
+
+                        <!-- A: High Scalability -->
+                        <div class="ed-bc ed-bc--a">
+                            <div class="ed-bc-body">
+                                <div class="ed-bc-icon"><i class="fa-solid fa-network-wired"></i></div>
+                                <h3 class="large">High Scalability</h3>
+                                <p>Easily expand your monitoring system as your project grows. A single network supports hundreds of wireless devices reliably and securely.</p>
+                            </div>
+                        </div>
+
+                        <!-- B: +1000 devices image card -->
+                        <div class="ed-bc ed-bc--b">
+                            <img src="../image/products/Datalogger_1.webp" alt="1000+ devices network" class="ed-bc-img">
+                            <div class="ed-bc-body">
+                                <div class="ed-bc-stat">+1000</div>
+                                <h3>devices into a single network</h3>
+                            </div>
+                        </div>
+
+                        <!-- C: Battery lifespan featured -->
+                        <div class="ed-bc ed-bc--c">
+                            <div class="ed-bc-body">
+                                <div class="ed-bc-left">
+                                    <div class="ed-bc-stat">25<small>years battery</small></div>
+                                </div>
+                                <div class="ed-bc-right">
+                                    <h3>Industry-leading battery lifespan</h3>
+                                    <p>High-energy, user-replaceable C and D cell batteries keep your edge devices operating for decades without revisiting remote deployment sites. Solar-assisted options available for zero-touch deployments.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- D: Low Maintenance -->
+                        <div class="ed-bc ed-bc--d">
+                            <div class="ed-bc-body">
+                                <div class="ed-bc-icon"><i class="fa-solid fa-wrench"></i></div>
+                                <h3>Low Maintenance</h3>
+                                <p>Minimize on-site visits. The Sentra edge devices are built for autonomous long-term operation, drastically reducing lifecycle maintenance costs.</p>
+                            </div>
+                        </div>
+
+                        <!-- E: Rapid deployment -->
+                        <div class="ed-bc ed-bc--e">
+                            <div class="ed-bc-body">
+                                <div class="ed-bc-icon"><i class="fa-solid fa-bolt"></i></div>
+                                <h3>Rapid Deployment</h3>
+                                <p>Wireless design and a mobile setup app means your team is up and running on-site within hours, not days.</p>
+                            </div>
+                        </div>
+
+                        <!-- F: Expert support -->
+                        <div class="ed-bc ed-bc--f">
+                            <div class="ed-bc-body">
+                                <div class="ed-bc-icon"><i class="fa-solid fa-headset"></i></div>
+                                <h3>Expert Support</h3>
+                                <p>Our IoT monitoring specialists are available to guide deployment, configuration and troubleshooting for every project.</p>
+                            </div>
+                        </div>
+
+                        <!-- G: Easy troubleshooting -->
+                        <div class="ed-bc ed-bc--g">
+                            <div class="ed-bc-body">
+                                <div class="ed-bc-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                                <h3>Easy Troubleshooting</h3>
+                                <p>Integrated diagnostic tools, offline radio coverage testing, and real-time alerts make issue detection fast and field-friendly.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ══ KEY FEATURES ══ -->
+        <div class="section">
+            <div class="hero-container">
+                <div class="d-flex flex-column gspace-5">
+                    <div class="d-flex flex-column justify-content-center text-center gspace-2">
+                        <div class="sub-heading align-self-center animate-box animated animate__animated" data-animate="animate__fadeInDown">
+                            <i class="fa-regular fa-circle-dot"></i>
+                            <span>Core Capabilities</span>
+                        </div>
+                        <h2 class="title-heading heading-container heading-container-medium animate-box animated animate__animated" data-animate="animate__fadeInDown" style="font-size:clamp(22px,3.5vw,36px);">
+                            What Makes Our Edge Devices Different
+                        </h2>
+                        <p style="max-width:600px;margin:0 auto;opacity:0.6;font-size:0.9rem;line-height:1.65;">Purpose-built for unattended infrastructure monitoring with a hardware-software stack designed for reliability at the edge.</p>
+                    </div>
+
+                    <div class="ed-features-grid">
+                        <div class="ed-feat-card animate-box animated animate__animated" data-animate="animate__fadeInUp">
+                            <div class="ed-feat-icon"><i class="fa-solid fa-wifi"></i></div>
+                            <div>
+                                <h4>Superior Wireless Connectivity</h4>
+                                <p>LoRaWAN long-range communications up to 15 km with support for 4G LTE, Bluetooth and RS-485 fallback. Operates on dedicated networks without internet dependency.</p>
+                            </div>
+                        </div>
+                        <div class="ed-feat-card animate-box animated animate__animated" data-animate="animate__fadeInUp">
+                            <div class="ed-feat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div>
+                                <h4>Durable, IP68-Rated Hardware</h4>
+                                <p>Industrial-grade enclosures rated IP68 for full submersion resistance. Operates reliably from −40°C to +85°C — from Arctic cold to desert heat.</p>
+                            </div>
+                        </div>
+                        <div class="ed-feat-card animate-box animated animate__animated" data-animate="animate__fadeInUp">
+                            <div class="ed-feat-icon"><i class="fa-solid fa-battery-full"></i></div>
+                            <div>
+                                <h4>Ultra-Long Battery Life</h4>
+                                <p>High-energy C and D size battery cells with up to 25 years of field life. User-replaceable without special tools. Solar panel integration available for remote sites.</p>
+                            </div>
+                        </div>
+                        <div class="ed-feat-card animate-box animated animate__animated" data-animate="animate__fadeInUp">
+                            <div class="ed-feat-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                            <div>
+                                <h4>Mobile App Configuration</h4>
+                                <p>Configure devices in the field via the Sentra mobile app. Built-in setup wizard, radio signal coverage testing, and data sampling — no laptop needed.</p>
+                            </div>
+                        </div>
+                        <div class="ed-feat-card animate-box animated animate__animated" data-animate="animate__fadeInUp">
+                            <div class="ed-feat-icon"><i class="fa-solid fa-cloud-upload-alt"></i></div>
+                            <div>
+                                <h4>Cloud & SCADA Integration</h4>
+                                <p>Transmits data securely to cloud platforms for real-time dashboards, historical analysis, and automated alerting. BIM and GIS integration ready.</p>
+                            </div>
+                        </div>
+                        <div class="ed-feat-card animate-box animated animate__animated" data-animate="animate__fadeInUp">
+                            <div class="ed-feat-icon"><i class="fa-solid fa-sliders"></i></div>
+                            <div>
+                                <h4>Configurable Reporting Intervals</h4>
+                                <p>Set reporting periods from 30 seconds to 24 hours based on project needs. Triggered event detection for seismic, tilt or vibration anomalies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ══ APPLICATIONS & INDUSTRIES ══ -->
+        <div class="section">
+            <div class="hero-container">
+                <div class="row row-cols-xl-2 row-cols-1 grid-spacer-5">
+
+                    <!-- Applications -->
+                    <div class="col">
+                        <div class="d-flex flex-column gspace-4">
+                            <div class="d-flex flex-column gspace-2">
+                                <div class="sub-heading">
+                                    <i class="fa-regular fa-circle-dot"></i>
+                                    <span>Applications</span>
+                                </div>
+                                <h2 class="title-heading" style="font-size:1.75rem;">Where Our Edge Devices Deploy</h2>
+                                <p style="opacity:0.6;font-size:0.87rem;line-height:1.65;">Sentra edge devices are designed for large-scale, unattended monitoring across surface and underground environments.</p>
+                            </div>
+                            <div class="ed-app-grid">
+                                <div class="ed-app-card">
+                                    <div class="ed-app-icon"><i class="fa-solid fa-bridge"></i></div>
+                                    <div>
+                                        <h5>Bridge Monitoring</h5>
+                                        <p>Continuous vibration, tilt and deflection monitoring on road and rail bridges for structural health assessment.</p>
+                                    </div>
+                                </div>
+                                <div class="ed-app-card">
+                                    <div class="ed-app-icon"><i class="fa-solid fa-building"></i></div>
+                                    <div>
+                                        <h5>Building &amp; High-Rise</h5>
+                                        <p>Track settlement, tilt and seismic response in real time during construction and throughout service life.</p>
+                                    </div>
+                                </div>
+                                <div class="ed-app-card">
+                                    <div class="ed-app-icon"><i class="fa-solid fa-water"></i></div>
+                                    <div>
+                                        <h5>Dam &amp; Reservoir</h5>
+                                        <p>Automated piezometer, tiltmeter and GNSS networks for early warning and seepage detection on embankment dams.</p>
+                                    </div>
+                                </div>
+                                <div class="ed-app-card">
+                                    <div class="ed-app-icon"><i class="fa-solid fa-train-subway"></i></div>
+                                    <div>
+                                        <h5>Tunnels &amp; Metro</h5>
+                                        <p>Underground sensor networks for convergence, vibration and groundwater monitoring in tunnelling projects.</p>
+                                    </div>
+                                </div>
+                                <div class="ed-app-card">
+                                    <div class="ed-app-icon"><i class="fa-solid fa-mountain"></i></div>
+                                    <div>
+                                        <h5>Geotechnical Slopes</h5>
+                                        <p>Landslide and slope stability monitoring with inclinometers, tiltmeters and rainfall sensors on remote terrain.</p>
+                                    </div>
+                                </div>
+                                <div class="ed-app-card">
+                                    <div class="ed-app-icon"><i class="fa-solid fa-industry"></i></div>
+                                    <div>
+                                        <h5>Industrial Infrastructure</h5>
+                                        <p>Pump houses, tanks, silos and industrial facilities where predictive maintenance and vibration data drive uptime.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Industries + Related Products (compact sidebar) -->
+                    <div class="col">
+                        <div class="d-flex flex-column gspace-3">
+
+                            <!-- Industries panel -->
+                            <div class="ed-sidebar-panel">
+                                <div class="ed-sidebar-panel-title">
+                                    <i class="fa-solid fa-industry"></i> Industries Served
+                                </div>
+                                <div class="ed-industry-chips">
+                                    <span class="ed-chip"><i class="fa-solid fa-hard-hat"></i> Civil Infrastructure</span>
+                                    <span class="ed-chip"><i class="fa-solid fa-train"></i> Transport &amp; Rail</span>
+                                    <span class="ed-chip"><i class="fa-solid fa-gem"></i> Mining</span>
+                                    <span class="ed-chip"><i class="fa-solid fa-helmet-safety"></i> Construction</span>
+                                    <span class="ed-chip"><i class="fa-solid fa-city"></i> Smart Cities</span>
+                                    <span class="ed-chip"><i class="fa-solid fa-droplet"></i> Water &amp; Dams</span>
+                                    <span class="ed-chip"><i class="fa-solid fa-solar-panel"></i> Energy &amp; Utilities</span>
+                                    <span class="ed-chip"><i class="fa-solid fa-leaf"></i> Environmental</span>
+                                    <span class="ed-chip"><i class="fa-solid fa-flask"></i> Geotechnical</span>
+                                    <span class="ed-chip"><i class="fa-solid fa-satellite-dish"></i> Geospatial</span>
+                                    <span class="ed-chip"><i class="fa-solid fa-hospital"></i> Critical Facilities</span>
+                                    <span class="ed-chip"><i class="fa-solid fa-wind"></i> Renewables</span>
+                                </div>
+                            </div>
+
+                            <!-- Related Products panel -->
+                            <div class="ed-sidebar-panel">
+                                <div class="ed-sidebar-panel-title">
+                                    <i class="fa-solid fa-microchip"></i> Related Products
+                                </div>
+                                <div class="ed-related-wrap">
+                                    <ul class="ed-products-list" id="edProductsList">
+                                    <li><a href="/products/vibrating-wire.html" class="ed-pl-item" data-img="../image/products/Vibrating_Wire_1.webp" data-name="Vibrating Wire" data-models="VW-S2,VW-S4" data-href="/products/vibrating-wire.html">
+                                        <i class="fa-solid fa-chevron-right ed-pl-arrow"></i>
+                                        <span>Vibrating Wire</span>
+                                    </a></li>
+                                    <li><a href="/products/digital-data-logger.html" class="ed-pl-item" data-img="../image/products/Datalogger_1.webp" data-name="Digital Data Logger" data-models="DDL-1CH,DDL-4CH" data-href="/products/digital-data-logger.html">
+                                        <i class="fa-solid fa-chevron-right ed-pl-arrow"></i>
+                                        <span>Digital Data Logger</span>
+                                    </a></li>
+                                    <li><a href="/products/analog-data-logger.html" class="ed-pl-item" data-img="../image/products/Analog_logger_1.webp" data-name="Analog Data Logger" data-models="ADL-1CH,ADL-4CH" data-href="/products/analog-data-logger.html">
+                                        <i class="fa-solid fa-chevron-right ed-pl-arrow"></i>
+                                        <span>Analog Data Logger</span>
+                                    </a></li>
+                                    <li><a href="/products/piconode-data-logger.html" class="ed-pl-item" data-img="../image/products/Piconode_1.webp" data-name="Piconode Data Logger" data-models="PN-IoT,PN-LoRa" data-href="/products/piconode-data-logger.html">
+                                        <i class="fa-solid fa-chevron-right ed-pl-arrow"></i>
+                                        <span>Piconode Data Logger</span>
+                                    </a></li>
+                                    <li><a href="/products/gnss-meter.html" class="ed-pl-item" data-img="../image/products/GNSSMeter_1.webp" data-name="GNSS Meter" data-models="GNSS-L1,RTK" data-href="/products/gnss-meter.html">
+                                        <i class="fa-solid fa-chevron-right ed-pl-arrow"></i>
+                                        <span>GNSS Meter</span>
+                                    </a></li>
+                                    <li><a href="/products/tiltmeter.html" class="ed-pl-item" data-img="../image/products/tiltmeter_1.webp" data-name="Tiltmeter" data-models="TM-1X,TM-Dual" data-href="/products/tiltmeter.html">
+                                        <i class="fa-solid fa-chevron-right ed-pl-arrow"></i>
+                                        <span>Tiltmeter</span>
+                                    </a></li>
+                                    <li><a href="/products/tiltmeter-event-detection.html" class="ed-pl-item" data-img="../image/products/tiltmeter_event_1.webp" data-name="Tiltmeter Event Detection" data-models="TM-EV,EV-Pro" data-href="/products/tiltmeter-event-detection.html">
+                                        <i class="fa-solid fa-chevron-right ed-pl-arrow"></i>
+                                        <span>Tiltmeter Event Detection</span>
+                                    </a></li>
+                                    <li><a href="/products/laser-tiltmeter.html" class="ed-pl-item" data-img="../image/products/laser_tilitmeter_1.webp" data-name="Laser Tiltmeter" data-models="LT-Basic,LT-Pro" data-href="/products/laser-tiltmeter.html">
+                                        <i class="fa-solid fa-chevron-right ed-pl-arrow"></i>
+                                        <span>Laser Tiltmeter</span>
+                                    </a></li>
+                                    <li><a href="/products/vibration-meter.html" class="ed-pl-item" data-img="../image/products/vibration_meter_1.webp" data-name="Vibration Meter" data-models="VM-3X,VM-3XT" data-href="/products/vibration-meter.html">
+                                        <i class="fa-solid fa-chevron-right ed-pl-arrow"></i>
+                                        <span>Vibration Meter</span>
+                                    </a></li>
+                                    </ul>
+                                    <div class="ed-related-preview">
+                                        <div class="ed-rp-img-wrap">
+                                            <img id="edRpImg" src="../image/products/Vibrating_Wire_1.webp" alt="Vibrating Wire" loading="lazy">
+                                        </div>
+                                        <div class="ed-rp-tags" id="edRpTags"><span class="ed-rp-tag">VW-S2</span><span class="ed-rp-tag">VW-S4</span></div>
+                                        <a class="ed-rp-cta" id="edRpCta" href="/products/vibrating-wire.html">
+                                            View <i class="fa-solid fa-arrow-right" style="font-size:0.55rem;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Section Testimonial -->
+        <div class="section testimonial-section-compact">
+            <div class="hero-container">
+                <div class="d-flex flex-column gspace-3">
+                    <div class="d-flex flex-column flex-xl-row gspace-3">
+                        <div class="testimonial-reviewer-container">
+                            <div class="testimonial-header-wrapper animate-box animated fast animate__animated"
+                                data-animate="animate__fadeInDown">
+                                <div class="card card-testimonial-reviewer">
+                                    <div class="d-flex flex-column flex-md-row flex-xl-column justify-content-between gspace-3">
+                                        <div class="testimonial-reviewer">
+                                            <div class="avatar-container">
+                                                <img src="../image/testimonials/reviews1.webp" alt="Client review avatar" class="avatar">
+                                                <img src="../image/testimonials/reviews2.webp" alt="Client review avatar" class="avatar">
+                                                <img src="../image/testimonials/reviews3.webp" alt="Client review avatar" class="avatar">
+                                            </div>
+                                            <div class="detail">
+                                                <h6>200+</h6>
+                                                <h6>Satisfied Clients</h6>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-rating-container">
+                                            <div class="d-flex flex-column justify-content-center align-items-center gspace-1">
+                                                <div class="counter-box d-flex flex-row align-items-center">
+                                                    <span class="counter" data-target="100"></span>
+                                                    <span class="counter-detail">%</span>
+                                                </div>
+                                                <p>Future Proof</p>
+                                            </div>
+                                            <div class="underline-vertical"></div>
+                                            <div class="d-flex flex-column justify-content-center align-items-center gspace-1">
+                                                <div class="counter-box d-flex flex-row align-items-center">
+                                                    <span class="counter" data-target="95"></span>
+                                                    <span class="counter-detail">%</span>
+                                                </div>
+                                                <p>Scalability</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column flex-md-row flex-xl-column justify-content-center gspace-2">
+                                        <div class="testimonial-header-link-wrapper">
+                                            <i class="fa-regular fa-circle-check accent-color"></i>
+                                            <a href="https://clovetech.com/services/digital-built/">BIM Solutions</a>
+                                        </div>
+                                        <div class="testimonial-header-link-wrapper">
+                                            <i class="fa-regular fa-circle-check accent-color"></i>
+                                            <a href="https://clovetech.com/services/digital-reality/">3D Laser Scanning</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-title-container">
+                            <div class="testimonial-header-wrapper-title animate-box animated animate__animated"
+                                data-animate="animate__fadeInRight">
+                                <div class="card-testimonial-header-title">
+                                    <div class="sub-heading">
+                                        <i class="fa-regular fa-circle-dot"></i>
+                                        <span>What Our Clients Say</span>
+                                    </div>
+                                    <h2 class="title-heading intro-heading-compact">Don't Trust Us, Trust Their Voice</h2>
+                                    <p class="intro-text-compact">Discover how your projects achieve maximum visual impact with Sentra's expert SHM solutions.</p>
+                                    <div class="link-wrapper link-wrapper-btn" style="margin-bottom: 10px;">
+                                        <a href="../testimonial.html">See All Testimonials</a>
+                                        <i class="fa-solid fa-circle-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <div class="overflow-hidden">
+                            <div class="swiper swiperTestimonial">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="card card-testimonial">
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <div class="d-flex flex-row gspace-2">
+                                                    <div class="testimonial-image">
+                                                        <img src="../image/testimonials/reviews1.webp" alt="Testimonial - client photo" class="img-fluid">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="profile-name">Emma Richard</span>
+                                                        <p class="profile-info">CEO Nexa</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fa-solid fa-3x fa-quote-right accent-color"></i>
+                                            </div>
+                                            <p class="testimonial-description">"Sentra completely transformed our way of Success! Their BIM Deployment strategies helped us get a new face for us and hold it up with pride."</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card card-testimonial">
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <div class="d-flex flex-row gspace-2">
+                                                    <div class="testimonial-image">
+                                                        <img src="../image/testimonials/reviews2.webp" alt="Testimonial - client photo" class="img-fluid">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="profile-name">David Mont</span>
+                                                        <p class="profile-info">Marketing Director</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fa-solid fa-3x fa-quote-right accent-color"></i>
+                                            </div>
+                                            <p class="testimonial-description">"Now that we are a part of Sentra Family. We can turn every inch of our ideology to our Strength."</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card card-testimonial">
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <div class="d-flex flex-row gspace-2">
+                                                    <div class="testimonial-image">
+                                                        <img src="../image/testimonials/reviews3.webp" alt="Testimonial - client photo" class="img-fluid">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="profile-name">Sophia Lewis</span>
+                                                        <p class="profile-info">Founder</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fa-solid fa-3x fa-quote-right accent-color"></i>
+                                            </div>
+                                            <p class="testimonial-description">"Sentra's monitoring solutions gave us real-time insights we never had before. Absolutely game-changing for our infrastructure projects."</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card card-testimonial">
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <div class="d-flex flex-row gspace-2">
+                                                    <div class="testimonial-image">
+                                                        <img src="../image/testimonials/reviews4.webp" alt="Testimonial - client photo" class="img-fluid">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="profile-name">James Peterson</span>
+                                                        <p class="profile-info">COO, BrightWave</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fa-solid fa-3x fa-quote-right accent-color"></i>
+                                            </div>
+                                            <p class="testimonial-description">"Highly professional and results-oriented. Sentra's expertise in IoT made us take a huge step into Innovation that we will never deny."</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card card-testimonial">
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <div class="d-flex flex-row gspace-2">
+                                                    <div class="testimonial-image">
+                                                        <img src="../image/testimonials/reviews1.webp" alt="Testimonial - client photo" class="img-fluid">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="profile-name">Emma Richard</span>
+                                                        <p class="profile-info">CEO Nexa</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fa-solid fa-3x fa-quote-right accent-color"></i>
+                                            </div>
+                                            <p class="testimonial-description">"Sentra revolutionized our success journey. Their BIM deployment strategies redefined our operations and helped us present our organization with renewed confidence."</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card card-testimonial">
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <div class="d-flex flex-row gspace-2">
+                                                    <div class="testimonial-image">
+                                                        <img src="../image/testimonials/reviews4.webp" alt="Testimonial - client photo" class="img-fluid">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="profile-name">Michael Torres</span>
+                                                        <p class="profile-info">VP Engineering, InfraCorp</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fa-solid fa-3x fa-quote-right accent-color"></i>
+                                            </div>
+                                            <p class="testimonial-description">"Sentra's real-time monitoring platform gave us complete visibility into our bridge assets. The predictive alerts alone saved us from a potential shutdown."</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card card-testimonial">
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <div class="d-flex flex-row gspace-2">
+                                                    <div class="testimonial-image">
+                                                        <img src="../image/testimonials/reviews1.webp" alt="Testimonial - client photo" class="img-fluid">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="profile-name">Aisha Patel</span>
+                                                        <p class="profile-info">Head of Infrastructure, Metro Rail</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fa-solid fa-3x fa-quote-right accent-color"></i>
+                                            </div>
+                                            <p class="testimonial-description">"The sensor deployment and data analytics from Sentra gave us 24/7 visibility across our entire rail network. We detected anomalies weeks before they could become safety issues."</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card card-testimonial">
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <div class="d-flex flex-row gspace-2">
+                                                    <div class="testimonial-image">
+                                                        <img src="../image/testimonials/reviews4.webp" alt="Testimonial - client photo" class="img-fluid">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="profile-name">James Peterson</span>
+                                                        <p class="profile-info">COO, BrightWave</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fa-solid fa-3x fa-quote-right accent-color"></i>
+                                            </div>
+                                            <p class="testimonial-description">"Sentra's IoT expertise pushed us to embrace innovation like never before. Their professionalism and focus on results made all the difference."</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══ CTA BANNER ══ -->
+        <div class="section">
+            <div class="hero-container">
+                <div class="ed-cta-banner animate-box animated animate__animated" data-animate="animate__fadeInUp">
+                    <div class="ed-cta-left">
+                        <h3>Ready to Deploy Smart Infrastructure Monitoring?</h3>
+                        <p>Talk to our engineering team about the right edge device combination for your project — bridges, tunnels, dams, slopes or industrial facilities. Custom solutions, fast turnaround.</p>
+                    </div>
+                    <div class="ed-cta-btns">
+                        <a href="../contact.html" class="btn btn-accent btn-quote">
+                            <span class="btn-title"><span>Get a Quote</span></span>
+                            <span class="icon-circle"><i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                        <a href="../case-studies/bridgepluse-ai-and-drone-technology-for-bridge-health-monitoring.html" class="btn btn-primary">
+                            <span class="btn-title"><span>View Case Study</span></span>
+                            <span class="icon-circle"><i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ══ FAQs ══ -->
+        <div class="section">
+            <div class="hero-container">
+                <div class="row row-cols-xl-2 row-cols-1 grid-spacer-5">
+                    <div class="col col-xl-5">
+                        <div class="faq-title-container">
+                            <div class="sub-heading">
+                                <i class="fa-regular fa-circle-dot"></i>
+                                <span>Frequently Asked Questions</span>
+                            </div>
+                            <h2 class="title-heading" style="font-size:clamp(22px,3.5vw,36px);">Got Questions About Our Edge Devices?</h2>
+                            <p style="opacity:0.6;font-size:0.87rem;line-height:1.65;margin-top:1rem;">Can't find what you're looking for? <a href="../contact.html" style="color:var(--accent-color);">Contact our team</a> — we're happy to help.</p>
+                        </div>
+                    </div>
+                    <div class="col col-xl-7">
+                        <div class="d-flex flex-column">
+                            <div class="accordion" id="faqAccordion1">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                            What types of structures can be monitored?
+                                        </button>
+                                    </h2>
+                                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion1">
+                                        <div class="accordion-body">
+                                            <div class="accordion-spacer"></div>
+                                            <p>Sentra edge devices are suitable for bridges, buildings, tunnels, dams, industrial facilities, wind turbines, slopes, retaining walls and any structure where continuous vibration, tilt or deformation monitoring is critical for safety and performance.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                            How is the device powered and what's the battery life?
+                                        </button>
+                                    </h2>
+                                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion1">
+                                        <div class="accordion-body">
+                                            <div class="accordion-spacer"></div>
+                                            <p>Devices use high-energy C or D cell batteries with up to 25 years of field life depending on reporting interval. Batteries are user-replaceable without tools. AC/DC power input and solar panel integration options are also available for continuous or solar-powered deployments.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                            What connectivity options are available?
+                                        </button>
+                                    </h2>
+                                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion1">
+                                        <div class="accordion-body">
+                                            <div class="accordion-spacer"></div>
+                                            <p>Our devices support LoRaWAN for long-range wireless communication (up to 15 km), 4G LTE for cellular connectivity, Bluetooth for local mobile app configuration, and RS-485 for wired integration with existing SCADA or data acquisition systems.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                            Can the devices withstand harsh weather and environments?
+                                        </button>
+                                    </h2>
+                                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion1">
+                                        <div class="accordion-body">
+                                            <div class="accordion-spacer"></div>
+                                            <p>Yes. All devices are rated IP68 for full submersion protection and carry industrial-grade certification. Operating temperature range is −40°C to +85°C, making them suitable for underground mines, coastal bridges, mountain slopes and tropical environments.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                            How is data accessed and analysed?
+                                        </button>
+                                    </h2>
+                                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion1">
+                                        <div class="accordion-body">
+                                            <div class="accordion-spacer"></div>
+                                            <p>Data is transmitted to Sentra's cloud platform and accessible via web dashboards or mobile apps. The platform includes real-time visualisation, historical trend analysis, automated threshold alerts, and export integrations for BIM and GIS platforms.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                                            How many devices can one network support?
+                                        </button>
+                                    </h2>
+                                    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion1">
+                                        <div class="accordion-body">
+                                            <div class="accordion-spacer"></div>
+                                            <p>A single Sentra LoRaWAN gateway network can support 1000+ wireless sensors and data loggers simultaneously — ideal for large-scale infrastructure projects like dam instrumentation networks or city-wide bridge monitoring programmes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div id="footer"></div>
+    </footer>
+
+    <script src="../js/vendor/jquery.min.js"></script>
+    <script src="../js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="../js/vendor/swiper-bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/swiper-script.js"></script>
+    <script src="../js/submit-form.js"></script>
+    <script src="../js/video_embedded.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+    <script src="../js/chatbot-widget.js"></script>
+
+    <script>
+    // Related Products hover preview
+    (function () {
+        var items = document.querySelectorAll('#edProductsList .ed-pl-item');
+        var rpImg = document.getElementById('edRpImg');
+        var rpTags = document.getElementById('edRpTags');
+        var rpCta = document.getElementById('edRpCta');
+        if (!items.length || !rpImg) return;
+        items[0] && items[0].classList.add('ed-pl-active');
+        items.forEach(function (item) {
+            item.addEventListener('mouseenter', function () {
+                items.forEach(function (i) { i.classList.remove('ed-pl-active'); });
+                item.classList.add('ed-pl-active');
+                rpImg.classList.add('ed-rp-fade');
+                setTimeout(function () {
+                    rpImg.src = item.dataset.img || '';
+                    rpImg.alt = item.dataset.name || '';
+                    rpImg.classList.remove('ed-rp-fade');
+                }, 180);
+                var models = item.dataset.models ? item.dataset.models.split(',') : [];
+                rpTags.innerHTML = models.map(function (m) {
+                    return '<span class="ed-rp-tag">' + m.trim() + '</span>';
+                }).join('');
+                if (rpCta) rpCta.href = item.dataset.href || '#';
+            });
+        });
+    })();
+    </script>
+
+    <script>
+        // Product carousel
+        const carouselSlides = Array.from(document.querySelectorAll('#carousel-slider .carousel-slide'));
+        let carouselIndex = 0;
+        let carouselTimer = null;
+
+        function showCarouselSlide(i) {
+            i = (i + carouselSlides.length) % carouselSlides.length;
+            carouselSlides.forEach((s, idx) => {
+                s.className = 'carousel-slide';
+                if (idx === i) s.classList.add('carousel-active');
+                else if (idx === (i + 1) % carouselSlides.length) s.classList.add('carousel-next');
+                else if (idx === (i - 1 + carouselSlides.length) % carouselSlides.length) s.classList.add('carousel-prev');
+            });
+            carouselIndex = i;
+        }
+
+        showCarouselSlide(0);
+        carouselTimer = setInterval(() => showCarouselSlide(carouselIndex + 1), 5000);
+
+        document.querySelector('.carousel-prev-btn')?.addEventListener('click', () => {
+            showCarouselSlide(carouselIndex - 1);
+            clearInterval(carouselTimer);
+            carouselTimer = setInterval(() => showCarouselSlide(carouselIndex + 1), 5000);
+        });
+        document.querySelector('.carousel-next-btn')?.addEventListener('click', () => {
+            showCarouselSlide(carouselIndex + 1);
+            clearInterval(carouselTimer);
+            carouselTimer = setInterval(() => showCarouselSlide(carouselIndex + 1), 5000);
+        });
+
+        const carouselEl = document.getElementById('carousel-slider');
+        carouselEl?.addEventListener('mouseenter', () => clearInterval(carouselTimer));
+        carouselEl?.addEventListener('mouseleave', () => carouselTimer = setInterval(() => showCarouselSlide(carouselIndex + 1), 3000));
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,455 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How Clove Technologies delivered the Amaravati Integrated Command Control Centre (AICCC) — a Digital Twin, IoT and BIM-powered Smart City command center." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Building Resilient Smart Cities with Data-Driven Insights" />
+    <meta property="og:description" content="How Clove Technologies delivered the Amaravati Integrated Command Control Centre (AICCC) — a Digital Twin, IoT and BIM-powered Smart City command center for real-time governance and asset intelligence." />
+    <meta property="og:url" content="https://sentratech.in/article/building-resilient-smart-cities-with-data-driven-insights.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://sentratech.in/image/articles/article_Building%20Resilient%20Smart%20Cities%20with%20Data-Driven%20Insights.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Building Resilient Smart Cities with Data-Driven Insights" />
+    <meta name="twitter:description" content="How Clove Technologies delivered the Amaravati Integrated Command Control Centre (AICCC) — a Digital Twin, IoT and BIM-powered Smart City command center." />
+    <meta name="twitter:image" content="https://sentratech.in/image/articles/article_Building%20Resilient%20Smart%20Cities%20with%20Data-Driven%20Insights.webp" />
+    <meta name="twitter:site" content="@sentratech" />
+    <meta name="twitter:image:width" content="1200" />
+    <meta name="twitter:image:height" content="630" />
+    <title>Building Resilient Smart Cities with Data-Driven Insights</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="icon" href="/image/branding/favicon.webp" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/branding/favicon.webp">
+    <link rel="stylesheet" href="../css/chatbot.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/vendor/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/detail-page.css">
+    <style>
+        .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+        .word { transition: background-color 0.12s ease; padding: 0 1px; border-radius: 2px; }
+        .highlight { background-color: #f48120; transition: background-color 0.15s ease; }
+        body.lightmode .highlight { background-color: #ffe082; }
+        .conclusion-btn-wrapper { margin-bottom: 30px; }
+        body.dark-mode .detail-hero .hero-text-col, body.dark-mode .detail-article, body.dark-mode .hero-title { color: #fff; }
+        body.lightmode .hero-title { color: #111; }
+        body.dark-mode .hero-intro p, body.dark-mode .detail-article p, body.dark-mode .detail-article li { color: rgba(255,255,255,0.6); }
+        body.lightmode .hero-intro p, body.lightmode .detail-article p, body.lightmode .detail-article li { color: rgba(0,0,0,0.6); }
+    </style>
+    <link rel="canonical" href="https://sentratech.in/article/building-resilient-smart-cities-with-data-driven-insights.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Building Resilient Smart Cities with Data-Driven Insights",
+      "description": "How Clove Technologies delivered the Amaravati Integrated Command Control Centre (AICCC) — a Digital Twin, IoT and BIM-powered Smart City command center for real-time governance and asset intelligence.",
+      "datePublished": "2025-11-03",
+      "dateModified": "2025-11-03",
+      "author": {
+        "@type": "Organization",
+        "name": "Sentra Technologies"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sentra",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://sentratech.in/image/articles/article_Building%20Resilient%20Smart%20Cities%20with%20Data-Driven%20Insights.webp"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://sentratech.in/article/building-resilient-smart-cities-with-data-driven-insights.html"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://sentratech.in/image/articles/article_Building%20Resilient%20Smart%20Cities%20with%20Data-Driven%20Insights.webp"
+      },
+      "inLanguage": "en"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".detail-article h2, .detail-article h4", ".detail-article p", ".hero-intro"]
+      },
+      "url": "https://sentratech.in/article/building-resilient-smart-cities-with-data-driven-insights.html"
+    }
+    </script>
+    
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo"><img src="../image/branding/sentra_white_1.svg" alt="Sentra"></div>
+            <div class="preloader-logo-sub">Smart · Secure · Scalable</div>
+            <div class="preloader-counter">
+                <span id="preloader-count">0</span>
+                <span class="preloader-percent">%</span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div id="header"></div>
+    </header>
+
+    <aside>
+        <div id="edit-sidebar"></div>
+    </aside>
+
+    <aside>
+        <div id="sidebar"></div>
+    </aside>
+
+    <main>
+        <!-- Hero -->
+        <section class="detail-hero">
+            <a href="../resources.html#articles" class="back-btn"><i class="fa-solid fa-chevron-left" style="font-size:10px"></i> Back to Resources</a>
+            <div class="hero-bg-dots"></div>
+            <div class="hero-glow orange-glow"></div>
+            <div class="hero-top-line"></div>
+            <div class="hero-container-inner">
+                <div class="hero-grid">
+                    <div class="hero-text-col">
+                        <div class="hero-meta-row">
+                            <span class="hero-badge teal">Smart Cities</span>
+                            <span class="hero-meta-icon"><i class="fa-regular fa-calendar"></i> Nov 3, 2025</span>
+                            <span class="hero-meta-icon"><i class="fa-regular fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h1 class="hero-title">Building Resilient Smart Cities with Data-Driven Insights</h1>
+                        <div class="hero-intro">
+                            <p>Smart cities don't run on intention. They run on real-time intelligence, connected infrastructure, and the ability to act before problems escalate — exactly what Clove Technologies delivered at Amaravati's Integrated Command Control Centre.</p>
+                        </div>
+                    </div>
+                    <div class="hero-image-col">
+                        <div class="hero-image-wrap">
+                            <img src="../image/articles/article_Building%20Resilient%20Smart%20Cities%20with%20Data-Driven%20Insights.webp" alt="Smart City Data-Driven Insights" loading="eager">
+                            <div class="hero-image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <div class="detail-content-wrapper">
+            <div class="detail-grid">
+                <article class="detail-article">
+                    <div class="tts-bar">
+                        <button id="ttsPlayBtn" class="tts-btn"><i class="fas fa-play"></i></button>
+                        <div class="tts-progress" id="ttsProgressBar">
+                            <div id="progressFill" class="tts-fill"></div>
+                        </div>
+                        <span class="tts-label">Listen</span>
+                    </div>
+
+                    <div class="detail-meta-bar">
+                        <div class="detail-meta-left">
+                            <span class="detail-meta-item"><i class="fa-regular fa-calendar"></i> Nov 3, 2025</span>
+                            <span class="detail-meta-item"><i class="fa-regular fa-folder"></i> Smart Cities</span>
+                        </div>
+                        <span class="detail-meta-item"><i class="fa-regular fa-user"></i> Yuva Subharam <a href="https://www.linkedin.com/in/yuva-subharam-vasamsetti-75a39117a/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a> | Sentra Technologies</span>
+                    </div>
+
+                    <div id="ttsContent">
+                        <p>Across government bodies and enterprise operations alike, the demand for integrated command and control platforms is accelerating. Digital Twin technology, IoT-driven monitoring, and BIM-enabled asset visibility are no longer future-state concepts — they are operational imperatives. Clove Technologies is delivering them today.</p>
+
+                        <h2 id="specsSection">Integrated Command Intelligence for Smarter Cities &amp; Enterprises</h2>
+                        <p>Smart cities don't run on intention. They run on real-time intelligence, connected infrastructure, and the ability to act before problems escalate. That principle sits behind every command center Clove Technologies builds — whether for a government-scale smart city or a distributed enterprise campus.</p>
+
+                        <h2 id="Para1Section">Project Spotlight: Amaravati Integrated Command Control Centre (AICCC)</h2>
+                        <p style="font-size:0.8rem;font-weight:700;letter-spacing:0.02em;color:var(--accent-color);text-transform:uppercase;margin-bottom:0.5rem;">Smart City &middot; Digital Twin &middot; IoT / Real-Time Monitoring &middot; BIM</p>
+                        <p>Clove Technologies designed and delivered the AICCC — a fully operational Smart City command center for Amaravati, the capital city greenfield project of Andhra Pradesh. At its core is a Digital Twin framework that synchronises physical infrastructure with live data streams, enabling Asset Intelligence at a city scale. From IoT-powered real-time monitoring to BIM-integrated lifecycle management, the AICCC represents the most complete implementation of integrated command infrastructure we have delivered to date.</p>
+
+                        <h2 id="DescSection">Key Functionalities Enabled by Clove Technologies</h2>
+
+                        <h4>IoT / Real-Time Monitoring</h4>
+                        <ul class="blog-bullets">
+                            <li><strong>24×7 Multi-Domain Monitoring</strong> — IoT sensors feeding live operational data across utilities, infrastructure, and city services.</li>
+                            <li><strong>Drone &amp; CCTV Field Visibility</strong> — Integrated aerial and ground-level IoT feeds delivering field intelligence to command operators.</li>
+                        </ul>
+
+                        <h4>Smart City / Command Center</h4>
+                        <ul class="blog-bullets">
+                            <li><strong>Real-Time Construction &amp; Approval Tracking</strong> — Live progress dashboards and digital approval workflows managed through the command center.</li>
+                            <li><strong>Multi-Channel Grievance Platform</strong> — Citizen feedback routed, tracked, and resolved through the Smart City command layer.</li>
+                            <li><strong>Outreach Campaign Analytics</strong> — Measurable public engagement data surfaced through the command center's analytics dashboard.</li>
+                        </ul>
+
+                        <h4>BIM / Scan to CAD</h4>
+                        <ul class="blog-bullets">
+                            <li><strong>BIM-Enabled Lifecycle Readiness</strong> — BIM models, including Scan to CAD conversions of existing structures, linked to Digital Twin asset lifecycle workflows.</li>
+                        </ul>
+
+                        <h4>Asset Intelligence</h4>
+                        <ul class="blog-bullets">
+                            <li><strong>Land Pooling Transparency</strong> — Asset Intelligence layer tracking land pooling records, ownership data, and status in real time.</li>
+                            <li><strong>DLI/DLR Funding Readiness</strong> — Asset-linked compliance reporting structured for disbursement and milestone accountability.</li>
+                        </ul>
+
+                        <h2 id="Para2Section">Why This Matters for Cities and Enterprises</h2>
+                        <p>The AICCC proves that Digital Twin technology is no longer confined to single-asset deployments. When scaled to a Smart City environment, Digital Twin infrastructure creates a living, continuously updated model of an entire city, enabling predictive maintenance, funding accountability, and citizen-responsive governance from one command center.</p>
+                        <p>For enterprise leaders managing distributed infrastructure campuses, industrial facilities, and logistics networks, the same Asset Intelligence principles apply. BIM-enabled Digital Twins, IoT real-time monitoring, and Scan to CAD data capture give operations teams the visibility to move from reactive management to proactive control.</p>
+                        <p>Clove Technologies delivers this convergence not as a product, but as an engineered implementation tailored to your environment.</p>
+                    </div>
+
+                    <div class="detail-cta">
+                        <h2 id="ConclusionSection">Build Your Digital Twin Command Center</h2>
+                        <p>Whether you are planning a Smart City command center, an enterprise Asset Intelligence platform, or an IoT-integrated operations hub, Clove Technologies has the implementation expertise to make it real. Let's start with your specific challenge.</p>
+                        <a class="cta-btn" href="/contact.html">Schedule a strategic discussion <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <aside class="detail-sidebar">
+                    <div class="sidebar-sticky">
+                        <div class="sidebar-card toc">
+                            <h3><i class="fa-solid fa-list"></i> Table of Contents</h3>
+                            <div id="tocContainer">
+                                <button class="toc-item" data-target="specsSection">Integrated Command Intelligence</button>
+                                <button class="toc-item" data-target="Para1Section">Project Spotlight: AICCC</button>
+                                <button class="toc-item" data-target="DescSection">Key Functionalities</button>
+                                <button class="toc-item" data-target="Para2Section">Why This Matters</button>
+                                <button class="toc-item" data-target="ConclusionSection">Build Your Command Center</button>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h3><i class="fa-regular fa-share-from-square"></i> Share</h3>
+                            <div class="sidebar-share-icons">
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://sentratech.in/article/building-resilient-smart-cities-with-data-driven-insights.html" target="_blank" class="share-icon-link" aria-label="Share on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://x.com/intent/tweet?url=https://sentratech.in/article/building-resilient-smart-cities-with-data-driven-insights.html&text=Building%20Resilient%20Smart%20Cities%20with%20Data-Driven%20Insights" target="_blank" class="share-icon-link" aria-label="Share on Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://sentratech.in/article/building-resilient-smart-cities-with-data-driven-insights.html" target="_blank" class="share-icon-link" aria-label="Share on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://api.whatsapp.com/send?text=Building%20Resilient%20Smart%20Cities%20with%20Data-Driven%20Insights%20https://sentratech.in/article/building-resilient-smart-cities-with-data-driven-insights.html" target="_blank" class="share-icon-link" aria-label="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+
+                        <a href="../resources.html#articles" class="back-btn" style="position:static;display:flex;width:100%;justify-content:center;"><i class="fa-solid fa-chevron-left" style="font-size:10px"></i> Back to Resources</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <!-- More Articles -->
+        <div class="hero-container" style="max-width:1280px;margin:0 auto;padding:0 1rem 4rem">
+            <div class="trending-section">
+                <div class="trending-header">
+                    <span class="trending-dot"></span>
+                    <h2>More Articles</h2>
+                </div>
+                <div class="trending-grid">
+                    <a href="../article/revolutionizing-infrastructure-monitoring-with-iot.html" class="trending-card">
+                        <div class="trending-card-thumb"><img src="../image/blogs/1st_article_image_1.webp" alt="IoT Infrastructure" style="width:100%;height:100%;object-fit:cover;"></div>
+                        <div class="trending-card-body">
+                            <h4>Revolutionizing Infrastructure Monitoring with IoT</h4>
+                            <div class="trending-card-meta"><span>IoT Innovation</span><span>&middot;</span><span>Article</span></div>
+                        </div>
+                    </a>
+                    <a href="../article/intelligent-pump-house-monitoring-and-control.html" class="trending-card">
+                        <div class="trending-card-thumb"><img src="../image/blogs/banners/blogs_intelligent-pump-house-monitoring-and-control.webp" alt="Pump House Monitoring" style="width:100%;height:100%;object-fit:cover;"></div>
+                        <div class="trending-card-body">
+                            <h4>Intelligent Pump House Monitoring &amp; Control</h4>
+                            <div class="trending-card-meta"><span>Smart Pumping</span><span>&middot;</span><span>Article</span></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer"></div>
+    </footer>
+
+    <script>
+        (function () {
+            const synth = window.speechSynthesis;
+            let voices = [], isPlaying = false, isPaused = false, totalWords = 0;
+            let currentWordIndex = 0, wordSpans = [], paragraphs = [], currentParagraphIndex = 0;
+            let activeUtterance = null, fallbackTimer = null, boundarySupported = false;
+            let autoScrollEnabled = true, mouseIdleTimer;
+
+            const ttsContent = document.getElementById('ttsContent');
+            const playBtn = document.getElementById('ttsPlayBtn');
+            const progressFill = document.getElementById('progressFill');
+            const progressBar = document.getElementById('ttsProgressBar');
+
+            function loadVoices() { voices = synth.getVoices() || []; }
+            loadVoices();
+            if (speechSynthesis.onvoiceschanged !== undefined) speechSynthesis.onvoiceschanged = loadVoices;
+
+            function pickVoice() {
+                return voices.find(v => /Google US English|Samantha|en-US/i.test(v.name + ' ' + v.lang)) || voices[0];
+            }
+
+            document.addEventListener('mousemove', () => {
+                autoScrollEnabled = false;
+                clearTimeout(mouseIdleTimer);
+                mouseIdleTimer = setTimeout(() => { autoScrollEnabled = true; }, 5000);
+            });
+
+            function wrapWords() {
+                ttsContent.querySelectorAll('p, h2, h4, li').forEach(el => {
+                    if (el.querySelector('.word')) return;
+                    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null, false);
+                    const nodes = [];
+                    let n;
+                    while (n = walker.nextNode()) { if (n.textContent.trim()) nodes.push(n); }
+                    nodes.forEach(tn => {
+                        const frag = document.createDocumentFragment();
+                        tn.textContent.split(/(\s+)/).forEach(tok => {
+                            if (/\s+/.test(tok)) { frag.appendChild(document.createTextNode(tok)); }
+                            else if (tok) { const s = document.createElement('span'); s.className = 'word'; s.textContent = tok; frag.appendChild(s); totalWords++; }
+                        });
+                        tn.parentNode.replaceChild(frag, tn);
+                    });
+                });
+                wordSpans = Array.from(ttsContent.querySelectorAll('.word'));
+            }
+            wrapWords();
+
+            function getParagraphs() { paragraphs = Array.from(ttsContent.querySelectorAll('p, h2, h4, li')).filter(el => el.textContent.trim()); }
+            getParagraphs();
+
+            function computeBoundaries(text) {
+                const words = text.split(/\s+/).filter(Boolean), bounds = [];
+                let cursor = 0;
+                words.forEach(w => { const f = text.indexOf(w, cursor); bounds.push(f === -1 ? cursor : f); cursor = (f === -1 ? cursor : f) + w.length; });
+                return bounds;
+            }
+
+            function scrollCenter(el) { if (el && autoScrollEnabled) el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+            function clearTimer() { if (fallbackTimer) { clearInterval(fallbackTimer); fallbackTimer = null; } }
+
+            function speakFrom(index) {
+                clearTimer(); boundarySupported = false;
+                if (index >= paragraphs.length) {
+                    isPlaying = isPaused = false;
+                    playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                    currentParagraphIndex = currentWordIndex = 0;
+                    progressFill.style.width = '0%';
+                    return;
+                }
+                currentParagraphIndex = index;
+                const p = paragraphs[index], text = p.textContent.trim();
+                if (!text) { speakFrom(index + 1); return; }
+                const bounds = computeBoundaries(text);
+                const spans = Array.from(p.querySelectorAll('.word')).filter(s => s.textContent.trim());
+                spans.forEach(w => w.classList.remove('highlight'));
+                const u = new SpeechSynthesisUtterance(text);
+                activeUtterance = u; u.lang = 'en-US'; u.rate = 1.1; u.pitch = 1.1;
+                const v = pickVoice(); if (v) u.voice = v;
+                const fps = Math.max(120, Math.round(1000 / (3.0 * u.rate)));
+                u.onstart = () => {
+                    isPlaying = true; isPaused = false;
+                    playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                    currentWordIndex = 0;
+                    if (spans[0]) { spans[0].classList.add('highlight'); scrollCenter(spans[0]); }
+                    fallbackTimer = setInterval(() => {
+                        if (boundarySupported || !isPlaying || isPaused) { clearTimer(); return; }
+                        if (currentWordIndex < spans.length - 1) {
+                            spans[currentWordIndex].classList.remove('highlight');
+                            spans[++currentWordIndex].classList.add('highlight');
+                            scrollCenter(spans[currentWordIndex]);
+                        }
+                    }, fps);
+                };
+                u.onboundary = (ev) => {
+                    boundarySupported = true; clearTimer();
+                    const ci = ev.charIndex || 0;
+                    let wi = 0;
+                    for (let i = 0; i < bounds.length; i++) {
+                        const end = i < bounds.length - 1 ? bounds[i + 1] : text.length;
+                        if (ci >= bounds[i] && ci < end) { wi = i; break; }
+                        if (i === bounds.length - 1) wi = bounds.length - 1;
+                    }
+                    wi = Math.min(Math.max(wi, 0), spans.length - 1);
+                    if (wi !== currentWordIndex) {
+                        if (spans[currentWordIndex]) spans[currentWordIndex].classList.remove('highlight');
+                        if (spans[wi]) { spans[wi].classList.add('highlight'); scrollCenter(spans[wi]); }
+                        currentWordIndex = wi;
+                    }
+                };
+                u.onend = () => {
+                    p.querySelectorAll('.word.highlight').forEach(w => w.classList.remove('highlight'));
+                    activeUtterance = null; clearTimer();
+                    if (isPlaying && !isPaused) speakFrom(index + 1);
+                    else { isPlaying = isPaused = false; playBtn.innerHTML = '<i class="fas fa-play"></i>'; }
+                };
+                u.onerror = () => { activeUtterance = null; isPlaying = false; clearTimer(); playBtn.innerHTML = '<i class="fas fa-play"></i>'; };
+                try { synth.speak(u); } catch(e) {}
+                progressFill.style.width = ((index + 1) / paragraphs.length * 100) + '%';
+            }
+
+            playBtn.addEventListener('click', () => {
+                if (!voices.length) loadVoices();
+                if (isPlaying && !isPaused) { synth.pause(); isPaused = true; isPlaying = false; playBtn.innerHTML = '<i class="fas fa-play"></i>'; }
+                else if (isPaused) { synth.resume(); isPaused = false; isPlaying = true; playBtn.innerHTML = '<i class="fas fa-pause"></i>'; }
+                else { if (currentParagraphIndex >= paragraphs.length) currentParagraphIndex = 0; speakFrom(currentParagraphIndex); }
+            });
+
+            progressBar.addEventListener('click', (e) => {
+                const pct = (e.clientX - progressBar.getBoundingClientRect().left) / progressBar.clientWidth;
+                if (synth.speaking) synth.cancel();
+                wordSpans.forEach(w => w.classList.remove('highlight'));
+                clearTimer();
+                currentParagraphIndex = Math.floor(pct * paragraphs.length);
+                speakFrom(currentParagraphIndex);
+            });
+
+            window.addEventListener('beforeunload', () => { if (synth.speaking) synth.cancel(); });
+        })();
+    </script>
+
+    <script src="../js/vendor/jquery.min.js"></script>
+    <script src="../js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="../js/vendor/swiper-bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/swiper-script.js"></script>
+    <script src="../js/submit-form.js"></script>
+    <script src="../js/video_embedded.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+    <script src="../js/chatbot-widget.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var tocItems = document.querySelectorAll('.toc-item');
+            var sections = [];
+            tocItems.forEach(function (btn) {
+                var target = document.getElementById(btn.getAttribute('data-target'));
+                if (target) sections.push({ btn: btn, target: target });
+                btn.addEventListener('click', function () {
+                    var el = document.getElementById(this.getAttribute('data-target'));
+                    if (el) {
+                        var h = (document.querySelector('header') || {getBoundingClientRect:()=>({height:0})}).getBoundingClientRect().height;
+                        window.scrollTo({ top: Math.max(el.getBoundingClientRect().top + window.scrollY - h - 80, 0), behavior: 'smooth' });
+                    }
+                });
+            });
+            window.addEventListener('scroll', function () {
+                var scrollY = window.scrollY + 200, active = null;
+                sections.forEach(function (s) { if (s.target.offsetTop <= scrollY) active = s; });
+                tocItems.forEach(function (b) { b.classList.remove('active'); });
+                if (active) active.btn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(agent-browser resize *)",
+      "Bash(agent-browser get *)",
+      "Bash(agent-browser tab *)",
+      "Bash(agent-browser --session newsletter-verify open \"file:///C:/Users/admin-it/Downloads/Sentra-V1.2/Sentra-Tech-main/index.html\")",
+      "Bash(agent-browser --session newsletter-verify wait --load networkidle)"
+    ]
+  }
+}

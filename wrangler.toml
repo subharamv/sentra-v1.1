@@ -1,0 +1,16 @@
+name = "veronica-sentra"
+main = "index.js"
+compatibility_date = "2026-02-07"
+workers_dev = true
+
+[[kv_namespaces]]
+binding = "ADMIN_SESSIONS"
+id = "fbbe7f4b8bc54f44989c1202a0095497"
+
+[env.production]
+name = "veronica-sentra-prod"
+vars = { ENVIRONMENT = "production" }
+
+[[env.production.kv_namespaces]]
+binding = "ADMIN_SESSIONS"
+id = "fbbe7f4b8bc54f44989c1202a0095497"

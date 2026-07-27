@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -iE \"^blogs$|^article$\")",
+      "Bash(python -c ' *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8000/index.html)",
+      "Bash(agent-browser console *)",
+      "Bash(agent-browser screenshot *)",
+      "Bash(agent-browser eval *)",
+      "Bash(agent-browser set *)",
+      "Bash(agent-browser open *)",
+      "Bash(agent-browser wait *)",
+      "Bash(agent-browser close *)",
+      "Bash(agent-browser find *)",
+      "Bash(agent-browser snapshot *)",
+      "Bash(agent-browser scroll *)",
+      "WebFetch(domain:axisxd.vercel.app)",
+      "Skill(agent-browser)",
+      "Skill(agent-browser:*)",
+      "Read(//c/Users/admin-it/Downloads/axisxd-main/src/pages/resources/**)",
+      "Read(//c/Users/admin-it/Downloads/axisxd-main/src/data/**)",
+      "WebFetch(domain:www.worldsensing.com)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 \"C:/Users/admin-it/AppData/Local/Temp/fix_related.py\")",
+      "Read(//c/Users/admin-it/Downloads/products cinematic images/**)",
+      "Bash(node -e ' *)",
+      "PowerShell(node \"C:\\\\Users\\\\admin-it\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-admin-it-Downloads-Sentra-V1-2-Sentra-Tech-main\\\\27fc81c7-88af-4785-91a9-853960da39cd\\\\scratchpad\\\\patch_chatbot.js\")",
+      "Bash(curl -s -X POST http://localhost:3000/api/newsletter -H \"Content-Type: application/json\" -d '{\"email\":\"test@example.com\"}')",
+      "Bash(curl -s -X POST http://localhost:3000/api/contact -H \"Content-Type: application/json\" -d '{\"firstName\":\"Yuva\",\"lastName\":\"Vasamsetti\",\"email\":\"subharam.v@clovetech.com\",\"subject\":\"Test\",\"message\":\"Test msg\"}')",
+      "PowerShell(netstat -ano)",
+      "Read(//c/Users/admin-it/Downloads/Sentra-V1.2/**)",
+      "Bash(powershell -Command ' *)",
+      "Bash(curl -s -o - -w \"\\\\nHTTP_STATUS:%{http_code}\" -X POST \"https://veronica-sentra.subharam-v.workers.dev/api/user-profile\" -H \"Content-Type: application/json\" -d \"{\\\\\"name\\\\\":\\\\\"DiagnosticTest\\\\\",\\\\\"email\\\\\":\\\\\"diag@diagtest.com\\\\\"}\")",
+      "Bash(npx wrangler *)"
+    ]
+  }
+}

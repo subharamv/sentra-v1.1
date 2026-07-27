@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+      <!-- Homepage -->
+      <url>
+            <loc>https://sentratech.in/index.html</loc>
+            <lastmod>2026-06-29</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>1.0</priority>
+      </url>
+
+      <!-- Industries Hub Page -->
+      <url>
+            <loc>https://sentratech.in/industries.html</loc>
+            <lastmod>2026-06-29</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.9</priority>
+      </url>
+
+      <!-- Industry Verticals -->
+      <url>
+            <loc>https://sentratech.in/industries/railway-infrastructure-monitoring.html</loc>
+            <lastmod>2026-06-29</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/industries/bridges-highways-monitoring.html</loc>
+            <lastmod>2026-06-29</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/industries/buildings-highrise-monitoring.html</loc>
+            <lastmod>2026-06-29</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/industries/dams-reservoirs-monitoring.html</loc>
+            <lastmod>2026-06-29</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/industries/mining-geotechnical-monitoring.html</loc>
+            <lastmod>2026-06-29</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/industries/ports-marine-monitoring.html</loc>
+            <lastmod>2026-06-29</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/industries/construction-tunnelling-monitoring.html</loc>
+            <lastmod>2026-06-29</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/industries/industrial-facilities-monitoring.html</loc>
+            <lastmod>2026-06-29</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+      </url>
+
+      <!-- About Pages -->
+      <url>
+            <loc>https://sentratech.in/about.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+      </url>
+     
+      <!-- Products Page -->
+      <url>
+            <loc>https://sentratech.in/products.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.9</priority>
+      </url>
+
+      <!-- Contact Page -->
+      <url>
+            <loc>https://sentratech.in/contact.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>yearly</changefreq>
+            <priority>0.5</priority>
+      </url>
+
+      <!-- Resources Hub Page (unifies Blogs, Case Studies, Articles) -->
+      <url>
+            <loc>https://sentratech.in/resources.html</loc>
+            <lastmod>2026-06-16</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.7</priority>
+      </url>
+
+      <!-- Article Pages -->
+      <url>
+            <loc>https://sentratech.in/article/building-resilient-smart-cities-with-data-driven-insights.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/article/revolutionizing-infrastructure-monitoring-with-iot.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/article/intelligent-pump-house-monitoring-and-control.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/article/track-to-the-future-remote-monitoring-rail-infrastructure.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/article/xgrids-authorized-reseller-india.html</loc>
+            <lastmod>2026-07-27</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/article/worldsensing-official-reseller-india.html</loc>
+            <lastmod>2026-07-27</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+
+      <!-- Case Studies -->
+      <url>
+            <loc>https://sentratech.in/case-studies/bridgepluse-ai-and-drone-technology-for-bridge-health-monitoring.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/case-studies/iot-bridge-monitoring-and-sensor-installation-on-railway-bridges.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/case-studies/structural-health-monitoring-of-highway-bridges.html</loc>
+            <lastmod>2026-07-27</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+
+      <!-- Solution Page -->
+      <url>
+            <loc>https://sentratech.in/solutions.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.9</priority>
+      </url>
+
+      <!-- Partnership Page -->
+      <url>
+            <loc>https://sentratech.in/partnership.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+      </url>
+
+      <!-- FAQ Page -->
+      <url>
+            <loc>https://sentratech.in/faq.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+      </url>
+
+  
+
+      <!-- Solution Page -->
+      <url>
+            <loc>https://sentratech.in/solutions/advanced-non-destructive-testing-ndt.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.9</priority>
+      </url>
+
+      <!-- Asset Monitoring and Management Solutions Page -->
+      <url>
+            <loc>https://sentratech.in/solutions/asset-monitoring-and-management-solutions.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.9</priority>
+      </url>
+
+      <!-- Bridge Inspection and Condition Assessment Solutions Page -->
+      <url>
+            <loc>https://sentratech.in/solutions/bridge-inspection-and-condition-assessment.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.9</priority>
+      </url>
+
+      <!-- Consulting and Advisory Services Page -->
+      <url>
+            <loc>https://sentratech.in/solutions/consulting-and-advisory-services.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.9</priority>
+      </url>
+
+
+      <!-- Digital Engineering and Documentation Solutions Page -->
+      <url>
+            <loc>https://sentratech.in/solutions/digital-engineering-and-documentation.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.9</priority>
+      </url>  
+
+
+      <!-- Fatigue and Residual Life Assessment Solutions Page -->
+      <url>
+            <loc>https://sentratech.in/solutions/fatigue-and-residual-life-assessment.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.9</priority>
+      </url>  
+
+      <!-- Geotechnical and Foundation Monitoring Solutions Page -->
+      <url>
+            <loc>https://sentratech.in/solutions/geotechnical-and-foundation-monitoring.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.9</priority>
+      </url>  
+
+      <!-- Digital Twin Solutions Page -->
+      <url>
+            <loc>https://sentratech.in/solutions/digital-twin.html</loc>
+            <lastmod>2026-06-29</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.9</priority>
+      </url>
+
+      <!-- Structural Health Monitoring Solutions Page -->
+      <url>
+            <loc>https://sentratech.in/solutions/structural-health-monitoring.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.9</priority>
+      </url>  
+
+      <!-- Testimonial Page -->
+      <url>
+            <loc>https://sentratech.in/testimonial.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+      </url>
+
+      <!-- 404 Page -->
+      <url>
+            <loc>https://sentratech.in/404-page.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>yearly</changefreq>
+            <priority>0.3</priority>
+      </url>
+
+
+      <!-- Blogs Pages -->
+      <url>
+            <loc>https://sentratech.in/blogs/fatigue-life-assessment.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/blogs/structural-health-monitoring.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/blogs/advanced-iot-solutions.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/blogs/asset-monitoring-facility-management.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/blogs/real-time-monitoring-solutions-transforming-infrastructure-safety-performance.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/blogs/intelligent-pump-house-monitoring-and-control.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/blogs/top-5-hidden-structural-damages-bridge-inspection.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/blogs/10-early-warning-signs-bridge-continuous-monitoring.html</loc>
+            <lastmod>2026-06-24</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/blogs/monitoring-construction-induced-vibrations.html</loc>
+            <lastmod>2026-06-24</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/blogs/seismic-monitoring-buildings-critical-infrastructure.html</loc>
+            <lastmod>2026-06-24</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/blogs/future-digital-twins-mesh-point-cloud-gaussian-splatting.html</loc>
+            <lastmod>2026-07-27</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+
+      <url>
+            <loc>https://sentratech.in/products/core-communications.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/products/wired-sensors.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+
+      <url>
+            <loc>https://sentratech.in/products/laser-scanners.html</loc>
+            <lastmod>2026-07-23</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/products/lixel-k2.html</loc>
+            <lastmod>2026-07-23</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/products/portalcam.html</loc>
+            <lastmod>2026-07-23</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/products/lixel-l2-pro.html</loc>
+            <lastmod>2026-07-23</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+      <url>
+            <loc>https://sentratech.in/products/lixelkity-k1.html</loc>
+            <lastmod>2026-07-23</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+
+
+      <url>
+            <loc>https://sentratech.in/products/edge-devices.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+
+      <url>
+            <loc>https://sentratech.in/products/gateway.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+
+      <url>
+            <loc>https://sentratech.in/products/gnss-meter.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+
+      <url>
+            <loc>https://sentratech.in/products/laser-tiltmeter.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+
+
+      <url>
+            <loc>https://sentratech.in/products/piconode-data-logger.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+
+
+      <url>
+            <loc>https://sentratech.in/products/repeater.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+
+      <url>
+            <loc>https://sentratech.in/products/strain-gauges.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+            
+          <url>
+            <loc>https://sentratech.in/products/thread.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>  
+
+      <url>
+            <loc>https://sentratech.in/products/tiltmeter-event-detection.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+
+
+      <url>
+            <loc>https://sentratech.in/products/tiltmeter.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+
+      <url>
+            <loc>https://sentratech.in/products/vibrating-wire.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+
+      <url>
+            <loc>https://sentratech.in/products/vibration-meter.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+
+      <url>
+            <loc>https://sentratech.in/products/vibrating-wire-rcr.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+
+
+      <url>
+            <loc>https://sentratech.in/products/accelerometers.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+
+      
+      <url>
+            <loc>https://sentratech.in/products/analog-data-logger.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+
+       <url>
+            <loc>https://sentratech.in/products/digital-data-logger.html</loc>
+            <lastmod>2025-11-13</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+      </url>
+
+
+</urlset>

@@ -1,0 +1,643 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Comprehensive IoT Implementation with Smart Sensors & Real-Time Data Analytics. Learn how IoT, GIS, and Digital Twins are transforming infrastructure." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Advanced IoT Solutions - Comprehensive IoT Implementation" />
+    <meta property="og:description"
+        content="Comprehensive IoT Implementation with Smart Sensors & Real-Time Data Analytics. Learn how IoT, GIS, and Digital Twins are transforming infrastructure." />
+    <meta property="og:url" content="https://sentratech.in/blogs/advanced-iot-solutions.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://sentratech.in/image/branding/sentra.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Advanced IoT Solutions - Comprehensive IoT Implementation" />
+    <meta name="twitter:description"
+        content="Comprehensive IoT Implementation with Smart Sensors & Real-Time Data Analytics. Learn how IoT, GIS, and Digital Twins are transforming infrastructure." />
+    <meta name="twitter:image" content="https://sentratech.in/image/branding/sentra.webp" />
+    <meta name="twitter:site" content="@sentratech" />
+    <meta name="twitter:image:width" content="1200" />
+    <meta name="twitter:image:height" content="630" />
+    <title>Advanced IoT Solutions</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="icon" href="/image/branding/favicon.webp" type="image/png" sizes="16x16">
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/branding/favicon.webp">
+    <link rel="stylesheet" href="../css/chatbot.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="../css/vendor/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/detail-page.css">
+    <style>
+        .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+        .word { transition: background-color 0.12s ease; padding: 0 1px; border-radius: 2px; }
+        .highlight { background-color: #f48120; transition: background-color 0.15s ease; }
+        body.lightmode .highlight { background-color: #ffe082; }
+        .conclusion-btn-wrapper { margin-bottom: 30px; }
+        .swiperProducts .card-blog { display: flex; flex-direction: column; }
+        @media (min-width: 992px) { .swiperProducts .card-blog { width: 600px !important; } }
+        .swiperProducts .blog-image { aspect-ratio: 836 / 442 !important; }
+        .card-body { display: flex; flex-direction: column; flex-grow: 1; }
+        body.dark-mode .detail-hero .hero-text-col, body.dark-mode .detail-article, body.dark-mode .hero-title { color: #fff; }
+        body.lightmode .hero-title { color: #111; }
+        body.dark-mode .hero-intro p, body.dark-mode .detail-article p, body.dark-mode .detail-article li { color: rgba(255,255,255,0.6); }
+        body.lightmode .hero-intro p, body.lightmode .detail-article p, body.lightmode .detail-article li { color: rgba(0,0,0,0.6); }
+    </style>
+
+    <link rel="canonical" href="https://sentratech.in/blogs/advanced-iot-solutions.html">
+
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Advanced IoT Solutions",
+      "description": "Comprehensive IoT Implementation with Smart Sensors & Real-Time Data Analytics. Learn how IoT, GIS, and Digital Twins are transforming infrastructure.",
+      "datePublished": "2025-10-20",
+      "dateModified": "2025-10-20",
+      "author": {
+        "@type": "Organization",
+        "name": "Sentra Technologies"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sentra",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://sentratech.in/image/branding/sentra.webp"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://sentratech.in/blogs/advanced-iot-solutions.html"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://sentratech.in/image/branding/sentra.webp"
+      },
+      "inLanguage": "en"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".detail-article h2, .detail-article h4", ".detail-article p", ".hero-intro"]
+      },
+      "url": "https://sentratech.in/blogs/advanced-iot-solutions.html"
+    }
+    </script>
+    
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo"><img src="../image/branding/sentra_white_1.svg" alt="Sentra"></div>
+            <div class="preloader-logo-sub">Smart · Secure · Scalable</div>
+            <div class="preloader-counter">
+                <span id="preloader-count">0</span>
+                <span class="preloader-percent">%</span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Header -->
+    <header>
+        <!-- Section Navbar -->
+        <div id="header"></div>
+    </header>
+
+    <!-- Section Content Edit -->
+    <aside>
+        <div id="edit-sidebar"></div>
+    </aside>
+
+
+
+    <!-- Section Sidebar -->
+    <aside>
+        <div id="sidebar"></div>
+    </aside>
+
+    <!-- Section Main Content -->
+    <main>
+        <section class="detail-hero">
+            <a href="../resources.html#blogs" class="back-btn"><i class="fa-solid fa-chevron-left" style="font-size:10px"></i> Back to Resources</a>
+            <div class="hero-bg-dots"></div>
+            <div class="hero-glow orange-glow"></div>
+            <div class="hero-top-line"></div>
+            <div class="hero-container-inner">
+                <div class="hero-grid">
+                    <div class="hero-text-col">
+                        <div class="hero-meta-row">
+                            <span class="hero-badge orange">IoT</span>
+                            <span class="hero-meta-icon"><i class="fa-regular fa-calendar"></i> Oct 20, 2025</span>
+                            <span class="hero-meta-icon"><i class="fa-regular fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h1 class="hero-title">Advanced IoT Solutions</h1>
+                        <div class="hero-intro">
+                            <p>Infrastructure is no longer static. Buildings, bridges, utilities, and industrial facilities are becoming connected ecosystems powered by intelligent sensors, geospatial intelligence, and digital twins.</p>
+                        </div>
+                    </div>
+                    <div class="hero-image-col">
+                        <div class="hero-image-wrap">
+                            <img src="../image/blogs/banners/blogs_advanced-iot-solutions.webp" alt="IoT Solutions" loading="eager">
+                            <div class="hero-image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="detail-content-wrapper">
+            <div class="detail-grid">
+                <article class="detail-article">
+                    <div class="tts-bar">
+                        <button id="ttsPlayBtn" class="tts-btn"><i class="fas fa-play"></i></button>
+                        <div class="tts-progress" id="ttsProgressBar">
+                            <div id="progressFill" class="tts-fill"></div>
+                        </div>
+                        <span class="tts-label">Listen</span>
+                    </div>
+                    <div class="detail-meta-bar">
+                        <div class="detail-meta-left">
+                            <span class="detail-meta-item"><i class="fa-regular fa-calendar"></i> Oct 20, 2025</span>
+                            <span class="detail-meta-item"><i class="fa-regular fa-folder"></i> IoT</span>
+                        </div>
+                        <span class="detail-meta-item"><i class="fa-regular fa-user"></i> Yuva Subharam <a href="https://www.linkedin.com/in/yuva-subharam-vasamsetti-75a39117a/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a> | Sentra Technologies</span>
+                    </div>
+                    <div id="ttsContent">
+                                <p>Ask a facilities manager what keeps them up at night and you'll rarely hear "the roof." It's the failure nobody saw coming — the pipe that bursts at 2 a.m., the bearing that seizes mid-shift, the crack that was there for months before an inspector found it. A single unplanned data-center outage can cost $9,000 a minute; a bridge closure from unforeseen structural damage can strand 50,000 daily commuters and cost a city $2–5 million a day. Numbers like that are why the global smart infrastructure market cleared $120 billion in 2025 — owners are done paying the "fix it when it breaks" tax and are shifting toward infrastructure that reports on its own condition.</p>
+                                <p>Getting there takes more than bolting a sensor onto a wall. It means combining wired and wireless sensing, edge computing, geospatial intelligence, and digital twins so that the subsurface geology under a dam and the sway of a high-rise in the wind both show up on the same real-time picture.</p>
+
+                                <h2 id="specsSection">The Digital Infrastructure Stack</h2>
+                                <p>Wireless IoT gets the headlines, but wired sensors still do the heavy lifting on mission-critical structures. Fiber Bragg Grating optical sensors read distributed strain and temperature along a single fiber at 1 mm spatial resolution and ±1 microstrain accuracy — about the only option for long-span bridges, metro tunnels, and nuclear containment structures, where electromagnetic interference makes wireless a liability rather than a convenience. Vibrating wire sensors, drifting less than 0.04% a year, remain the default for geotechnical work on dams and deep excavations. And wired accelerometers sampling at up to 10 kHz with 24-bit resolution catch the high-frequency vibration signatures that bearing-defect detection and modal analysis actually need.</p>
+                                <p>Sensing is only half the job — the data has to turn into action. Threshold alerts, trend analysis, and automated control close that loop. HVAC systems that adjust to occupancy sensors cut energy use 15–25%. Leak-detection systems that isolate a damaged pipe section within seconds head off the $10,000–50,000 an average water-damage incident otherwise costs. Fire suppression that fires on multi-sensor fusion — smoke, temperature, and gas together, not one detector alone — cuts false alarms by up to 90%, which matters more than it sounds like when a false alarm means evacuating a full building.</p>
+                                <p>What ties it together is analytics working at three levels: what happened, why it happened, and what's likely to happen next. Machine learning models trained on vibration history can flag bearing degradation 6–8 weeks before failure just from characteristic spectral peaks at ball-pass frequencies. A 2026 study on IoT bridge monitoring found Random Forest classifiers hitting above 85% accuracy separating normal behavior from damage conditions — with vibration carrying the highest feature importance (0.483), ahead of temperature and strain.</p>
+
+                                <h2 id="DescSection">GIS &amp; GeoBIM: Spatial Intelligence for Asset Monitoring</h2>
+                                <p>A sensor reading means little on its own — it needs to know where it sits relative to everything else. That's what GIS adds: every valve, transformer, and structural element becomes a geo-tagged feature, so operators can overlay flood plains, seismic zones, and landslide-prone slopes, or simply ask "show me every bridge within 500 meters of a high-voltage line." For linear assets like pipelines, railways, and roads, that spatial relationship to the surrounding environment is often the whole risk picture.</p>
+                                <p>GeoBIM takes it a step further by placing detailed BIM models (IFC/COBie) inside a real-world geospatial context (CityGML, ArcGIS) — which lets risk assessment factor in terrain slope, soil type, and groundwater levels that a BIM model alone simply doesn't see. Research published in 2026 found standardized BIM-GIS-IoT frameworks cutting bridge inspection costs by roughly 30% and improving HVAC energy efficiency by up to 25%. Esri's ArcGIS GeoBIM and Bentley's iTwin IoT are the commercial face of this convergence today.</p>
+
+                                <h2 id="Para1Section">Digital Twin — The Operational Brain</h2>
+                                <p>A Digital Twin is not simply a 3D visualization — it is a living, data-connected replica that evolves in real time with its physical counterpart. It federates three data streams: (1) IoT sensor feeds providing continuous structural response data; (2) BIM models capturing geometry, material properties, and design intent; and (3) GIS context providing terrain, environmental, and geospatial relationships.</p>
+                                <p>For infrastructure owners, digital twins enable capabilities that static models cannot: automated maintenance scheduling triggered by real-time condition data; structural fatigue tracking through cumulative damage indices updated with each load cycle; and "what-if" scenario simulations — What happens to dam safety factors if reservoir level rises 2 meters? How will bridge deflection change under a 20% traffic load increase? What is the predicted remaining life of a bearing under current operating conditions?</p>
+                                <p>Proqio's Digital Twin platform exemplifies this approach, integrating surface assets, terrain, subsoil geotechnical strata, and real-time sensor data into a single living model. Using machine learning, the platform identifies normal behavior patterns, detects early deviations, and generates behavior-based early warnings — transforming raw data into predictive intelligence that prioritizes actions based on actual risk rather than scheduled inspection intervals.</p>
+
+                                <h2 id="Para2Section">Communications &amp; Cloud Integration</h2>
+                                <p>IoT ecosystems depend on a layered communication architecture optimized for the specific constraints of each deployment: LoRaWAN (10+ km range, 10-year battery life) for low-bandwidth geotechnical sensors; NB-IoT for deep indoor penetration in buildings and tunnels; 5G NR for high-throughput applications like real-time video-based crack monitoring; and fiber-optic backbone networks for high-bandwidth data aggregation from dense sensor arrays.</p>
+                                <p>Edge computing is increasingly critical — processing vibration data, computing FFT spectra, and running anomaly detection algorithms locally at the sensor gateway reduces cloud bandwidth requirements by 85% while maintaining sub-second alert latency. Cloud platforms provide the scalable storage (petabyte-scale for long-term structural monitoring archives), multi-site dashboards, and API integrations needed for enterprise-wide asset management across airports, residential communities, industrial clusters, and urban infrastructure networks.</p>
+
+                                <h2 id="Para3Section">Industry-Wide Impact</h2>
+                                <ul class="blog-bullets">
+                                    <li><strong>Smart Cities:</strong> Integrated IoT + GIS + Digital Twin platforms provide centralized urban command centers where city managers visualize real-time data from traffic sensors, utility networks, structural monitors, and environmental stations on a single geospatial dashboard. Virtual Singapore and Helsinki's Kalasatama Digital Twin demonstrate city-scale implementations that integrate BIM, GIS, and IoT data for urban planning, flood risk assessment, and infrastructure asset management.</li>
+                                    <li><strong>Transportation Infrastructure:</strong> Bentley's iTwin IoT platform deployed on Denver's Highland bridge combines real-time sensor data with digital twin visualizations for enhanced structural health monitoring, while the Christ Church Cathedral Reinstatement Project uses digital twin technology with real-time sensor data to increase safety and efficiency throughout each construction phase.</li>
+                                    <li><strong>Water and Energy:</strong> Yuba Water Agency modernized dam monitoring with IoT sensor networks providing dynamic movement data, replacing decades-old manual gauge readings. Real-time piezometer and inclinometer data streams enable early detection of internal erosion, seepage anomalies, and seismic loading effects.</li>
+                                    <li><strong>Commercial Facilities:</strong> Energy optimization through occupancy-based HVAC control, real-time fault detection in MEP systems, and predictive maintenance of elevators, chillers, and fire protection systems reduces operating costs by 15–30% while improving occupant satisfaction scores.</li>
+                                </ul>
+                            </div>
+
+                        <div class="detail-cta">
+                            <h2 id="ConclusionSection">Conclusion</h2>
+                            <p>None of these pieces — sensors, GIS, digital twins, edge compute — does much on its own. Stitched together, they're the difference between finding out about a problem from an inspection report and finding out about it before it becomes one.</p>
+                            <a class="cta-btn" href="/contact.html">Contact us <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+
+                    </article>
+
+                    <aside class="detail-sidebar">
+                        <div class="sidebar-sticky">
+                            <div class="sidebar-card toc">
+                                <h3><i class="fa-solid fa-list"></i> Table of Contents</h3>
+                                <div id="tocContainer">
+                                    <button class="toc-item" data-target="specsSection">The Digital Infrastructure Stack</button>
+                                    <button class="toc-item" data-target="DescSection">GIS &amp; GeoBIM Intelligence</button>
+                                    <button class="toc-item" data-target="Para1Section">Digital Twin</button>
+                                    <button class="toc-item" data-target="Para2Section">Communications &amp; Cloud</button>
+                                    <button class="toc-item" data-target="Para3Section">Industry-Wide Impact</button>
+                                    <button class="toc-item" data-target="ConclusionSection">Conclusion</button>
+                                </div>
+                            </div>
+                            <div class="sidebar-card">
+                                <h3><i class="fa-regular fa-share-from-square"></i> Share</h3>
+                                <div class="sidebar-share-icons">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://sentratech.in/blogs/advanced-iot-solutions.html" target="_blank" class="share-icon-link"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="https://x.com/intent/tweet?url=https://sentratech.in/blogs/advanced-iot-solutions.html&text=Advanced%20IoT%20Solutions" target="_blank" class="share-icon-link"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://sentratech.in/blogs/advanced-iot-solutions.html" target="_blank" class="share-icon-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="https://api.whatsapp.com/send?text=Advanced%20IoT%20Solutions%20https://sentratech.in/blogs/advanced-iot-solutions.html" target="_blank" class="share-icon-link"><i class="fa-brands fa-whatsapp"></i></a>
+                                </div>
+                            </div>
+                            <a href="../resources.html#blogs" class="back-btn" style="position:static;display:flex;width:100%;justify-content:center;"><i class="fa-solid fa-chevron-left" style="font-size:10px"></i> Back to Resources</a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── More Blogs ── -->
+        <div class="hero-container" style="max-width:1280px;margin:0 auto;padding:0 1rem 4rem">
+            <div class="trending-section">
+                <div class="cs-section-label">
+                    <span class="trending-dot"></span>
+                    <h2>More Blogs</h2>
+                </div>
+                <div class="trending-grid">
+                    <a href="../blogs/structural-health-monitoring.html" class="trending-card">
+                        <div class="trending-card-thumb"><img src="../image/blogs/banners/blogs_structural-health-monitoring.webp" alt="Structural Health Monitoring" style="width:100%;height:100%;object-fit:cover;"></div>
+                        <div class="trending-card-body">
+                            <h4>Structural Health Monitoring</h4>
+                            <div class="trending-card-meta"><span>Structural Health</span><span>&middot;</span><span>Blog</span></div>
+                        </div>
+                    </a>
+                    <a href="../blogs/real-time-monitoring-solutions-transforming-infrastructure-safety-performance.html" class="trending-card">
+                        <div class="trending-card-thumb"><img src="../image/blogs/banners/blogs_real-time-monitoring-solutions-transforming-infrastructure-safety-performance.webp" alt="Real-Time Monitoring" style="width:100%;height:100%;object-fit:cover;"></div>
+                        <div class="trending-card-body">
+                            <h4>Real-Time Monitoring Solutions</h4>
+                            <div class="trending-card-meta"><span>Monitoring</span><span>&middot;</span><span>Blog</span></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── More Case Studies ── -->
+        <div class="hero-container" style="max-width:1280px;margin:0 auto;padding:0 1rem 4rem">
+            <div class="trending-section">
+                <div class="cs-section-label">
+                    <span class="trending-dot"></span>
+                    <h2>More Case Studies</h2>
+                </div>
+                <div class="trending-grid">
+                    <a href="../case-studies/bridgepluse-ai-and-drone-technology-for-bridge-health-monitoring.html" class="trending-card">
+                        <div class="trending-card-thumb"><img src="../image/case-studies/banners/case_studies_bridgepluse-ai-and-drone-technology-for-bridge-health-monitoring.webp" alt="BridgePulse" style="width:100%;height:100%;object-fit:cover;"></div>
+                        <div class="trending-card-body">
+                            <h4>BridgePulse &mdash; AI and Drone Technology</h4>
+                            <div class="trending-card-meta"><span>AI &amp; Drones</span><span>&middot;</span><span>Case Study</span></div>
+                        </div>
+                    </a>
+                    <a href="../case-studies/iot-bridge-monitoring-and-sensor-installation-on-railway-bridges.html" class="trending-card">
+                        <div class="trending-card-thumb"><img src="../image/case-studies/banners/case_studies_iot-bridge-monitoring-and-sensor-installation-on-railway-bridges.webp" alt="IoT Bridge Monitoring" style="width:100%;height:100%;object-fit:cover;"></div>
+                        <div class="trending-card-body">
+                            <h4>IoT Bridge Monitoring on Railway Bridges</h4>
+                            <div class="trending-card-meta"><span>Railways</span><span>&middot;</span><span>Case Study</span></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Section Footer -->
+    <div id="footer"></div>
+
+    <script>
+        (function () {
+            const synth = window.speechSynthesis;
+            let voices = [];
+            let isPlaying = false;
+            let isPaused = false;
+            let totalWords = 0;
+            let currentWordIndex = 0;
+            let wordSpans = [];
+            let paragraphs = [];
+            let currentParagraphIndex = 0;
+            let activeUtterance = null;
+            let fallbackTimer = null;
+            let boundarySupported = false;
+            let autoScrollEnabled = true;
+            let mouseIdleTimer;
+
+            const ttsContent = document.getElementById('ttsContent');
+            const playBtn = document.getElementById('ttsPlayBtn');
+            const progressFill = document.getElementById('progressFill');
+            const progressBar = document.getElementById('ttsProgressBar');
+
+            function loadVoices() {
+                voices = synth.getVoices() || [];
+            }
+            loadVoices();
+            if (speechSynthesis.onvoiceschanged !== undefined) {
+                speechSynthesis.onvoiceschanged = loadVoices;
+            }
+
+            function pickFemaleVoice() {
+                const femaleCandidates = voices.filter(v => /Deepa|Joanna|Google Translate|female|woman|Google US English|Samantha|Alloy|Amy|Emma|en-US/i.test(v.name + ' ' + v.lang));
+                return femaleCandidates[0] || voices.find(v => /en-?us|en-?gb/i.test(v.lang)) || voices[0];
+            }
+
+            function pickMaleVoice() {
+                const maleCandidates = voices.filter(v => /Sundar|Google Translate|male|man|Google UK English|Daniel|Alex|en-?gb|en-?au/i.test(v.name + ' ' + v.lang));
+                return maleCandidates[0] || voices.find(v => /en-?us|en-?gb/i.test(v.lang)) || voices[0];
+            }
+
+            document.addEventListener('mousemove', () => {
+                autoScrollEnabled = false;
+                clearTimeout(mouseIdleTimer);
+                mouseIdleTimer = setTimeout(() => {
+                    autoScrollEnabled = true;
+                }, 5000);
+            });
+
+            function wrapWords() {
+                const elements = ttsContent.querySelectorAll('p, h2, h4, li');
+                elements.forEach(el => {
+                    if (el.querySelector('.word')) return;
+                    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null, false);
+                    const textNodes = [];
+                    let node;
+                    while (node = walker.nextNode()) {
+                        if (node.textContent.trim()) textNodes.push(node);
+                    }
+                    textNodes.forEach(textNode => {
+                        const tokens = textNode.textContent.split(/(\s+)/);
+                        const fragment = document.createDocumentFragment();
+                        tokens.forEach(tok => {
+                            if (/\s+/.test(tok)) {
+                                fragment.appendChild(document.createTextNode(tok));
+                            } else if (tok) {
+                                const span = document.createElement('span');
+                                span.className = 'word';
+                                span.textContent = tok;
+                                fragment.appendChild(span);
+                                totalWords++;
+                            }
+                        });
+                        textNode.parentNode.replaceChild(fragment, textNode);
+                    });
+                });
+                wordSpans = Array.from(ttsContent.querySelectorAll('.word'));
+            }
+            wrapWords();
+
+            function getParagraphs() {
+                const elements = ttsContent.querySelectorAll('p, h2, h4, li');
+                paragraphs = Array.from(elements).filter(el => el.textContent.trim() !== '');
+            }
+            getParagraphs();
+
+            function computeWordBoundaries(text) {
+                const words = text.split(/\s+/).filter(Boolean);
+                const boundaries = [];
+                let cursor = 0;
+                for (let i = 0; i < words.length; i++) {
+                    const w = words[i];
+                    const found = text.indexOf(w, cursor);
+                    if (found === -1) {
+                        boundaries.push(cursor);
+                        cursor += w.length;
+                    } else {
+                        boundaries.push(found);
+                        cursor = found + w.length;
+                    }
+                }
+                return boundaries;
+            }
+
+            function clearAllHighlights() {
+                wordSpans.forEach(w => w.classList.remove('highlight'));
+            }
+
+            function scrollIntoCenter(el) {
+                if (!el) return;
+                if (autoScrollEnabled) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+
+            function clearFallbackTimer() {
+                if (fallbackTimer) {
+                    clearInterval(fallbackTimer);
+                    fallbackTimer = null;
+                }
+            }
+
+            function speakFrom(index) {
+                clearFallbackTimer();
+                boundarySupported = false;
+
+                if (index >= paragraphs.length) {
+                    isPlaying = false;
+                    isPaused = false;
+                    playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                    currentParagraphIndex = 0;
+                    currentWordIndex = 0;
+                    progressFill.style.width = '0%';
+                    return;
+                }
+
+                currentParagraphIndex = index;
+                const p = paragraphs[index];
+                const role = (p.getAttribute('data-voice') || 'female').toLowerCase();
+                const voice = role === 'male' ? pickMaleVoice() : pickFemaleVoice();
+                const utterText = p.textContent.trim();
+                if (!utterText) {
+                    speakFrom(index + 1);
+                    return;
+                }
+
+                const boundaries = computeWordBoundaries(utterText);
+                const wordSpansInP = Array.from(p.querySelectorAll('.word')).filter(s => s.textContent.trim() !== '');
+                wordSpansInP.forEach(w => w.classList.remove('highlight'));
+
+                const u = new SpeechSynthesisUtterance(utterText);
+                activeUtterance = u;
+                u.lang = 'en-US';
+                u.rate = role === 'male' ? 0.9 : 1.3;
+                u.pitch = 1.2;
+                if (voice) u.voice = voice;
+
+                const wordsPerSecondBase = 3.0 * u.rate;
+                const fallbackIntervalMs = Math.max(120, Math.round(1000 / wordsPerSecondBase));
+
+                u.onstart = () => {
+                    isPlaying = true;
+                    isPaused = false;
+                    playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+
+                    currentWordIndex = 0;
+                    if (wordSpansInP.length > 0) {
+                        wordSpansInP.forEach(w => w.classList.remove('highlight'));
+                        const first = wordSpansInP[0];
+                        first.classList.add('highlight');
+                        scrollIntoCenter(first);
+                    }
+
+                    fallbackTimer = setInterval(() => {
+                        if (boundarySupported) return;
+                        if (!isPlaying || isPaused) { clearFallbackTimer(); return; }
+
+                        if (currentWordIndex < wordSpansInP.length - 1) {
+                            wordSpansInP[currentWordIndex].classList.remove('highlight');
+                            currentWordIndex++;
+                            wordSpansInP[currentWordIndex].classList.add('highlight');
+                            scrollIntoCenter(wordSpansInP[currentWordIndex]);
+                        }
+                    }, fallbackIntervalMs);
+                };
+
+                u.onboundary = (ev) => {
+                    boundarySupported = true;
+                    clearFallbackTimer();
+
+                    const charIndex = ev.charIndex || 0;
+                    let wi = 0;
+                    for (let i = 0; i < boundaries.length; i++) {
+                        const start = boundaries[i];
+                        const end = (i < boundaries.length - 1) ? boundaries[i + 1] : utterText.length;
+                        if (charIndex >= start && charIndex < end) {
+                            wi = i;
+                            break;
+                        }
+                        if (i === boundaries.length - 1) wi = boundaries.length - 1;
+                    }
+
+                    wi = Math.min(wi, wordSpansInP.length - 1);
+                    if (wi < 0) wi = 0;
+
+                    if (wi !== currentWordIndex) {
+                        if (wordSpansInP[currentWordIndex]) wordSpansInP[currentWordIndex].classList.remove('highlight');
+                        if (wordSpansInP[wi]) {
+                            wordSpansInP[wi].classList.add('highlight');
+                            scrollIntoCenter(wordSpansInP[wi]);
+                        }
+                        currentWordIndex = wi;
+                    }
+                };
+
+                u.onend = () => {
+                    p.querySelectorAll('.word.highlight').forEach(w => w.classList.remove('highlight'));
+                    activeUtterance = null;
+                    clearFallbackTimer();
+
+                    if (isPlaying && !isPaused) {
+                        speakFrom(index + 1);
+                    } else {
+                        isPlaying = false;
+                        isPaused = false;
+                        playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                    }
+                };
+
+                u.onerror = (err) => {
+                    console.error('Speech error', err);
+                    activeUtterance = null;
+                    isPlaying = false;
+                    clearFallbackTimer();
+                    playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                };
+
+                try {
+                    synth.speak(u);
+                } catch (e) {
+                    console.error('synth.speak error:', e);
+                }
+
+                const progress = ((index + 1) / paragraphs.length) * 100;
+                progressFill.style.width = progress + '%';
+            }
+
+
+            playBtn.addEventListener('click', () => {
+                if (!voices || voices.length === 0) loadVoices();
+
+                if (isPlaying && !isPaused) {
+                    synth.pause();
+                    isPaused = true;
+                    isPlaying = false;
+                    playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                } else if (isPaused) {
+                    synth.resume();
+                    isPaused = false;
+                    isPlaying = true;
+                    playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                } else {
+                    if (currentParagraphIndex >= paragraphs.length) currentParagraphIndex = 0;
+                    speakFrom(currentParagraphIndex);
+                }
+            });
+
+            progressBar.addEventListener('click', (e) => {
+                const rect = progressBar.getBoundingClientRect();
+                const clickX = e.clientX - rect.left;
+                const percentage = clickX / rect.width;
+                const targetIndex = Math.floor(percentage * paragraphs.length);
+                if (synth.speaking) {
+                    synth.cancel();
+                }
+                clearAllHighlights();
+                clearFallbackTimer();
+                currentParagraphIndex = targetIndex;
+                speakFrom(targetIndex);
+            });
+
+            window.addEventListener('beforeunload', () => {
+                if (synth && synth.speaking) synth.cancel();
+            });
+        })();
+    </script>
+
+
+
+    <script src="../js/vendor/jquery.min.js"></script>
+    <script src="../js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="../js/vendor/swiper-bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/swiper-script.js"></script>
+    <script src="../js/submit-form.js"></script>
+    <script src="../js/video_embedded.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var tocItems = document.querySelectorAll('.toc-item');
+            var sections = [];
+            tocItems.forEach(function(btn) {
+                var target = document.getElementById(btn.getAttribute('data-target'));
+                if (target) sections.push({ btn: btn, target: target });
+                btn.addEventListener('click', function() {
+                    var el = document.getElementById(this.getAttribute('data-target'));
+                    if (el) {
+                        var header = document.querySelector('header');
+                        var h = header ? header.getBoundingClientRect().height : 0;
+                        var y = el.getBoundingClientRect().top + window.scrollY - h - 80;
+                        window.scrollTo({ top: Math.max(y, 0), behavior: 'smooth' });
+                    }
+                });
+            });
+            window.addEventListener('scroll', function() {
+                var scrollY = window.scrollY + 200;
+                var active = null;
+                sections.forEach(function(s) {
+                    if (s.target.offsetTop <= scrollY) active = s;
+                });
+                tocItems.forEach(function(b) { b.classList.remove('active'); });
+                if (active) active.btn.classList.add('active');
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+  <script src="../js/chatbot-widget.js"></script>
+</body>
+</html>

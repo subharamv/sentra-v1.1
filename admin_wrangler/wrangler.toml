@@ -1,0 +1,19 @@
+name = "sentra-admin"
+main = "src/index.js"
+compatibility_date = "2026-02-07"
+workers_dev = true
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+[env.production]
+name = "sentra-admin-prod"
+vars = { ENVIRONMENT = "production" }
+routes = [
+  { pattern = "admin.sentratech.in", zone_name = "sentratech.in" }
+]
+
+[env.production.assets]
+directory = "./public"
+binding = "ASSETS"

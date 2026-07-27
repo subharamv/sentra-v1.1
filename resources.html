@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources Hub — Blogs, Case Studies & Articles | Sentra</title>
+    <meta name="description"
+        content="One place for everything Sentra publishes — blogs, case studies and articles on IoT, structural health monitoring and predictive maintenance." />
+
+    <link rel="canonical" href="https://sentratech.in/resources.html">
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Resources Hub — Blogs, Case Studies & Articles | Sentra" />
+    <meta property="og:description"
+        content="Insights, case studies and technical articles about IoT and structural monitoring, all in one place." />
+    <meta property="og:url" content="https://sentratech.in/resources.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://sentratech.in/image/branding/sentra.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Resources Hub — Blogs, Case Studies & Articles | Sentra" />
+    <meta name="twitter:description"
+        content="Insights, case studies and technical articles about IoT and structural monitoring, all in one place." />
+    <meta name="twitter:image" content="https://sentratech.in/image/branding/sentra.webp" />
+    <meta name="twitter:site" content="@sentratech" />
+    <meta name="twitter:image:width" content="1200" />
+    <meta name="twitter:image:height" content="630" />
+
+    <script type="application/ld+json">
+    {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Sentra Resources Hub",
+    "description":"Unified library of blogs, case studies and articles on IoT and infrastructure monitoring.",
+    "url":"https://sentratech.in/resources.html"
+    }
+    </script>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="/image/branding/favicon.webp" type="image/png" sizes="16x16">
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/branding/favicon.webp">
+    <link rel="stylesheet" href="../css/chatbot.css">
+    <link rel="stylesheet" href="./css/resources.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <style>
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo"><img src="./image/branding/sentra_white_1.svg" alt="Sentra"></div>
+            <div class="preloader-logo-sub">Smart · Secure · Scalable</div>
+            <div class="preloader-counter">
+                <span id="preloader-count">0</span>
+                <span class="preloader-percent">%</span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+    <h1 class="visually-hidden">Resources Hub — Blogs, Case Studies & Articles</h1>
+
+    <!-- Section Header -->
+    <header>
+        <!-- Section Navbar -->
+        <div id="header"></div>
+    </header>
+
+    <!-- Section Content Edit -->
+    <aside>
+        <div id="edit-sidebar"></div>
+    </aside>
+
+    <!-- Section Sidebar -->
+    <aside>
+        <div id="sidebar"></div>
+    </aside>
+
+    <!-- Section Main Content -->
+    <main>
+        <!-- Section Resources Hub -->
+        <div class="resources-hub">
+
+            <!-- Hero / Search -->
+            <div class="rh-hero">
+                <span class="rh-eyebrow"><i class="fa-solid fa-sparkles"></i> Knowledge Base</span>
+                <p>All our blogs, case studies, and articles — organized in one place for easy access.</p>
+
+                <div class="rh-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input id="rh-search-input" type="text" placeholder="Search blogs, case studies, articles…">
+                    <button id="rh-search-clear" type="button" style="display:none;">✕</button>
+                </div>
+
+                <div class="rh-stats">
+                    <span><b id="rh-count-blogs">0</b>Blogs</span>
+                    <span class="rh-sep"></span>
+                    <span><b id="rh-count-cs">0</b>Case Studies</span>
+                    <span class="rh-sep"></span>
+                    <span><b id="rh-count-articles">0</b>Articles</span>
+                </div>
+            </div>
+
+            <!-- Filter Bar -->
+            <div class="rh-filterbar" id="rh-tabs">
+                <!-- tabs injected by js/resources.js -->
+            </div>
+            <div style="display:flex;justify-content:flex-end;margin:8px 0 0;">
+                <span class="rh-results" id="rh-results-count">0 RESULTS</span>
+            </div>
+
+            <!-- Category Chips -->
+            <div class="rh-categories" id="rh-categories"></div>
+
+            <!-- Recently Published -->
+            <div class="rh-section" id="rh-recent">
+                <div class="rh-section-head">
+                    <div class="rh-section-title">
+                        <span class="rh-section-icon rh-grad-orange"><i class="fa-solid fa-bolt"></i></span>
+                        <span id="rh-recent-heading">Recently Published</span>
+                    </div>
+                </div>
+                <div id="rh-recent-grid"></div>
+            </div>
+
+            <!-- No results -->
+            <div class="rh-empty" id="rh-empty" style="display:none;">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <p>No results found.</p>
+                <button id="rh-empty-clear" type="button">Clear search</button>
+            </div>
+
+            <!-- Blogs Carousel -->
+            <div class="rh-section" id="rh-section-blogs">
+                <div class="rh-section-head">
+                    <div class="rh-section-title">
+                        <span class="rh-section-icon rh-grad-orange"><i class="fa-solid fa-blog"></i></span>
+                        <span>Blogs</span>
+                        <span class="rh-section-count">0</span>
+                    </div>
+                    <div class="rh-scroll-btns">
+                        <button class="rh-scroll-btn rh-scroll-left" type="button" aria-label="Scroll left"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button class="rh-scroll-btn rh-scroll-right" type="button" aria-label="Scroll right"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <p class="rh-section-desc">Explore our latest articles on IoT, structural monitoring, and smart
+                    infrastructure.</p>
+                <div class="rh-track"></div>
+            </div>
+
+            <!-- Case Studies Carousel -->
+            <div class="rh-section" id="rh-section-case-studies">
+                <div class="rh-section-head">
+                    <div class="rh-section-title">
+                        <span class="rh-section-icon rh-grad-rose"><i class="fa-solid fa-award"></i></span>
+                        <span>Case Studies</span>
+                        <span class="rh-section-count">0</span>
+                    </div>
+                    <div class="rh-scroll-btns">
+                        <button class="rh-scroll-btn rh-scroll-left" type="button" aria-label="Scroll left"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button class="rh-scroll-btn rh-scroll-right" type="button" aria-label="Scroll right"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <p class="rh-section-desc">In-depth case studies showcasing real-world IoT and monitoring deployments.
+                </p>
+                <div class="rh-track"></div>
+            </div>
+
+            <!-- Articles Carousel -->
+            <div class="rh-section" id="rh-section-articles">
+                <div class="rh-section-head">
+                    <div class="rh-section-title">
+                        <span class="rh-section-icon rh-grad-blue"><i class="fa-solid fa-newspaper"></i></span>
+                        <span>Articles</span>
+                        <span class="rh-section-count">0</span>
+                    </div>
+                    <div class="rh-scroll-btns">
+                        <button class="rh-scroll-btn rh-scroll-left" type="button" aria-label="Scroll left"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button class="rh-scroll-btn rh-scroll-right" type="button" aria-label="Scroll right"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <p class="rh-section-desc">Technical articles and thought leadership pieces on infrastructure
+                    innovation.</p>
+                <div class="rh-track"></div>
+            </div>
+
+            <!-- Footer Navigation Block -->
+            <div class="rh-footer-nav">
+                <div class="rh-footer-col">
+                    <h4>Resources</h4>
+                    <button class="rh-footer-tab-link" data-tab="blogs">Blogs (<span
+                            id="rh-footer-blogs-count">0</span>)</button>
+                    <button class="rh-footer-tab-link" data-tab="case-studies">Case Studies (<span
+                            id="rh-footer-cs-count">0</span>)</button>
+                    <button class="rh-footer-tab-link" data-tab="articles">Articles (<span
+                            id="rh-footer-articles-count">0</span>)</button>
+                </div>
+                <div class="rh-footer-col">
+                    <h4>By Category</h4>
+                    <button class="rh-footer-cat-link" data-cat="Digital Twin">Digital Twin</button>
+                    <button class="rh-footer-cat-link" data-cat="Bridge Safety">Bridge Safety</button>
+                    <button class="rh-footer-cat-link" data-cat="Structural Health">Structural Health</button>
+                    <button class="rh-footer-cat-link" data-cat="IoT Sensors">IoT Sensors</button>
+                    <button class="rh-footer-cat-link" data-cat="Smart Pumping">Smart Pumping</button>
+                    <button class="rh-footer-cat-link" data-cat="Smart Cities">Smart Cities</button>
+                    <button class="rh-footer-cat-link" data-cat="Rail Infrastructure">Rail Infrastructure</button>
+                </div>
+                <div class="rh-footer-col">
+                    <h4>Quick Links</h4>
+                    <button class="rh-footer-tab-link" data-tab="all">All Resources</button>
+                    <button class="rh-clear-filters" type="button">Clear Filters</button>
+                </div>
+                <div class="rh-footer-col">
+                    <h4>Stats</h4>
+                    <p class="rh-stat-row"><span>Total Resources</span><b id="rh-stat-total">0</b></p>
+                    <p class="rh-stat-row"><span>Current Results</span><b id="rh-stat-current">0</b></p>
+                    <p class="rh-stat-row"><span>Categories</span><b id="rh-stat-categories">0</b></p>
+                </div>
+            </div>
+
+            <div class="rh-footer-bottom">
+                <p>Explore our comprehensive resource library to learn more about IoT and structural monitoring.</p>
+                <button class="rh-back-top" type="button">Back to Top <i class="fa-solid fa-arrow-up"></i></button>
+            </div>
+
+        </div>
+
+        <!-- Static resource links for search crawlers (full interactive version rendered above by JS) -->
+        <noscript>
+            <nav aria-label="Resource library">
+                <h2>Blogs</h2>
+                <ul>
+                    <li><a href="./blogs/future-digital-twins-mesh-point-cloud-gaussian-splatting.html">The Future of
+                            Digital Twins: Mesh, Point Clouds, and Gaussian Splatting Compared</a></li>
+                    <li><a href="./blogs/top-5-hidden-structural-damages-bridge-inspection.html">Top 5 Hidden Structural
+                            Damages Manual Bridge Inspection Misses</a></li>
+                    <li><a href="./blogs/structural-health-monitoring.html">Structural Health Monitoring</a></li>
+                    <li><a href="./blogs/fatigue-life-assessment.html">Fatigue Life Assessment</a></li>
+                    <li><a
+                            href="./blogs/real-time-monitoring-solutions-transforming-infrastructure-safety-performance.html">Real-Time
+                            Monitoring Solutions</a></li>
+                    <li><a href="./blogs/asset-monitoring-facility-management.html">Asset Monitoring &amp; Facility
+                            Management</a></li>
+                    <li><a href="./blogs/advanced-iot-solutions.html">Advanced IoT Solutions</a></li>
+                    <li><a href="./blogs/intelligent-pump-house-monitoring-and-control.html">Intelligent Pump House
+                            Monitoring &amp; Control</a></li>
+                    <li><a href="./blogs/10-early-warning-signs-bridge-continuous-monitoring.html">10 Early Warning
+                            Signs for Bridge Continuous Monitoring</a></li>
+                    <li><a href="./blogs/monitoring-construction-induced-vibrations.html">Monitoring
+                            Construction-Induced Vibrations</a></li>
+                    <li><a href="./blogs/seismic-monitoring-buildings-critical-infrastructure.html">Seismic Monitoring
+                            for Buildings &amp; Critical Infrastructure</a></li>
+                </ul>
+                <h2>Case Studies</h2>
+                <ul>
+                    <li><a href="./case-studies/bridgepluse-ai-and-drone-technology-for-bridge-health-monitoring.html">BridgePluse:
+                            AI and Drone Technology for Bridge Health Monitoring</a></li>
+                    <li><a href="./case-studies/iot-bridge-monitoring-and-sensor-installation-on-railway-bridges.html">IoT
+                            Bridge Monitoring and Sensor Installation on Railway Bridges</a></li>
+                </ul>
+                <h2>Articles</h2>
+                <ul>
+                    <li><a href="./article/worldsensing-official-reseller-india.html">Celebrating One Year of
+                            Partnership: Clove Technologies &amp; Worldsensing</a></li>
+                    <li><a href="./article/xgrids-authorized-reseller-india.html">Clove Technologies Becomes Authorized
+                            XGRIDS Reseller in India</a></li>
+                    <li><a href="./article/intelligent-pump-house-monitoring-and-control.html">Intelligent Pump House
+                            Monitoring &amp; Control</a></li>
+                    <li><a href="./article/building-resilient-smart-cities-with-data-driven-insights.html">Building
+                            Resilient Smart Cities with Data-Driven Insights</a></li>
+                    <li><a href="./article/track-to-the-future-remote-monitoring-rail-infrastructure.html">Track to the
+                            Future: Remote Monitoring of Rail Infrastructure</a></li>
+                </ul>
+            </nav>
+        </noscript>
+    </main>
+
+    <!-- Section Footer -->
+    <footer>
+        <div id="footer"></div>
+    </footer>
+
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/vendor/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/swiper-script.js"></script>
+    <script src="js/submit-form.js"></script>
+    <script src="js/video_embedded.js"></script>
+    <!-- Linking Emoji Mart script for emoji picker -->
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+
+    <!-- Chatbot Widget -->
+    <script src="../js/chatbot-widget.js"></script>
+
+    <!-- GSAP for smooth carousel animations -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <!-- Resources Hub logic -->
+    <script src="js/resources.js"></script>
+
+
+</body>
+
+</html>

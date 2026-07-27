@@ -1,0 +1,2494 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentra - Smart. Secure. Scalable.</title>
+    <meta name="description"
+        content="Sentra provides IoT edge devices, sensor networks and AI analytics for real-time infrastructure monitoring — keeping bridges, tunnels and assets safe." />
+    <link rel="canonical" href="https://sentratech.in/index.html" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Sentra - Smart. Secure. Scalable." />
+    <meta property="og:description"
+        content="IoT edge devices + predictive analytics for structural health monitoring of bridges, tunnels and industrial assets." />
+    <meta property="og:url" content="https://sentratech.in/index.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://sentratech.in/image/branding/sentra.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sentra - Smart. Secure. Scalable." />
+    <meta name="twitter:description"
+        content="Sentra provides IoT edge devices, sensor networks and AI analytics for real-time monitoring." />
+    <meta name="twitter:image" content="https://sentratech.in/image/branding/sentra.webp" />
+    <meta name="twitter:site" content="@sentratech" />
+    <meta name="twitter:image:width" content="1200" />
+    <meta name="twitter:image:height" content="630" />
+
+    <script type="application/ld+json">
+    {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Sentra",
+    "url":"https://sentratech.in/",
+    "description":"Sentra provides IoT edge devices, sensor networks and AI analytics for real-time infrastructure monitoring — keeping bridges, tunnels and assets safe.",
+    "publisher":{"@type":"Organization","name":"Sentra","url":"https://sentratech.in/","parentOrganization":{"@type":"Organization","name":"Clove Technologies Private Limited"}}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://sentratech.in/"}
+    ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Sentra",
+    "url":"https://sentratech.in/",
+    "parentOrganization":{"@type":"Organization","name":"Clove Technologies Private Limited"},
+    "logo":"https://sentratech.in/assets/logo.webp"
+    }
+    </script>
+
+    <link rel="preload" href="./css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/solutions-v2.css">
+    <link rel="preload" href="./css/chatbot.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="./css/chatbot.css">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    </noscript>
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    </noscript>
+    <link rel="icon" href="/image/branding/favicon.webp" type="image/png" sizes="16x16">
+
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/branding/favicon.webp">
+    <link rel="preload" href="header.html" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="footer.html" as="fetch" crossorigin="anonymous">
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JY641C8LKH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JY641C8LKH');
+    </script>
+
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="w+zfk9KW5N4Qc7VwqPEqkw" async></script>
+    <style>
+        /* Reset header to normal flow on homepage (solutions-v2.css makes it absolute) */
+        body.home-page header {
+            position: relative !important;
+            top: auto !important;
+        }
+
+        .card-body p {
+            color: var(--text-color, #ffffff);
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            z-index: 10000;
+            padding: 8px 16px;
+            background: var(--accent-color, #f48120);
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 0 0 8px 0;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* ---- Hero text sizing ---- */
+        .hero-subheading {
+            font-size: clamp(14px, 1.8vw, 18px);
+            color: var(--primary, #dfcaa0);
+            font-weight: 500;
+            line-height: 1.5;
+            max-width: 640px;
+        }
+
+        .title-heading-banner {
+            font-size: clamp(36px, 5.5vw, 68px);
+            line-height: 1.05;
+            font-weight: 800;
+            background-image: none;
+            -webkit-text-fill-color: #fff;
+            color: #fff;
+        }
+
+        .title-heading {
+            font-size: clamp(22px, 3.5vw, 40px);
+        }
+
+        .title-heading1 {
+            font-size: clamp(20px, 3vw, 34px);
+        }
+
+        .banner-video-container {
+            padding: 70px 20px 60px 20px;
+        }
+
+        .hero-layout {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            align-items: center;
+            min-height: 50vh;
+        }
+
+        .hero-main {
+            flex: 1 1 58%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .hero-side {
+            flex: 1 1 42%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .hero-side .banner-reviewer {
+            gap: 12px;
+            margin-right: 0;
+        }
+
+        .hero-side .banner-reviewer .avatar {
+            width: 32px;
+            height: 32px;
+            border-width: 2px;
+        }
+
+        .hero-side .banner-reviewer .detail {
+            font-size: 12px;
+            gap: 2px;
+        }
+
+        .hero-tagline {
+            font-size: clamp(13px, 1.3vw, 16px);
+            color: var(--primary, #dfcaa0);
+            opacity: 0.8;
+            margin: 0;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 14px;
+            margin-top: 0.25rem;
+        }
+
+
+        .hero-actions .btn {
+            height: 42px;
+        }
+
+        .hero-actions .btn-title {
+            padding: 0 22px;
+            font-size: 14px;
+        }
+
+        .hero-actions .icon-circle {
+            width: 34px;
+            height: 34px;
+            font-size: 14px;
+        }
+
+        .hero-actions .btn.btn-outline {
+            border: 1px solid var(--accent-color-2);
+        }
+
+        body.lightmode .hero-actions .btn.btn-outline .btn-title span {
+            color: #f48120;
+        }
+
+        body.lightmode .hero-actions .btn.btn-outline .icon-circle {
+            border-color: #f48120;
+        }
+
+        body.lightmode .hero-actions .btn.btn-outline i {
+            color: #f48120;
+        }
+
+        .hero-actions .btn.btn-outline:hover,
+        .hero-actions .btn.btn-outline:focus {
+            background-color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .hero-actions .btn.btn-outline:hover .btn-title span,
+        .hero-actions .btn.btn-outline:focus .btn-title span {
+            color: #000000 !important;
+        }
+
+        .hero-actions .btn.btn-outline .icon-circle {
+            border: 1px solid var(--accent-color-2);
+        }
+
+        .hero-actions .btn.btn-outline:hover .icon-circle,
+        .hero-actions .btn.btn-outline:focus .icon-circle {
+            border-color: #ffffff;
+        }
+
+        .hero-actions .btn.btn-outline:hover i,
+        .hero-actions .btn.btn-outline:focus i {
+            color: #000000;
+        }
+
+        body.lightmode .hero-actions .btn.btn-outline:hover i,
+        body.lightmode .hero-actions .btn.btn-outline:focus i {
+            color: #f48120;
+        }
+
+        .hero-actions .btn.btn-outline:hover .icon-circle i,
+        .hero-actions .btn.btn-outline:focus .icon-circle i {
+            color: #000000;
+        }
+
+        body.lightmode .hero-actions .btn.btn-outline:hover .icon-circle i,
+        body.lightmode .hero-actions .btn.btn-outline:focus .icon-circle i {
+            color: #f48120;
+        }
+
+        .hero-video-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            padding: 22px 20px;
+            border-radius: var(--global-border-radius, 25px);
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            text-align: center;
+            max-width: 360px;
+        }
+
+        .li-play-btn {
+            position: relative;
+            height: 70px;
+            border-radius: 50% !important;
+            border: none;
+            background-color: var(--secondary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--primary);
+            font-size: var(--font-size-4xl);
+            aspect-ratio: 1/1;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .li-play-btn:hover {
+            color: var(--primary);
+            background-color: var(--accent-color);
+        }
+
+        .li-play-btn::after,
+        .li-play-btn::before {
+            opacity: 0.2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            content: '';
+            height: 100%;
+            width: 100%;
+            color: var(--accent-color);
+            border: 4px solid currentColor;
+            border-radius: 50%;
+            animation-name: ripple;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(.65, 0, .34, 1);
+            z-index: 0;
+        }
+
+        .li-play-btn::after {
+            animation-delay: 0.5s;
+            animation-duration: 3s;
+        }
+
+        .li-play-btn::before {
+            animation-delay: 0.2s;
+            animation-duration: 3s;
+        }
+
+        .linkedin-modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--accent-transparent-2, rgba(0, 0, 0, 0.75));
+            z-index: 100000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .linkedin-modal {
+            background-color: var(--secondary, #111);
+            padding: 0;
+            position: relative;
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 14px;
+            overflow: visible;
+        }
+
+        .linkedin-modal iframe {
+            width: 504px;
+            max-width: 90vw;
+            height: auto;
+            aspect-ratio: 504 / 399;
+            display: block;
+            border: 0;
+            border-radius: 14px;
+        }
+
+        .linkedin-modal .my-close {
+            position: absolute;
+            top: -40px;
+            right: 0px;
+            font-size: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #fff;
+            z-index: 2000;
+        }
+
+        .hero-video-card p {
+            font-size: 14px;
+            color: var(--primary, #dfcaa0);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .hero-solution-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 575px) {
+            .hero-solution-pills {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 6px;
+            }
+
+            .hero-solution-pill {
+                justify-content: center;
+                text-align: center;
+                font-size: 10px;
+                padding: 5px 8px;
+                gap: 4px;
+                white-space: normal;
+                word-break: break-word;
+                hyphens: auto;
+            }
+
+            .hero-solution-pill:last-child {
+                grid-column: 1 / -1;
+            }
+
+            .hero-solution-pill .pill-icon {
+                font-size: 13px;
+            }
+
+            .hero-video-card {
+                flex-direction: column;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+
+        .hero-solution-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 50px;
+            background: var(--accent-color, #f48120);
+            border: 1px solid var(--accent-color, #f48120);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: 0.25s ease;
+        }
+
+        .hero-solution-pill:hover {
+            background: #fff;
+            border-color: #fff;
+            color: #000;
+        }
+
+        body.lightmode .hero-solution-pill:hover {
+            color: #000;
+        }
+
+        .hero-solution-pill .pill-icon {
+            font-size: 16px;
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+            line-height: 1;
+        }
+
+        body.lightmode .hero-solution-pill {
+            background: #ff8c00;
+            border-color: #ff8c00;
+            color: #fff;
+        }
+
+        .banner-reviewer {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .banner-reviewer .detail {
+            white-space: nowrap;
+        }
+
+        @media (max-width: 991px) {
+            .hero-layout {
+                flex-direction: column;
+                min-height: auto;
+                gap: 24px;
+                padding: 1rem 0;
+            }
+
+            .hero-side {
+                width: 100%;
+            }
+
+            .hero-video-card {
+                max-width: 100%;
+                flex-direction: row;
+                padding: 16px 20px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .banner-reviewer {
+                width: 100%;
+                justify-content: center;
+                margin-right: 0;
+            }
+
+            .hero-solution-pills {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body class="home-page">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo"><img src="./image/branding/sentra_white_1.svg" alt="Sentra"></div>
+            <div class="preloader-logo-sub">Smart · Secure · Scalable</div>
+            <div class="preloader-counter">
+                <span id="preloader-count">0</span>
+                <span class="preloader-percent">%</span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Section Header -->
+    <header>
+        <!-- Section Navbar -->
+        <div id="header"></div>
+    </header>
+    <script>
+        fetch("header.html")
+            .then(r => r.text())
+            .then(h => document.getElementById("header").innerHTML = h);
+    </script>
+
+    <!-- Section Content Edit -->
+    <aside>
+        <div id="edit-sidebar"></div>
+    </aside>
+
+
+
+    <!-- Section Sidebar -->
+    <aside>
+        <div id="sidebar"></div>
+    </aside>
+
+    <!-- Section Main Content-->
+    <main id="main-content">
+        <!-- Section Banner -->
+
+
+
+        <div class="section-banner">
+            <div class="banner-video-container keep-dark ">
+                <div id="banner-video-background" data-video-id="U9PcESAe4-4"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-container position-relative">
+                    <div class="hero-layout">
+                        <div class="hero-main">
+                            <h1 class="title-heading-banner">Smart. Secure.<br>Scalable.</h1>
+                            <p class="hero-subheading">IoT-Powered Structural Health Monitoring, Asset Monitoring,
+                                Bridge Inspection &amp; Digital Twin Solutions</p>
+                            <div class="hero-solution-pills">
+                                <a href="./solutions/digital-engineering-and-documentation.html"
+                                    class="hero-solution-pill">
+                                    <span class="pill-icon material-symbols-outlined">view_in_ar</span>
+                                    Digital Twin
+                                </a>
+                                <a href="./solutions/asset-monitoring-and-management-solutions.html"
+                                    class="hero-solution-pill">
+                                    <span class="pill-icon material-symbols-outlined">database</span>
+                                    Asset Monitoring
+                                </a>
+                                <a href="./solutions/bridge-inspection-and-condition-assessment.html"
+                                    class="hero-solution-pill">
+                                    <span class="pill-icon material-symbols-outlined">signpost</span>
+                                    Bridge Inspection
+                                </a>
+                                <a href="./solutions/structural-health-monitoring.html" class="hero-solution-pill">
+                                    <span class="pill-icon material-symbols-outlined">monitoring</span>
+                                    Structural Health Monitoring
+                                </a>
+                            </div>
+                            <div class="hero-actions">
+                                <a href="./solutions.html" class="btn btn-accent">
+                                    <div class="btn-title"><span>Explore Solutions</span></div>
+                                    <div class="icon-circle"><i class="fa-solid fa-arrow-right"></i></div>
+                                </a>
+                                <a href="./about.html" class="btn btn-outline">
+                                    <div class="btn-title"><span>About Sentra</span></div>
+                                    <div class="icon-circle"><i class="fa-solid fa-arrow-right"></i></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="hero-side">
+                            <div class="hero-video-card">
+                                <button class="li-play-btn" aria-label="Play video" id="heroLinkedinPlay"
+                                    data-video="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7478429953664040960?compact=1">
+                                    <i class="fa-solid fa-play"></i>
+                                </button>
+                                <p>Watch how we transform ideas into reality that leave a lasting impact.</p>
+                            </div>
+                            <div class="banner-reviewer">
+                                <div class="d-flex flex-row align-items-center">
+                                    <img src="./image/about/partner_1.webp" alt="Amaravathi" class="avatar">
+                                    <img src="./image/about/partner_3.webp" alt="Indian_Railways" class="avatar">
+                                    <img src="./image/about/partner_8.webp" alt="HappyNest" class="avatar">
+                                </div>
+                                <div class="detail">
+                                    <span>200+</span>
+                                    <span>Projects Completed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Section Expertise -->
+        <div class="section">
+            <div class="hero-container">
+                <div class="d-flex flex-column flex-xl-row gspace-5">
+                    <div class="expertise-img-layout expertise-cards-stack">
+                        <div class="card card-expertise  animate-box animated animate__animated"
+                            data-animate="animate__fadeInDown">
+                            <h4>Ready to See Intelligent Monitoring in Action?</h4>
+                            <p>Experience how we adapt to your scalable project.</p>
+                            <div class="d-flex align-items-center flex-row gspace-2 expertise-link">
+                                <a href="./contact.html">Schedule a Demo</a>
+                                <i class="fa-solid fa-circle-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="card card-expertise card-expertise-counter animate-box animated animate__animated"
+                            data-animate="animate__fadeInUp">
+                            <div class="d-flex flex-row gspace-2 align-items-center">
+                                <div class="counter-box d-flex flex-row align-items-center">
+                                    <span class="counter" data-target="21"></span>
+                                    <span class="counter-detail">+</span>
+                                </div>
+                                <div class="counter-text">
+                                    <h6 class="mb-0">Years of Experience on Digital Twin and Sensor Monitoring</h6>
+                                </div>
+                            </div>
+                            <p class="expertise-quote">
+                                <i class="fa-solid fa-quote-left"></i>
+                                Delivering reliable IoT-powered sensing and data-driven insights that ensure safety,
+                                precision, and efficiency across critical infrastructure projects.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="expertise-title">
+                        <div class="sub-heading animate-box animated animate__animated"
+                            data-animate="animate__fadeInRight">
+                            <i class="fa-regular fa-circle-dot"></i>
+                            <span>Our Expertise</span>
+                        </div>
+                        <h2 class="title-heading intro-heading-compact animate-box animated animate__animated"
+                            data-animate="animate__fadeInRight">Data like no other, Results we strive together</h2>
+                        <p class="intro-text-compact">At Sentra, we don’t just monitor — we empower industries with
+                            intelligence, precision, and
+                            unstoppable secure progress.</p>
+                        <div class="expertise-list expertise-list-grid">
+                            <h5>What We Do Best</h5>
+                            <div class="link-wrapper" style="margin-bottom:0.5rem;">
+                                <a href="./industries.html">Industries We Serve</a>
+                                <i class="fa-solid fa-circle-arrow-right"></i>
+                            </div>
+                            <div class="expertise-chip-grid">
+                                <a href="./solutions/structural-health-monitoring.html" class="expertise-chip">
+                                    <span class="material-symbols-outlined">monitoring</span>
+                                    Structural Health Monitoring
+                                </a>
+                                <a href="./solutions/bridge-inspection-and-condition-assessment.html"
+                                    class="expertise-chip">
+                                    <span class="material-symbols-outlined">signpost</span>
+                                    Bridge Inspection & Condition Assessment
+                                </a>
+                                <a href="./solutions/fatigue-and-residual-life-assessment.html" class="expertise-chip">
+                                    <span class="material-symbols-outlined">speed</span>
+                                    Fatigue & Residual Life Assessment
+                                </a>
+                                <a href="./solutions/asset-monitoring-and-management-solutions.html"
+                                    class="expertise-chip">
+                                    <span class="material-symbols-outlined">database</span>
+                                    Asset Monitoring & Management Solutions
+                                </a>
+                                <a href="./solutions/geotechnical-and-foundation-monitoring.html"
+                                    class="expertise-chip">
+                                    <span class="material-symbols-outlined">terrain</span>
+                                    Geotechnical & Foundation Monitoring
+                                </a>
+                                <a href="./solutions/advanced-non-destructive-testing-ndt.html" class="expertise-chip">
+                                    <span class="material-symbols-outlined">biotech</span>
+                                    Advanced Non-Destructive Testing (NDT)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Modal Video -->
+        <div class="section p-0">
+            <div id="modal-overlay" class="modal-overlay">
+                <div class="my-modal">
+                    <span class="my-close"><i class="fa-solid fa-xmark"></i></span>
+                    <iframe id="my-video-frame" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div id="linkedin-modal-overlay" class="linkedin-modal-overlay">
+                <div class="linkedin-modal">
+                    <span class="my-close" id="linkedinModalClose"><i class="fa-solid fa-xmark"></i></span>
+                    <iframe id="linkedin-modal-frame" title="Embedded post" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Partner -->
+        <div class="section-partner">
+            <div class="hero-container">
+                <div class="card card-partner  animate-box animated animate__animated"
+                    data-animate="animate__fadeInRight">
+                    <div class="partner-spacer"></div>
+                    <div class="row row-cols-xl-2 row-cols-1 align-items-center px-5 position-relative z-2">
+                        <div class="col">
+                            <div class="d-flex flex-column justify-content-start pe-xl-3 pe-0">
+                                <h3 class="title-heading">
+                                    Powering Success with Our Top Partners
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex flex-column ps-xl-3 ps-0 pt-3 pt-xl-0">
+                                <p>
+                                    At Sentra, we collaborate with industry leaders to deliver advanced IoT monitoring
+                                    and smart digital solutions that drive accuracy, efficiency, and innovation. By
+                                    combining
+                                    cutting-edge technology with deep expertise, we help our partners achieve measurable
+                                    success and stay ahead in a connected world.
+                                </p>
+                                <div class="link-wrapper">
+                                    <a href="partnership.html" style="color: #f48120;">Join Us</a>
+                                    <i class="fa-solid fa-arrow-circle-right accent-color"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiperPartner-layout">
+                        <div class="swiperPartner-overlay">
+                            <div class="spacer"></div>
+                        </div>
+                        <div class="swiperPartner-container">
+                            <div class="swiper swiperPartner">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="partner-slide">
+                                                <img src="./image/about/partner_1.webp" alt="Amaravathi - Partner"
+                                                    class="partner-logo img-fluid">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="partner-slide">
+                                                <img src="./image/about/partner_2.webp" alt="Partner Company Logo"
+                                                    class="partner-logo img-fluid">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="partner-slide">
+                                                <img src="./image/about/partner_3.webp" alt="Indian Railways - Partner"
+                                                    class="partner-logo img-fluid">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="partner-slide">
+                                                <img src="./image/about/partner_4.webp" alt="Partner Company Logo"
+                                                    class="partner-logo img-fluid">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="partner-slide">
+                                                <img src="./image/about/partner_5.webp" alt="Partner Company Logo"
+                                                    class="partner-logo img-fluid">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="partner-slide">
+                                                <img src="./image/about/partner_6.webp" alt="Partner Company Logo"
+                                                    class="partner-logo img-fluid">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="partner-slide">
+                                                <img src="./image/about/partner_7.webp" alt="Partner Company Logo"
+                                                    class="partner-logo img-fluid">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="partner-slide">
+                                                <img src="./image/about/partner_4.webp" alt="Partner Company Logo"
+                                                    class="partner-logo img-fluid">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="partner-slide">
+                                                <img src="./image/about/partner_3.webp" alt="Partner Company Logo"
+                                                    class="partner-logo img-fluid">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="partner-slide">
+                                                <img src="./image/about/partner_2.webp" alt="Partner Company Logo"
+                                                    class="partner-logo img-fluid">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="partner-slide">
+                                                <img src="./image/about/partner_1.webp" alt="Partner Company Logo"
+                                                    class="partner-logo img-fluid">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="partner-slide">
+                                                <img src="./image/about/partner_2.webp" alt="Partner Company Logo"
+                                                    class="partner-logo img-fluid">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="partner-slide">
+                                                <img src="./image/about/partner_3.webp" alt="Partner Company Logo"
+                                                    class="partner-logo img-fluid">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="partner-slide">
+                                                <img src="./image/about/partner_4.webp" alt="Partner Company Logo"
+                                                    class="partner-logo img-fluid">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="partner-slide">
+                                                <img src="./image/about/partner_5.webp" alt="Partner Company Logo"
+                                                    class="partner-logo img-fluid">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="partner-slide">
+                                                <img src="./image/about/partner_6.webp" alt="Partner Company Logo"
+                                                    class="partner-logo img-fluid">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="partner-slide">
+                                                <img src="./image/about/partner_8.webp" alt="Partner Company Logo"
+                                                    class="partner-logo img-fluid">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Why Choose Us -->
+        <div class="section">
+            <div class="hero-container">
+                <div class="d-flex flex-column gspace-2 chooseus-section-heading">
+                    <div class="sub-heading  animate-box animated animate__animated" data-animate="animate__fadeInDown">
+                        <i class="fa-regular fa-circle-dot"></i>
+                        <span>Why Choose Us</span>
+                    </div>
+                    <h2 class="title-heading intro-heading-compact animate-box animated animate__animated"
+                        data-animate="animate__fadeInDown">Your Success is Our Mission</h2>
+                    <p class="mb-0 intro-text-compact animate-box animated animate__animated"
+                        data-animate="animate__fadeInDown">We always understand and adapt for business.
+                    </p>
+                </div>
+                <div class="d-flex flex-column flex-xl-row gspace-5">
+                    <div class="chooseus-card-container">
+                        <div class="solution-showcase-list">
+                            <div class="solution-showcase-item active"
+                                data-img="./image/solutions/Homepage/Structural%20Health%20Monitoring.webp"
+                                data-alt="Structural Health Monitoring">
+                                <div class="solution-showcase-header">
+                                    <span class="material-symbols-outlined">monitoring</span>
+                                    <h4>Structural Health Monitoring</h4>
+                                    <i class="fa-solid fa-chevron-down showcase-chevron"></i>
+                                </div>
+                                <div class="solution-showcase-body">
+                                    <p>Ensure your infrastructure stands the test of time. Our end-to-end SHM solutions
+                                        combine intelligent sensors, predictive analytics, and edge-based insights to
+                                        detect structural stress before it becomes a problem.</p>
+                                    <div class="link-wrapper">
+                                        <a href="./solutions/structural-health-monitoring.html">Read More</a>
+                                        <i class="fa-solid fa-arrow-circle-right accent-color"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="solution-showcase-item"
+                                data-img="./image/solutions/Homepage/Bridge%20Inspection%20%26%20Condition%20Assessment.webp"
+                                data-alt="Bridge Inspection & Condition Assessment">
+                                <div class="solution-showcase-header">
+                                    <span class="material-symbols-outlined">signpost</span>
+                                    <h4>Bridge Inspection & Condition Assessment</h4>
+                                    <i class="fa-solid fa-chevron-down showcase-chevron"></i>
+                                </div>
+                                <div class="solution-showcase-body">
+                                    <p>Ensure complete visibility into your bridge assets. Our drone-based aerial
+                                        surveys
+                                        and underwater ROV inspections deliver fast, safe, accurate assessments,
+                                        uncovering hidden defects and enabling confident maintenance decisions.</p>
+                                    <div class="link-wrapper">
+                                        <a href="./solutions/bridge-inspection-and-condition-assessment.html">Read
+                                            More</a>
+                                        <i class="fa-solid fa-arrow-circle-right accent-color"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="solution-showcase-item"
+                                data-img="./image/solutions/Homepage/Fatigue%20%26%20Residual%20Life%20Assessment.webp"
+                                data-alt="Fatigue & Residual Life Assessment">
+                                <div class="solution-showcase-header">
+                                    <span class="material-symbols-outlined">speed</span>
+                                    <h4>Fatigue & Residual Life Assessment</h4>
+                                    <i class="fa-solid fa-chevron-down showcase-chevron"></i>
+                                </div>
+                                <div class="solution-showcase-body">
+                                    <p>Know exactly how much life remains in your assets. Our advanced fatigue analysis,
+                                        vibration monitoring, and predictive diagnostics help extend service life and
+                                        prevent unplanned failures.</p>
+                                    <div class="link-wrapper">
+                                        <a href="./solutions/fatigue-and-residual-life-assessment.html">Read More</a>
+                                        <i class="fa-solid fa-arrow-circle-right accent-color"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="solution-showcase-item"
+                                data-img="./image/solutions/Homepage/Asset%20Monitoring%20%26%20Management%20Solutions.webp"
+                                data-alt="Asset Monitoring & Management Solutions">
+                                <div class="solution-showcase-header">
+                                    <span class="material-symbols-outlined">database</span>
+                                    <h4>Asset Monitoring & Management Solutions</h4>
+                                    <i class="fa-solid fa-chevron-down showcase-chevron"></i>
+                                </div>
+                                <div class="solution-showcase-body">
+                                    <p>Gain complete visibility into your critical assets — bridges, tunnels,
+                                        transformers, or industrial machinery. Our smart monitoring systems enable
+                                        proactive maintenance and higher uptime.</p>
+                                    <div class="link-wrapper">
+                                        <a href="./solutions/asset-monitoring-and-management-solutions.html">Read
+                                            More</a>
+                                        <i class="fa-solid fa-arrow-circle-right accent-color"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="solution-showcase-item"
+                                data-img="./image/solutions/Homepage/Geotechnical%20%26%20Foundation%20Monitoring.webp"
+                                data-alt="Geotechnical & Foundation Monitoring">
+                                <div class="solution-showcase-header">
+                                    <span class="material-symbols-outlined">terrain</span>
+                                    <h4>Geotechnical & Foundation Monitoring</h4>
+                                    <i class="fa-solid fa-chevron-down showcase-chevron"></i>
+                                </div>
+                                <div class="solution-showcase-body">
+                                    <p>Detect ground movement before it impacts your structure. We monitor soil
+                                        behavior, pore pressure, settlement, and seismic response to provide early
+                                        warnings for engineers.</p>
+                                    <div class="link-wrapper">
+                                        <a href="./solutions/geotechnical-and-foundation-monitoring.html">Read More</a>
+                                        <i class="fa-solid fa-arrow-circle-right accent-color"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="solution-showcase-item"
+                                data-img="./image/solutions/Homepage/Advanced%20Non-Destructive%20Testing%20(NDT).webp"
+                                data-alt="Advanced Non-Destructive Testing (NDT)">
+                                <div class="solution-showcase-header">
+                                    <span class="material-symbols-outlined">biotech</span>
+                                    <h4>Advanced Non-Destructive Testing (NDT)</h4>
+                                    <i class="fa-solid fa-chevron-down showcase-chevron"></i>
+                                </div>
+                                <div class="solution-showcase-body">
+                                    <p>Experience precision diagnostics with the latest ultrasonic, GPR, and acoustic
+                                        technologies. We help you uncover hidden flaws and certify structural integrity
+                                        — without damaging the asset.</p>
+                                    <div class="link-wrapper">
+                                        <a href="./solutions/advanced-non-destructive-testing-ndt.html">Read More</a>
+                                        <i class="fa-solid fa-arrow-circle-right accent-color"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chooseus-content-container">
+                        <div class="d-flex flex-column gspace-5">
+                            <div class="image-container chooseus-image-container">
+                                <img id="chooseusActiveImage"
+                                    src="./image/solutions/Homepage/Structural%20Health%20Monitoring.webp"
+                                    alt="Structural Health Monitoring" class="chooseus-img">
+                                <div class="card-chooseus-cta-overlay">
+                                    <div class="card card-chooseus-cta glassmorphic">
+                                        <h5>Partner with us & take your projects to the next level.</h5>
+                                        <div class="link-wrapper">
+                                            <a href="./contact.html">Let's Talk Strategy</a>
+                                            <i class="fa-solid fa-circle-arrow-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Guide -->
+        <div class="section-guide">
+            <div class="guide-banner">
+                <div class="hero-container">
+                    <div class="guide-content  animate-box animated animate__animated" data-animate="animate__fadeInUp">
+                        <div class="guide-video-container">
+                            <button class="request-loader" aria-label="Play video"
+                                data-video="https://www.youtube.com/embed/2XORgewU0bc">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                            <p>
+                                See How We<br>Build a Family
+                            </p>
+                        </div>
+                        <div class="d-flex flex-column gspace-2 guide-text">
+                            <h3 class="title-heading guide-heading">Reimagine What’s Possible</h3>
+                            <p class="guide-subtext">Empowering businesses with IoT-driven insights and innovative
+                                solutions. Together,
+                                let’s
+                                shape a smarter future!
+                            </p>
+                            <a href="faq.html" class="guide-cta">
+                                <span>Got Questions? <strong>Read FAQs</strong></span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Products -->
+        <div class="section">
+            <div class="hero-container">
+                <div class="d-flex flex-column justify-content-center text-center gspace-5">
+                    <div class="d-flex flex-column justify-content-center text-center gspace-2">
+                        <div class="sub-heading align-self-center animate-box animated animate__animated"
+                            data-animate="animate__fadeInDown">
+                            <i class="fa-regular fa-circle-dot"></i>
+                            <span>Our Products</span>
+                        </div>
+                        <h2 class="title-heading intro-heading-compact heading-container heading-container-medium animate-box animated animate__animated"
+                            data-animate="animate__fadeInDown">Hardware Built for Real-World Monitoring</h2>
+                        <p class="intro-text-compact heading-container heading-container-medium animate-box animated animate__animated"
+                            data-animate="animate__fadeInDown">From wireless sensors to data loggers,
+                            communications hardware and laser scanners — explore the devices powering our monitoring
+                            solutions.</p>
+                    </div>
+                    <div class="product-filter-bar animate-box animated animate__animated"
+                        data-animate="animate__fadeInUp">
+                        <button class="product-filter-btn active" data-filter="all">All Products</button>
+                        <button class="product-filter-btn" data-filter="laser-scanners">Laser Scanners</button>
+                        <button class="product-filter-btn" data-filter="wireless">Wireless Sensors</button>
+                        <button class="product-filter-btn" data-filter="edge-devices">Edge Devices</button>
+                        <button class="product-filter-btn" data-filter="communications">Communications</button>
+                        <button class="product-filter-btn" data-filter="wired">Wired Sensors</button>
+                    </div>
+                    <div class="swiperProducts-layout animate-box animated animate__animated"
+                        data-animate="animate__fadeInUp">
+                        <div class="swiper swiperProducts">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" data-category="laser-scanners">
+                                    <div class="product-card">
+                                        <div class="product-card-image">
+                                            <img src="./image/products/scanners/lixel-k2-hero.webp" alt="Lixel K2"
+                                                class="product-img" loading="lazy">
+                                            <span class="product-image-label">New</span>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h4>Lixel K2</h4>
+                                            <span class="product-category-label">Laser Scanners</span>
+                                            <p>Lightweight SLAM LiDAR scanner with onboard RTK, 200,000 pts/s, 1.2kg.
+                                            </p>
+                                            <div class="product-card-actions">
+                                                <a href="./contact.html" class="btn-product-primary">
+                                                    <span>Quote</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <a href="./products/lixel-k2.html" class="btn-product-secondary">
+                                                    <span>View</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" data-category="laser-scanners">
+                                    <div class="product-card">
+                                        <div class="product-card-image">
+                                            <img src="./image/products/scanners/KV Horizontal.jpg" alt="PortalCam"
+                                                class="product-img" loading="lazy">
+                                            <span class="product-image-label">Spatial Camera</span>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h4>PortalCam</h4>
+                                            <span class="product-category-label">Laser Scanners</span>
+                                            <p>Spatial camera with 856K pts/s LiDAR, onboard AI 3DGS, 870g handheld.</p>
+                                            <div class="product-card-actions">
+                                                <a href="./contact.html" class="btn-product-primary">
+                                                    <span>Quote</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <a href="./products/portalcam.html" class="btn-product-secondary">
+                                                    <span>View</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" data-category="laser-scanners">
+                                    <div class="product-card">
+                                        <div class="product-card-image">
+                                            <img src="./image/products/scanners/lixel-l2-pro.jpg" alt="Lixel L2 Pro"
+                                                class="product-img" loading="lazy">
+                                            <span class="product-image-label">640K pts/s</span>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h4>Lixel L2 Pro</h4>
+                                            <span class="product-category-label">Laser Scanners</span>
+                                            <p>Precision redefined. Up to 640,000 pts/s and 300m range for large-scale
+                                                survey.</p>
+                                            <div class="product-card-actions">
+                                                <a href="./contact.html" class="btn-product-primary">
+                                                    <span>Quote</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <a href="./products/lixel-l2-pro.html" class="btn-product-secondary">
+                                                    <span>View</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" data-category="laser-scanners">
+                                    <div class="product-card">
+                                        <div class="product-card-image">
+                                            <img src="./image/products/scanners/lixelkity-k1-hero.png"
+                                                alt="LixelKity K1" class="product-img" loading="lazy">
+                                            <span class="product-image-label">Sub-1kg</span>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h4>LixelKity K1</h4>
+                                            <span class="product-category-label">Laser Scanners</span>
+                                            <p>Compact yet powerful. Sub-1kg wearable design for fast, tripod-free
+                                                capture.</p>
+                                            <div class="product-card-actions">
+                                                <a href="./contact.html" class="btn-product-primary">
+                                                    <span>Quote</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <a href="./products/lixelkity-k1.html" class="btn-product-secondary">
+                                                    <span>View</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" data-category="wireless">
+                                    <div class="product-card">
+                                        <div class="product-card-image">
+                                            <img src="./image/products/tiltmeter_1.webp" alt="Tilt90 Tiltmeter"
+                                                class="product-img" loading="lazy">
+                                            <span class="product-image-label">LS-G6-TIL90</span>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h4>Tilt90 Tiltmeter</h4>
+                                            <span class="product-category-label">Wireless Sensors</span>
+                                            <p>Three-axis tilt sensor offering rugged stability, low noise, and
+                                                long-range wireless telemetry for continuous monitoring.</p>
+                                            <div class="product-card-actions">
+                                                <a href="./contact.html" class="btn-product-primary">
+                                                    <span>Quote</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <a href="./products/tiltmeter.html" class="btn-product-secondary">
+                                                    <span>View</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" data-category="wireless">
+                                    <div class="product-card">
+                                        <div class="product-card-image">
+                                            <img src="./image/products/tiltmeter_event_1.webp"
+                                                alt="Tiltmeter Event Detection" class="product-img" loading="lazy">
+                                            <span class="product-image-label">LS-G6-TIL90-XE</span>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h4>Tiltmeter Event Detection</h4>
+                                            <span class="product-category-label">Wireless Sensors</span>
+                                            <p>Event-detection tiltmeter that triggers immediate alerts on sudden
+                                                movement for landslide and structural safety monitoring.</p>
+                                            <div class="product-card-actions">
+                                                <a href="./contact.html" class="btn-product-primary">
+                                                    <span>Quote</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <a href="./products/tiltmeter-event-detection.html"
+                                                    class="btn-product-secondary">
+                                                    <span>View</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" data-category="wireless">
+                                    <div class="product-card">
+                                        <div class="product-card-image">
+                                            <img src="./image/products/vibration_meter_1.webp" alt="Vibration Meter"
+                                                class="product-img" loading="lazy">
+                                            <span class="product-image-label">LSG7ACL-BILH-VIB</span>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h4>Vibration Meter</h4>
+                                            <span class="product-category-label">Wireless Sensors</span>
+                                            <p>Advanced three-axis vibration sensing with internal calculation of PPV
+                                                and dominant frequency.</p>
+                                            <div class="product-card-actions">
+                                                <a href="./contact.html" class="btn-product-primary">
+                                                    <span>Quote</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <a href="./products/vibration-meter.html" class="btn-product-secondary">
+                                                    <span>View</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" data-category="wireless">
+                                    <div class="product-card">
+                                        <div class="product-card-image">
+                                            <img src="./image/products/laser_tilitmeter_1.webp" alt="Laser Tiltmeter"
+                                                class="product-img" loading="lazy">
+                                            <span class="product-image-label">LS-G6-LAS-TIL90</span>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h4>Laser Tiltmeter</h4>
+                                            <span class="product-category-label">Wireless Sensors</span>
+                                            <p>Ultra-precise laser tiltmeter delivering sub-microradian accuracy for
+                                                highly sensitive structural and geodetic measurements.</p>
+                                            <div class="product-card-actions">
+                                                <a href="./contact.html" class="btn-product-primary">
+                                                    <span>Quote</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <a href="./products/laser-tiltmeter.html" class="btn-product-secondary">
+                                                    <span>View</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" data-category="wireless">
+                                    <div class="product-card">
+                                        <div class="product-card-image">
+                                            <img src="./image/products/GNSSMeter_1.webp" alt="GNSS Meter"
+                                                class="product-img" loading="lazy">
+                                            <span class="product-image-label">LSG7GNS-SXLH</span>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h4>GNSS Meter</h4>
+                                            <span class="product-category-label">Wireless Sensors</span>
+                                            <p>Satellite-based displacement monitoring providing precise three-axis
+                                                geospatial positioning data.</p>
+                                            <div class="product-card-actions">
+                                                <a href="./contact.html" class="btn-product-primary">
+                                                    <span>Quote</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <a href="./products/gnss-meter.html" class="btn-product-secondary">
+                                                    <span>View</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" data-category="edge-devices">
+                                    <div class="product-card">
+                                        <div class="product-card-image">
+                                            <img src="./image/products/Datalogger_1.webp" alt="Digital Data Logger"
+                                                class="product-img" loading="lazy">
+                                            <span class="product-image-label">LS-G6-DIG-2</span>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h4>Digital Data Logger</h4>
+                                            <span class="product-category-label">Data Loggers</span>
+                                            <p>Scalable digital logging solution for RS485 and SDI-12 sensor networks.
+                                            </p>
+                                            <div class="product-card-actions">
+                                                <a href="./contact.html" class="btn-product-primary">
+                                                    <span>Quote</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <a href="./products/digital-data-logger.html"
+                                                    class="btn-product-secondary">
+                                                    <span>View</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" data-category="edge-devices">
+                                    <div class="product-card">
+                                        <div class="product-card-image">
+                                            <img src="./image/products/Vibrating_Wire_1.webp"
+                                                alt="Vibrating Wire Logger" class="product-img" loading="lazy">
+                                            <span class="product-image-label">LS-G6-VW</span>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h4>Vibrating Wire Logger</h4>
+                                            <span class="product-category-label">Data Loggers</span>
+                                            <p>Robust logging for vibrating wire sensors, ensuring accurate frequency
+                                                readings in geotechnical applications.</p>
+                                            <div class="product-card-actions">
+                                                <a href="./contact.html" class="btn-product-primary">
+                                                    <span>Quote</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <a href="./products/vibrating-wire.html" class="btn-product-secondary">
+                                                    <span>View</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" data-category="edge-devices">
+                                    <div class="product-card">
+                                        <div class="product-card-image">
+                                            <img src="./image/products/vibrating_wire_rcr_front.webp"
+                                                alt="Vibrating Wire RCR" class="product-img" loading="lazy">
+                                            <span class="product-image-label">LS-G6-VW-RCR</span>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h4>Vibrating Wire RCR</h4>
+                                            <span class="product-category-label">Data Loggers</span>
+                                            <p>Ultra-robust 5-channel data logger designed to be embedded in precast
+                                                concrete for real-time stress and strain monitoring.</p>
+                                            <div class="product-card-actions">
+                                                <a href="./contact.html" class="btn-product-primary">
+                                                    <span>Quote</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <a href="./products/vibrating-wire-rcr.html"
+                                                    class="btn-product-secondary">
+                                                    <span>View</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" data-category="edge-devices">
+                                    <div class="product-card">
+                                        <div class="product-card-image">
+                                            <img src="./image/products/Analog_logger_1.webp" alt="Analog Data Logger"
+                                                class="product-img" loading="lazy">
+                                            <span class="product-image-label">LS-G6-ANALOG-4</span>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h4>Analog Data Logger</h4>
+                                            <span class="product-category-label">Data Loggers</span>
+                                            <p>Multi-channel analog data logger supporting voltage, current, and bridge
+                                                inputs for legacy and hybrid sensor systems.</p>
+                                            <div class="product-card-actions">
+                                                <a href="./contact.html" class="btn-product-primary">
+                                                    <span>Quote</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <a href="./products/analog-data-logger.html"
+                                                    class="btn-product-secondary">
+                                                    <span>View</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" data-category="edge-devices">
+                                    <div class="product-card">
+                                        <div class="product-card-image">
+                                            <img src="./image/products/Piconode_1.webp" alt="Piconode Data Logger"
+                                                class="product-img" loading="lazy">
+                                            <span class="product-image-label">LS-G6-PICO</span>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h4>Piconode Data Logger</h4>
+                                            <span class="product-category-label">Data Loggers</span>
+                                            <p>Compact wireless data logger for ultra-low-power analog sensor networks —
+                                                ideal for distributed, long-deployment monitoring.</p>
+                                            <div class="product-card-actions">
+                                                <a href="./contact.html" class="btn-product-primary">
+                                                    <span>Quote</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <a href="./products/piconode-data-logger.html"
+                                                    class="btn-product-secondary">
+                                                    <span>View</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" data-category="communications">
+                                    <div class="product-card">
+                                        <div class="product-card-image">
+                                            <img src="./image/home/gateway_01.webp" alt="Gateway" class="product-img"
+                                                loading="lazy">
+                                            <span class="product-image-label">LS-M6-KIO-GW</span>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h4>Gateway</h4>
+                                            <span class="product-category-label">Narrowband Communications</span>
+                                            <p>Reliable 4G LTE gateway that securely forwards data from remote sensors,
+                                                ensuring real-time monitoring even in harsh outdoor environments.</p>
+                                            <div class="product-card-actions">
+                                                <a href="./contact.html" class="btn-product-primary">
+                                                    <span>Quote</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <a href="./products/gateway.html" class="btn-product-secondary">
+                                                    <span>View</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" data-category="communications">
+                                    <div class="product-card">
+                                        <div class="product-card-image">
+                                            <img src="./image/home/repeater_01.webp" alt="Repeater" class="product-img"
+                                                loading="lazy">
+                                            <span class="product-image-label">RPK20E</span>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h4>Repeater</h4>
+                                            <span class="product-category-label">Narrowband Communications</span>
+                                            <p>Wireless repeater to extend network coverage and improve connectivity
+                                                stability across distributed sensor networks.</p>
+                                            <div class="product-card-actions">
+                                                <a href="./contact.html" class="btn-product-primary">
+                                                    <span>Quote</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <a href="./products/repeater.html" class="btn-product-secondary">
+                                                    <span>View</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" data-category="communications">
+                                    <div class="product-card">
+                                        <div class="product-card-image">
+                                            <img src="./image/products/thread_01.webp" alt="Thread" class="product-img"
+                                                loading="lazy">
+                                            <span class="product-image-label">ThreadX3</span>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h4>Thread</h4>
+                                            <span class="product-category-label">Broadband Communications</span>
+                                            <p>High-performance broadband node that delivers fast, reliable 4G/LTE data
+                                                communication for multi-sensor networks, even in remote or harsh
+                                                environments.</p>
+                                            <div class="product-card-actions">
+                                                <a href="./contact.html" class="btn-product-primary">
+                                                    <span>Quote</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <a href="./products/thread.html" class="btn-product-secondary">
+                                                    <span>View</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" data-category="wired">
+                                    <div class="product-card">
+                                        <div class="product-card-image">
+                                            <img src="./image/home/staingauge_01.webp" alt="Strain Gauge"
+                                                class="product-img" loading="lazy">
+                                            <span class="product-image-label">Model 4100</span>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h4>Strain Gauge</h4>
+                                            <span class="product-category-label">Wired Sensors</span>
+                                            <p>Compact wired strain gauge for accurate strain and load measurement.</p>
+                                            <div class="product-card-actions">
+                                                <a href="./contact.html" class="btn-product-primary">
+                                                    <span>Quote</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <a href="./products/strain-gauges.html" class="btn-product-secondary">
+                                                    <span>View</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" data-category="wired">
+                                    <div class="product-card">
+                                        <div class="product-card-image">
+                                            <img src="./image/products/acceleorometer_01.webp" alt="Accelerometer"
+                                                class="product-img" loading="lazy">
+                                            <span class="product-image-label">LS-G6-VW</span>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h4>Accelerometer</h4>
+                                            <span class="product-category-label">Wired Sensors</span>
+                                            <p>High-fidelity acceleration monitoring for rotating machinery and bridges.
+                                            </p>
+                                            <div class="product-card-actions">
+                                                <a href="./contact.html" class="btn-product-primary">
+                                                    <span>Quote</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <a href="./products/accelerometers.html" class="btn-product-secondary">
+                                                    <span>View</span>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiperProducts-nav">
+                            <div class="swiperProducts-btn swiperProducts-btn-prev">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <div class="swiperProducts-pagination"></div>
+                            <div class="swiperProducts-btn swiperProducts-btn-next">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-cta-row">
+                        <p>Looking for the right sensor or logger for your project?
+                            <a href="./products.html" class="btn-product-cta">
+                                <span>View All Products</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Case Studies -->
+        <div class="section p-0">
+            <div class="hero-container">
+                <div class="case-studies-layout">
+                    <div class="card card-case-studies">
+                        <div class="row row-cols-xl-2 row-cols-1 grid-spacer-5">
+                            <div class="col">
+                                <div class="d-flex flex-column gspace-2 animate-box animated animate__animated"
+                                    data-animate="animate__fadeInLeft">
+                                    <div class="sub-heading">
+                                        <i class="fa-regular fa-circle-dot"></i>
+                                        <span>Case Studies</span>
+                                    </div>
+                                    <h2 class="title-heading intro-heading-compact">Real-World Impact in Action</h2>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex flex-column h-100 justify-content-end gspace-2 animate-box animated animate__animated"
+                                    data-animate="animate__fadeInRight">
+                                    <p class="intro-text-compact">Discover how our IoT-powered monitoring solutions help
+                                        infrastructure operators detect structural risks early, reduce maintenance
+                                        costs, and extend asset life across bridges, railways, and critical facilities
+                                        worldwide.</p>
+                                    <div class="link-wrapper">
+                                        <a href="./resources.html#case-studies">More Case Studies</a>
+                                        <i class="fa-solid fa-circle-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Bento grid -->
+                        <div class="cs-new-bento">
+                            <!-- Card 1: BridgePulse — featured (big) -->
+                            <a href="./case-studies/bridgepluse-ai-and-drone-technology-for-bridge-health-monitoring.html"
+                                class="cs-new-card cs-new-card--featured animate-box animated animate__animated"
+                                data-animate="animate__fadeInUp">
+                                <div class="cs-new-thumb">
+                                    <img src="./image/case-studies/banners/case_studies_bridgepluse-ai-and-drone-technology-for-bridge-health-monitoring.webp"
+                                        alt="BridgePulse AI Bridge Monitoring" loading="lazy">
+                                </div>
+                                <div class="cs-new-body">
+                                    <span class="cs-new-badge">AI &amp; Drones</span>
+                                    <h4>BridgePulse — AI and Drone Technology for Bridge Health Monitoring</h4>
+                                    <p>Impact of Implementation of IoT Sensors and Regularized Monitoring Devices.</p>
+                                </div>
+                            </a>
+                            <!-- Card 2: IoT Bridge — small -->
+                            <a href="./case-studies/iot-bridge-monitoring-and-sensor-installation-on-railway-bridges.html"
+                                class="cs-new-card animate-box animated animate__animated"
+                                data-animate="animate__fadeInUp">
+                                <div class="cs-new-thumb">
+                                    <img src="./image/case-studies/banners/case_studies_iot-bridge-monitoring-and-sensor-installation-on-railway-bridges.webp"
+                                        alt="IoT Bridge Monitoring" loading="lazy">
+                                </div>
+                                <div class="cs-new-body">
+                                    <span class="cs-new-badge">IoT &amp; Sensors</span>
+                                    <h4>IoT Bridge Monitoring &amp; Sensor Installation on Railway Bridges</h4>
+                                    <p>24×7 monitoring, instant alerts, and data-driven decisions for safer rail
+                                        networks.</p>
+                                </div>
+                            </a>
+                            <!-- Card 3: Real-Time Monitoring — small -->
+                            <a href="./blogs/real-time-monitoring-solutions-transforming-infrastructure-safety-performance.html"
+                                class="cs-new-card animate-box animated animate__animated"
+                                data-animate="animate__fadeInUp">
+                                <div class="cs-new-thumb">
+                                    <img src="./image/blogs/banners/blogs_real-time-monitoring-solutions-transforming-infrastructure-safety-performance.webp"
+                                        alt="Real-Time Monitoring" loading="lazy">
+                                </div>
+                                <div class="cs-new-body">
+                                    <span class="cs-new-badge">Monitoring</span>
+                                    <h4>Real-Time Monitoring Solutions: Transforming Infrastructure Safety &amp;
+                                        Performance</h4>
+                                    <p>3× increase in Bridge Delivery Projects &amp; 2× Sensor Implementation.</p>
+                                </div>
+                            </a>
+                            <!-- Card 4: Asset Monitoring — featured (big) -->
+                            <a href="./blogs/asset-monitoring-facility-management.html"
+                                class="cs-new-card cs-new-card--featured animate-box animated animate__animated"
+                                data-animate="animate__fadeInUp">
+                                <div class="cs-new-thumb">
+                                    <img src="./image/blogs/banners/blogs_asset-monitoring-facility-management.webp"
+                                        alt="Asset Monitoring" loading="lazy">
+                                </div>
+                                <div class="cs-new-body">
+                                    <span class="cs-new-badge">Asset Management</span>
+                                    <h4>Asset Monitoring &amp; Facility Management</h4>
+                                    <p>Comprehensive IoT implementation with smart sensors for real-time monitoring and
+                                        management.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="spacer"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Section Newsletter Compact -->
+        <div class="section section-newsletter-compact">
+            <div class="hero-container">
+                <div class="newsletter-wrapper-compact">
+                    <div class="newsletter-layout-compact">
+                        <div
+                            class="d-flex flex-column flex-xl-row align-items-xl-center justify-content-between gspace-3">
+                            <div class="newsletter-text">
+                                <h4>Stay Ahead in Smart Infrastructure</h4>
+                                <p>Get exclusive insights, case studies, and IoT trends delivered straight to your
+                                    inbox.</p>
+                            </div>
+                            <form action="./php/newsletter_process.php" method="POST" id="newsletterForm"
+                                class="needs-validation newsletter-form-inline">
+                                <div id="newsletter-error" class="alert error hidden compact-alert">
+                                    <span class="cross-icon"><i class="fa-solid fa-xmark"></i></span>
+                                    <p>Failed. Try again.</p>
+                                </div>
+                                <div class="input-row">
+                                    <input type="email" name="newsletter-email" id="newsletter-email"
+                                        placeholder="Enter your email address" required>
+                                    <button class="btn-compact" type="submit">
+                                        <span>Subscribe</span>
+                                        <span class="btn-detail"><i class="fa-solid fa-arrow-right"></i></span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Testimonial -->
+        <div class="section testimonial-section-compact">
+            <div class="hero-container">
+                <div class="d-flex flex-column gspace-3">
+                    <div class="d-flex flex-column flex-xl-row gspace-3">
+                        <div class="testimonial-reviewer-container">
+                            <div class="testimonial-header-wrapper animate-box animated fast animate__animated"
+                                data-animate="animate__fadeInDown">
+                                <div class="card card-testimonial-reviewer">
+                                    <div
+                                        class="d-flex flex-column flex-md-row flex-xl-column justify-content-between gspace-3">
+                                        <div class="testimonial-reviewer">
+                                            <div class="avatar-container">
+                                                <img src="./image/testimonials/reviews1.webp" alt="Client review avatar"
+                                                    class="avatar">
+                                                <img src="./image/testimonials/reviews2.webp" alt="Client review avatar"
+                                                    class="avatar">
+                                                <img src="./image/testimonials/reviews3.webp" alt="Client review avatar"
+                                                    class="avatar">
+                                            </div>
+                                            <div class="detail">
+                                                <h6>200+</h6>
+                                                <h6>Satisfied Clients</h6>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-rating-container">
+                                            <div
+                                                class="d-flex flex-column justify-content-center align-items-center gspace-1">
+                                                <div class="counter-box d-flex flex-row align-items-center">
+                                                    <span class="counter" data-target="100"></span>
+                                                    <span class="counter-detail">%</span>
+                                                </div>
+                                                <p>Future Proof</p>
+                                            </div>
+                                            <div class="underline-vertical"></div>
+                                            <div
+                                                class="d-flex flex-column justify-content-center align-items-center gspace-1">
+                                                <div class="counter-box d-flex flex-row align-items-center">
+                                                    <span class="counter" data-target="95"></span>
+                                                    <span class="counter-detail">%</span>
+                                                </div>
+                                                <p>Scalability</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="d-flex flex-column flex-md-row flex-xl-column justify-content-center gspace-2">
+                                        <div class="testimonial-header-link-wrapper">
+                                            <i class="fa-regular fa-circle-check accent-color"></i>
+                                            <a href="https://clovetech.com/services/digital-built/">BIM Solutions</a>
+                                        </div>
+                                        <div class="testimonial-header-link-wrapper">
+                                            <i class="fa-regular fa-circle-check accent-color"></i>
+                                            <a href="https://clovetech.com/services/digital-reality/">3D Laser
+                                                Scanning</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-title-container">
+                            <div class="testimonial-header-wrapper-title animate-box animated animate__animated"
+                                data-animate="animate__fadeInRight">
+                                <div class="card-testimonial-header-title">
+                                    <div class="sub-heading">
+                                        <i class="fa-regular fa-circle-dot"></i>
+                                        <span>What Our Clients Say</span>
+                                    </div>
+                                    <h2 class="title-heading intro-heading-compact">Don’t Trust Us, Trust Their Voice
+                                    </h2>
+                                    <p class="intro-text-compact">Discover how your projects achieve maximum visual
+                                        impact with Sentra's expert
+                                        SHM
+                                        solutions.
+                                    </p>
+                                    <div class="link-wrapper link-wrapper-btn" style="margin-bottom: 10px;">
+                                        <a href="./testimonial.html">See All Testimonials</a>
+                                        <i class="fa-solid fa-circle-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <div class="overflow-hidden">
+                            <div class="swiper swiperTestimonial">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="card card-testimonial">
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <div class="d-flex flex-row gspace-2">
+                                                    <div class="testimonial-image">
+                                                        <img src="./image/testimonials/reviews1.webp"
+                                                            alt="Testimonial - client photo" class="img-fluid">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="profile-name">Emma Richard</span>
+                                                        <p class="profile-info">CEO Nexa</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fa-solid fa-3x fa-quote-right accent-color"></i>
+                                            </div>
+                                            <p class="testimonial-description">
+                                                “Sentra completely transformed our way of Success! Their BIM
+                                                Deployment
+                                                strategies helped us get a new face for us and hold it up with
+                                                pride.”
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card card-testimonial">
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <div class="d-flex flex-row gspace-2">
+                                                    <div class="testimonial-image">
+                                                        <img src="./image/testimonials/reviews2.webp"
+                                                            alt="Testimonial - client photo" class="img-fluid">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="profile-name">David Mont</span>
+                                                        <p class="profile-info">Marketing Director</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fa-solid fa-3x fa-quote-right accent-color"></i>
+                                            </div>
+                                            <p class="testimonial-description">
+                                                “Now that we are a part of Sentra Family. We can turn every inch of
+                                                our
+                                                ideology to our Strength.”
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card card-testimonial">
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <div class="d-flex flex-row gspace-2">
+                                                    <div class="testimonial-image">
+                                                        <img src="./image/testimonials/reviews3.webp"
+                                                            alt="Testimonial - client photo" class="img-fluid">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="profile-name">Sophia Lewis</span>
+                                                        <p class="profile-info">Founder</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fa-solid fa-3x fa-quote-right accent-color"></i>
+                                            </div>
+                                            <p class="testimonial-description">
+                                                “Sentra's monitoring solutions gave us real-time insights we never had
+                                                before. Absolutely game-changing for our infrastructure
+                                                projects.”
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card card-testimonial">
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <div class="d-flex flex-row gspace-2">
+                                                    <div class="testimonial-image">
+                                                        <img src="./image/testimonials/reviews4.webp"
+                                                            alt="Testimonial - client photo" class="img-fluid">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="profile-name">James Peterson</span>
+                                                        <p class="profile-info">COO, BrightWave</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fa-solid fa-3x fa-quote-right accent-color"></i>
+                                            </div>
+                                            <p class="testimonial-description">
+                                                “Highly professional and results-oriented. Sentra's expertise in IoT
+                                                made us take a huge step into Innovation that we will never deny.”
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card card-testimonial">
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <div class="d-flex flex-row gspace-2">
+                                                    <div class="testimonial-image">
+                                                        <img src="./image/testimonials/reviews4.webp"
+                                                            alt="Testimonial - client photo" class="img-fluid">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="profile-name">Michael Torres</span>
+                                                        <p class="profile-info">VP Engineering, InfraCorp</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fa-solid fa-3x fa-quote-right accent-color"></i>
+                                            </div>
+                                            <p class="testimonial-description">
+                                                “Sentra’s real-time monitoring platform gave us complete visibility
+                                                into our bridge assets. The predictive alerts alone saved us from
+                                                a potential shutdown.”
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card card-testimonial">
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <div class="d-flex flex-row gspace-2">
+                                                    <div class="testimonial-image">
+                                                        <img src="./image/testimonials/reviews1.webp"
+                                                            alt="Testimonial - client photo" class="img-fluid">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="profile-name">Aisha Patel</span>
+                                                        <p class="profile-info">Head of Infrastructure, Metro Rail</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fa-solid fa-3x fa-quote-right accent-color"></i>
+                                            </div>
+                                            <p class="testimonial-description">
+                                                “The sensor deployment and data analytics from Sentra gave us
+                                                24/7 visibility across our entire rail network. We detected
+                                                anomalies weeks before they could become safety issues.”
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card card-testimonial">
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <div class="d-flex flex-row gspace-2">
+                                                    <div class="testimonial-image">
+                                                        <img src="./image/testimonials/reviews4.webp"
+                                                            alt="Testimonial - client photo" class="img-fluid">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="profile-name">James Peterson</span>
+                                                        <p class="profile-info">COO, BrightWave</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fa-solid fa-3x fa-quote-right accent-color"></i>
+                                            </div>
+                                            <p class="testimonial-description">
+                                                “Sentra’s IoT expertise pushed us to embrace innovation like never
+                                                before. Their professionalism and focus on results made all the
+                                                difference.”
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Digital Process -->
+        <div class="section-wrapper-digital-process">
+            <div class="section digital-process-banner">
+                <div class="hero-container">
+                    <div class="digital-process-content">
+                        <div class="row row-cols-xl-2 row-cols-1 align-items-end grid-spacer-5">
+                            <div class="col">
+                                <div class="d-flex flex-column gspace-2 animate-box animated animate__animated"
+                                    data-animate="animate__fadeInDown">
+                                    <div class="sub-heading">
+                                        <i class="fa-regular fa-circle-dot"></i>
+                                        <span>How It Works</span>
+                                    </div>
+                                    <h2 class="title-heading intro-heading-compact">Smart Steps in Monitoring Excellence
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex flex-column gspace-2 justify-content-end h-100  animate-box animated fast animate__animated"
+                                    data-animate="animate__fadeInDown">
+                                    <p class="intro-text-compact">
+                                        From concept to continuous performance, we combine engineering expertise
+                                        with
+                                        intelligent automation — ensuring your monitoring journey is seamless,
+                                        scalable,
+                                        and insight-driven.
+                                    </p>
+                                    <div class="link-wrapper">
+                                        <a href="./contact.html">Start Your Monitoring Journey</a>
+                                        <i class="fa-solid fa-arrow-circle-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workflow-steps-row">
+                            <div class="row row-cols-xl-4 row-cols-md-2 row-cols-1 g-4">
+                                <div class="col">
+                                    <div class="workflow-step-card animate-box animated animate__animated"
+                                        data-animate="animate__fadeInUp">
+                                        <div class="workflow-step-header">
+                                            <div class="workflow-step-icon">
+                                                <span class="material-symbols-outlined">search_insights</span>
+                                                <div class="workflow-step-number">01</div>
+                                            </div>
+                                            <div class="workflow-step-connector"></div>
+                                        </div>
+                                        <div class="d-flex flex-column gspace-2">
+                                            <h5>Discovery & Project Assessment</h5>
+                                            <p>
+                                                We start by understanding your infrastructure goals and site
+                                                challenges, identifying where smart monitoring and data
+                                                integration
+                                                can deliver the greatest impact.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="workflow-step-card animate-box animated animate__animated"
+                                        data-animate="animate__fadeInDown">
+                                        <div class="workflow-step-header">
+                                            <div class="workflow-step-icon">
+                                                <span class="material-symbols-outlined">precision_manufacturing</span>
+                                                <div class="workflow-step-number">02</div>
+                                            </div>
+                                            <div class="workflow-step-connector"></div>
+                                        </div>
+                                        <div class="d-flex flex-column gspace-2">
+                                            <h5>Strategy & System Design</h5>
+                                            <p>
+                                                Our experts develop a tailored monitoring architecture —
+                                                combining precision sensors, edge analytics, and network
+                                                design
+                                                — built to match your project requirements.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="workflow-step-card animate-box animated animate__animated"
+                                        data-animate="animate__fadeInUp">
+                                        <div class="workflow-step-header">
+                                            <div class="workflow-step-icon">
+                                                <span class="material-symbols-outlined">construction</span>
+                                                <div class="workflow-step-number">03</div>
+                                            </div>
+                                            <div class="workflow-step-connector"></div>
+                                        </div>
+                                        <div class="d-flex flex-column gspace-2">
+                                            <h5>Implementation & Optimization</h5>
+                                            <p>
+                                                From installation to calibration, we ensure smooth
+                                                deployment
+                                                and real-time data reliability. Continuous optimization
+                                                keeps
+                                                your monitoring ecosystem performing at its best.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="workflow-step-card animate-box animated animate__animated"
+                                        data-animate="animate__fadeInDown">
+                                        <div class="workflow-step-header">
+                                            <div class="workflow-step-icon">
+                                                <span class="material-symbols-outlined">analytics</span>
+                                                <div class="workflow-step-number">04</div>
+                                            </div>
+                                            <div class="workflow-step-connector d-none"></div>
+                                        </div>
+                                        <div class="d-flex flex-column gspace-2">
+                                            <h5>Insights, Reporting & Growth</h5>
+                                            <p>
+                                                We deliver clear, actionable analytics and transparent
+                                                reporting
+                                                that help you make data-driven decisions with measurable ROI
+                                                and
+                                                sustained structural confidence.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Section Blog -->
+        <div class="section">
+            <div class="hero-container">
+                <div class="d-flex flex-column gspace-3">
+                    <!-- Header -->
+                    <div class="row row-cols-xl-2 row-cols-1 grid-spacer-5 m-0">
+                        <div class="col col-xl-8 ps-0 pe-0">
+                            <div class="d-flex flex-column gspace-2 animate-box animated fast animate__animated"
+                                data-animate="animate__fadeInLeft">
+                                <div class="sub-heading">
+                                    <i class="fa-regular fa-circle-dot"></i>
+                                    <span>Insights &amp; Trends</span>
+                                </div>
+                                <h2 class="title-heading intro-heading-compact">Latest Smart Infrastructure Strategies
+                                    &amp; Innovations</h2>
+                            </div>
+                        </div>
+                        <div class="col col-xl-4 ps-0 pe-0">
+                            <div class="d-flex flex-column gspace-2 justify-content-end h-100 animate-box animated animate__animated"
+                                data-animate="animate__fadeInRight">
+                                <p class="intro-text-compact">Explore our latest articles covering IoT adoption,
+                                    infrastructure monitoring, AI-driven automation, and actionable strategies for
+                                    future-ready businesses.</p>
+                                <div class="link-wrapper">
+                                    <a href="./resources.html#articles">View All Articles</a>
+                                    <i class="fa-solid fa-circle-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Editorial grid -->
+                    <div class="insights-grid animate-box animated animate__animated" data-animate="animate__fadeInUp">
+                        <!-- Featured article -->
+                        <a href="./article/track-to-the-future-remote-monitoring-rail-infrastructure.html"
+                            class="insights-featured">
+                            <img src="./image/home/homepage_article_track-to-the-future-remote-monitoring-rail-infrastructure.webp"
+                                alt="Remote monitoring for rail infrastructure" class="insights-featured-img"
+                                loading="lazy">
+                            <div class="insights-featured-overlay">
+                                <div class="insights-featured-meta">
+                                    <span class="insights-badge">Rail Infrastructure</span>
+                                    <span class="insights-date"><i class="fa-regular fa-calendar"
+                                            style="margin-right:4px;"></i>Jun 24, 2026</span>
+                                </div>
+                                <h3>Track to the Future: How Remote Monitoring Helps Safeguard Rail and Civil
+                                    Infrastructure</h3>
+                                <p>IoT sensors, wireless monitoring, and Digital Twin technology are reshaping the
+                                    safety and longevity of rail and civil infrastructure.</p>
+                                <span class="insights-read-link">Read Article <i class="fa-solid fa-arrow-right"
+                                        style="font-size:0.7rem;"></i></span>
+                            </div>
+                        </a>
+
+                        <!-- Carousel -->
+                        <div class="insights-carousel" id="insightsCarousel">
+                            <div class="insights-car-track" id="insightsTrack">
+                                <!-- Slide 1 -->
+                                <div class="insights-car-slide">
+                                    <a href="./article/building-resilient-smart-cities-with-data-driven-insights.html"
+                                        class="insights-car-card">
+                                        <div class="insights-car-thumb">
+                                            <img src="./image/articles/article_Building%20Resilient%20Smart%20Cities%20with%20Data-Driven%20Insights.webp"
+                                                alt="Smart city infrastructure monitoring" loading="lazy">
+                                        </div>
+                                        <div class="insights-car-body">
+                                            <div class="insights-car-meta">
+                                                <span class="insights-badge">Smart Cities</span>
+                                                <span class="insights-date"><i class="fa-regular fa-calendar"
+                                                        style="margin-right:3px;"></i>Nov 3, 2025</span>
+                                            </div>
+                                            <h4>Building Resilient Smart Cities with Data-Driven Insights</h4>
+                                            <p>Learn how connected IoT systems are shaping the future of urban planning
+                                                and sustainable infrastructure.</p>
+                                            <span class="insights-car-read">Read Article <i
+                                                    class="fa-solid fa-arrow-right"
+                                                    style="font-size:0.65rem;"></i></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="insights-car-slide">
+                                    <a href="./article/intelligent-pump-house-monitoring-and-control.html"
+                                        class="insights-car-card">
+                                        <div class="insights-car-thumb">
+                                            <img src="./image/articles/article_Intelligent%20Pump%20House%20Monitoring%20%26%20Control.webp"
+                                                alt="Intelligent Pump House Monitoring" loading="lazy">
+                                        </div>
+                                        <div class="insights-car-body">
+                                            <div class="insights-car-meta">
+                                                <span class="insights-badge">Smart Pumping</span>
+                                                <span class="insights-date"><i class="fa-regular fa-calendar"
+                                                        style="margin-right:3px;"></i>Feb 26, 2026</span>
+                                            </div>
+                                            <h4>Intelligent Pump House Monitoring &amp; Control</h4>
+                                            <p>Explore how IoT-driven pump house systems reduce downtime and enable
+                                                predictive maintenance at scale.</p>
+                                            <span class="insights-car-read">Read Article <i
+                                                    class="fa-solid fa-arrow-right"
+                                                    style="font-size:0.65rem;"></i></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Slide 3 -->
+                                <div class="insights-car-slide">
+                                    <a href="./blogs/future-digital-twins-mesh-point-cloud-gaussian-splatting.html"
+                                        class="insights-car-card">
+                                        <div class="insights-car-thumb">
+                                            <img src="./image/products/scanners/lixel-k2-mesh-comparison.jpg"
+                                                alt="Mesh, Point Cloud, and Gaussian Splatting comparison"
+                                                loading="lazy">
+                                        </div>
+                                        <div class="insights-car-body">
+                                            <div class="insights-car-meta">
+                                                <span class="insights-badge">Digital Twin</span>
+                                                <span class="insights-date"><i class="fa-regular fa-calendar"
+                                                        style="margin-right:3px;"></i>Jul 24, 2026</span>
+                                            </div>
+                                            <h4>The Future of Digital Twins: Mesh, Point Clouds, and Gaussian Splatting
+                                                Compared</h4>
+                                            <p>Discover how Mesh, Point Clouds, and Gaussian Splatting are transforming
+                                                Digital Twins, BIM, and laser scanning for the AEC industry.</p>
+                                            <span class="insights-car-read">Read Article <i
+                                                    class="fa-solid fa-arrow-right"
+                                                    style="font-size:0.65rem;"></i></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Slide 4 -->
+                                <div class="insights-car-slide">
+                                    <a href="./article/xgrids-authorized-reseller-india.html" class="insights-car-card">
+                                        <div class="insights-car-thumb">
+                                            <img src="./image/articles/xgrids-authorized-reseller-india.png"
+                                                alt="XGRIDS authorized reseller India" loading="lazy">
+                                        </div>
+                                        <div class="insights-car-body">
+                                            <div class="insights-car-meta">
+                                                <span class="insights-badge">Company News</span>
+                                                <span class="insights-date"><i class="fa-regular fa-calendar"
+                                                        style="margin-right:3px;"></i>Jul 23, 2026</span>
+                                            </div>
+                                            <h4>Clove Technologies Becomes Authorized XGRIDS Reseller in India</h4>
+                                            <p>Clove Technologies is now an authorized reseller of XGRIDS products in
+                                                India, offering advanced 3D reality capture and LiDAR solutions.</p>
+                                            <span class="insights-car-read">Read Article <i
+                                                    class="fa-solid fa-arrow-right"
+                                                    style="font-size:0.65rem;"></i></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Slide 5 -->
+                                <div class="insights-car-slide">
+                                    <a href="./article/worldsensing-official-reseller-india.html"
+                                        class="insights-car-card">
+                                        <div class="insights-car-thumb">
+                                            <img src="./image/articles/worldsensing-official-reseller-india.png"
+                                                alt="Worldsensing partnership India" loading="lazy">
+                                        </div>
+                                        <div class="insights-car-body">
+                                            <div class="insights-car-meta">
+                                                <span class="insights-badge">Company News</span>
+                                                <span class="insights-date"><i class="fa-regular fa-calendar"
+                                                        style="margin-right:3px;"></i>Jul 23, 2026</span>
+                                            </div>
+                                            <h4>Celebrating One Year of Partnership: Clove Technologies &amp;
+                                                Worldsensing</h4>
+                                            <p>Clove Technologies and Worldsensing celebrate one year of partnership in
+                                                India, delivering wireless IoT monitoring solutions.</p>
+                                            <span class="insights-car-read">Read Article <i
+                                                    class="fa-solid fa-arrow-right"
+                                                    style="font-size:0.65rem;"></i></span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Dot navigation -->
+                            <div class="insights-car-dots" id="insightsDots">
+                                <button class="insights-car-dot active" data-idx="0"></button>
+                                <button class="insights-car-dot" data-idx="1"></button>
+                                <button class="insights-car-dot" data-idx="2"></button>
+                                <button class="insights-car-dot" data-idx="3"></button>
+                                <button class="insights-car-dot" data-idx="4"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Section Footer -->
+    <footer>
+        <div id="footer"></div>
+    </footer>
+    <script>
+        fetch("footer.html")
+            .then(r => r.text())
+            .then(h => document.getElementById("footer").innerHTML = h);
+    </script>
+
+    <script src="js/vendor/jquery.min.js" defer></script>
+    <script src="js/vendor/bootstrap.bundle.min.js" defer></script>
+    <script src="js/vendor/swiper-bundle.min.js" defer></script>
+    <script src="js/dropdown-handler.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/swiper-script.js" defer></script>
+    <!-- API Configuration - Set before form submission script -->
+    <script>
+        window.__API_URL__ = window.location.hostname.includes('netlify.app')
+            ? 'https://api.sentratech.netlify.app'
+            : (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+                ? 'http://localhost:3000'
+                : '';
+    </script>
+    <script src="js/submit-form.js" defer></script>
+    <script src="js/vendor/isotope.pkgd.min.js" defer></script>
+    <script src="js/video_embedded.js" defer></script>
+
+    <!-- Linking Emoji Mart script for emoji picker -->
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js" defer></script>
+
+    <!-- Chatbot Widget -->
+    <script src="js/chatbot-widget.js" defer></script>
+
+    <!-- GSAP (homepage hero + solution-card animations) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="js/gsap-home.js" defer></script>
+    <script src="js/solution-showcase.js" defer></script>
+
+    <!-- Insights carousel -->
+    <script>
+        (function () {
+            function initInsightsCarousel() {
+                var track = document.getElementById('insightsTrack');
+                var dots = document.querySelectorAll('#insightsDots .insights-car-dot');
+                if (!track || !dots.length || typeof gsap === 'undefined') return;
+
+                var current = 0;
+                var total = dots.length;
+                var DOT_W = 8;
+                var DOT_AW = 24;
+                var timer;
+
+                function goTo(idx) {
+                    gsap.to(track, { x: -(idx * 100) + '%', duration: 0.55, ease: 'power2.inOut' });
+                    dots.forEach(function (d, i) {
+                        gsap.to(d, { width: i === idx ? DOT_AW : DOT_W, duration: 0.35, ease: 'power2.out' });
+                        d.classList.toggle('active', i === idx);
+                    });
+                    current = idx;
+                }
+
+                dots.forEach(function (d) {
+                    d.addEventListener('click', function () {
+                        clearInterval(timer);
+                        goTo(parseInt(this.dataset.idx));
+                        timer = setInterval(advance, 4000);
+                    });
+                });
+
+                function advance() { goTo((current + 1) % total); }
+                timer = setInterval(advance, 4000);
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initInsightsCarousel);
+            } else {
+                initInsightsCarousel();
+            }
+            // Fallback: wait for GSAP to load if deferred
+            window.addEventListener('load', initInsightsCarousel);
+        })();
+    </script>
+
+    <!-- Hero LinkedIn video popup -->
+    <script>
+        (function () {
+            var playBtn = document.getElementById('heroLinkedinPlay');
+            var overlay = document.getElementById('linkedin-modal-overlay');
+            var frame = document.getElementById('linkedin-modal-frame');
+            var closeBtn = document.getElementById('linkedinModalClose');
+            if (!playBtn || !overlay || !frame) return;
+
+            function openModal() {
+                frame.src = playBtn.getAttribute('data-video');
+                overlay.style.display = 'flex';
+            }
+            function closeModal() {
+                overlay.style.display = 'none';
+                frame.src = '';
+            }
+
+            playBtn.addEventListener('click', openModal);
+            closeBtn.addEventListener('click', closeModal);
+            overlay.addEventListener('click', function (e) {
+                if (e.target === overlay) closeModal();
+            });
+        })();
+    </script>
+
+</body>
+
+</html>

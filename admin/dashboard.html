@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <title>Sentra Admin Dashboard</title>
+    <link rel="icon" type="image/webp" href="../image/branding/favicon.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #f48120;
+            --primary-dark: #d96b10;
+            --bg: #0e0e0e;
+            --bg-card: #1a1a1a;
+            --bg-hover: #262626;
+            --text: #ffffff;
+            --text-muted: #a3a3a3;
+            --border: #2d2e2f;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #e63946;
+            --info: #ffb066;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .dashboard { display: flex; min-height: 100vh; position: relative; }
+        .sidebar {
+            width: 260px; background: var(--bg-card);
+            border-right: 1px solid var(--border);
+            padding: 24px 0; position: fixed;
+            height: 100vh; overflow-y: auto; overflow-x: hidden;
+            display: flex; flex-direction: column;
+            transition: width 0.2s ease;
+            z-index: 40;
+        }
+        .sidebar-header { padding: 0 24px 24px; border-bottom: 1px solid var(--border); }
+        .sidebar-header .brand-logo { height: 26px; display: block; }
+        .sidebar-header p { font-size: 12px; color: var(--text-muted); margin-top: 10px; white-space: nowrap; overflow: hidden; }
+        .nav-menu { padding: 16px 12px; flex: 1; }
+        .nav-item {
+            display: flex; align-items: center; gap: 12px;
+            padding: 12px 16px; border-radius: 8px;
+            color: var(--text-muted); text-decoration: none;
+            font-size: 14px; cursor: pointer;
+            transition: all 0.2s; margin-bottom: 4px;
+            white-space: nowrap;
+        }
+        .nav-item:hover { background: var(--bg-hover); color: var(--text); }
+        .nav-item.active { background: var(--primary); color: white; }
+        .nav-item svg { width: 20px; height: 20px; flex-shrink: 0; }
+        .sidebar-footer { padding: 12px 24px; border-top: 1px solid var(--border); }
+        .sidebar-footer .nav-item { margin-bottom: 0; }
+        .main-content { flex: 1; margin-left: 260px; padding: 32px; min-width: 0; }
+
+        /* Mobile-only chrome (hidden on tablet/desktop) */
+        .mobile-topbar, .mobile-bottom-nav { display: none; }
+
+        /* Page Header */
+        .page-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 32px;
+        }
+        .page-header h1 { font-size: 28px; font-weight: 700; }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px; margin-bottom: 32px;
+        }
+        .stat-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 12px; padding: 24px;
+        }
+        .stat-card .stat-label { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; }
+        .stat-card .stat-value { font-size: 32px; font-weight: 700; }
+        .stat-card.primary .stat-value { color: var(--primary); }
+        .stat-card.success .stat-value { color: var(--success); }
+        .stat-card.warning .stat-value { color: var(--warning); }
+        .stat-card.info .stat-value { color: var(--info); }
+        .stat-card-link {
+            cursor: pointer; transition: transform 0.15s ease, border-color 0.15s ease;
+        }
+        .stat-card-link:hover { border-color: var(--primary); transform: translateY(-2px); }
+
+        /* Table */
+        .table-container {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 12px; overflow: hidden;
+        }
+        .table-header {
+            display: flex; justify-content: space-between;
+            align-items: center; padding: 20px 24px;
+            border-bottom: 1px solid var(--border);
+        }
+        .table-header h2 { font-size: 18px; font-weight: 600; }
+        .search-box input {
+            padding: 8px 16px; background: var(--bg);
+            border: 1px solid var(--border); border-radius: 6px;
+            color: var(--text); font-size: 13px; width: 250px;
+        }
+        .search-box input:focus { outline: none; border-color: var(--primary); }
+        table { width: 100%; border-collapse: collapse; }
+        th, td {
+            padding: 14px 16px; text-align: left;
+            border-bottom: 1px solid var(--border); font-size: 13px;
+        }
+        th {
+            background: var(--bg); font-weight: 600;
+            color: var(--text-muted); text-transform: uppercase;
+            font-size: 11px; letter-spacing: 0.5px;
+        }
+        tr:hover { background: var(--bg-hover); }
+
+        /* Status Badges */
+        .status-badge {
+            display: inline-block; padding: 4px 10px;
+            border-radius: 12px; font-size: 11px; font-weight: 600;
+        }
+        .status-new { background: rgba(244,129,32,0.18); color: var(--primary); }
+        .status-contacted { background: rgba(245,158,11,0.2); color: var(--warning); }
+        .status-qualified { background: rgba(34,197,94,0.2); color: var(--success); }
+        .status-closed { background: rgba(148,163,184,0.2); color: var(--text-muted); }
+        .status-active { background: rgba(34,197,94,0.2); color: var(--success); }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 12px 24px; border-radius: 8px;
+            font-size: 14px; font-weight: 500; cursor: pointer;
+            transition: all 0.2s; border: none; gap: 8px;
+        }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); }
+        .btn-secondary { background: var(--bg-hover); color: var(--text); border: 1px solid var(--border); }
+        .btn-success { background: var(--success); color: white; }
+        .btn-warning { background: var(--warning); color: #000; }
+        .btn-danger { background: var(--danger); color: white; }
+        .btn-info { background: var(--info); color: white; }
+        .action-btn {
+            padding: 6px 12px; border-radius: 6px; border: none;
+            cursor: pointer; font-size: 12px; font-weight: 500;
+            transition: all 0.2s;
+        }
+        .action-btn:hover { opacity: 0.8; }
+        .refresh-btn {
+            background: var(--bg-hover); border: 1px solid var(--border);
+            color: var(--text); padding: 8px 16px; border-radius: 6px;
+            cursor: pointer; font-size: 13px;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .refresh-btn:hover { background: var(--border); }
+
+        /* Chat Layout */
+        .chat-layout {
+            display: grid; grid-template-columns: 300px 1fr;
+            gap: 20px; height: calc(100vh - 160px);
+        }
+        .chat-sessions-list {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 12px; overflow-y: auto;
+        }
+        .chat-session-item {
+            padding: 16px; border-bottom: 1px solid var(--border);
+            cursor: pointer; transition: background 0.2s;
+        }
+        .chat-session-item:hover { background: var(--bg-hover); }
+        .chat-session-item .session-name { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+        .chat-session-item .session-email { font-size: 12px; color: var(--text-muted); }
+        .chat-session-item .session-preview {
+            font-size: 12px; color: var(--text-muted); margin-top: 8px;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        .chat-session-item .session-time { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+        .chat-session-item { position: relative; }
+        .chat-session-item.has-unread { background: rgba(244,129,32,0.08); }
+        .online-dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: var(--success); display: inline-block; margin-right: 6px;
+            box-shadow: 0 0 0 2px rgba(34,197,94,0.25);
+        }
+        .offline-dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: var(--text-muted); display: inline-block; margin-right: 6px; opacity: 0.5;
+        }
+        .session-agent-tag { font-size: 11px; color: var(--primary); margin-top: 2px; }
+        .unread-count-badge {
+            position: absolute; top: 14px; right: 44px;
+            background: var(--danger); color: #fff; font-size: 11px;
+            font-weight: 700; border-radius: 10px; padding: 2px 7px; min-width: 18px; text-align: center;
+        }
+        .session-clickable { cursor: pointer; }
+        .session-delete-btn {
+            position: absolute; top: 10px; right: 10px;
+            background: none; border: none; color: var(--text-muted);
+            font-size: 13px; cursor: pointer; padding: 6px; border-radius: 6px;
+            opacity: 0.6; transition: all 0.2s;
+        }
+        .session-delete-btn:hover { opacity: 1; color: var(--danger); background: rgba(230,57,70,0.12); }
+        .nav-badge {
+            background: var(--danger); color: #fff; font-size: 11px; font-weight: 700;
+            border-radius: 10px; padding: 1px 7px; margin-left: auto;
+        }
+        .chat-view {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 12px; display: flex; flex-direction: column;
+            min-height: 0; /* let the flex child (.chat-messages) actually scroll instead of growing */
+        }
+        .chat-view-header {
+            padding: 16px 20px; border-bottom: 1px solid var(--border);
+            display: flex; align-items: center; gap: 12px; flex-shrink: 0;
+        }
+        .chat-view-header > div:first-of-type { flex: 1; min-width: 0; }
+        .chat-view-header h3 { font-size: 16px; }
+        .chat-back-btn {
+            display: none; background: none; border: none; color: var(--text);
+            font-size: 20px; cursor: pointer; padding: 4px 8px 4px 0; flex-shrink: 0;
+        }
+        .chat-messages {
+            flex: 1; overflow-y: auto; padding: 20px;
+            display: flex; flex-direction: column; gap: 2px;
+            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0);
+            background-size: 18px 18px;
+        }
+        .chat-message {
+            display: flex; flex-direction: column; max-width: 72%;
+        }
+        .chat-message.user, .chat-message.bot { align-self: flex-start; align-items: flex-start; }
+        .chat-message.agent { align-self: flex-end; align-items: flex-end; }
+
+        /* Sender label - only shown when the sender changes from the
+           previous message, WhatsApp-style grouping instead of repeating
+           the name on every single bubble. */
+        .message-sender { font-size: 11px; color: var(--text-muted); margin: 12px 4px 4px; }
+        .chat-message.agent .message-sender { color: var(--text-muted); }
+        .chat-message.bot .message-sender { color: var(--primary); font-weight: 600; }
+        .chat-message:first-child .message-sender { margin-top: 0; }
+
+        .message-bubble {
+            position: relative; padding: 10px 44px 10px 14px;
+            border-radius: 14px; font-size: 14px; line-height: 1.5;
+            word-wrap: break-word; overflow-wrap: anywhere;
+        }
+        .chat-message.user .message-bubble {
+            background: var(--bg-hover); color: var(--text); border-bottom-left-radius: 4px;
+        }
+        .chat-message.bot .message-bubble {
+            background: #262220; color: var(--text); border: 1px solid rgba(244,129,32,0.25);
+            border-bottom-left-radius: 4px;
+        }
+        .chat-message.agent .message-bubble {
+            background: var(--primary); color: white; border-bottom-right-radius: 4px;
+        }
+        .message-time {
+            position: absolute; bottom: 6px; right: 12px;
+            font-size: 10px; opacity: 0.6; white-space: nowrap;
+        }
+        .chat-message.agent .message-time { color: rgba(255,255,255,0.85); }
+
+        @keyframes chatMsgIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Only animate on a fresh conversation open, not on the background
+           poll refresh - otherwise the whole thread would "replay" every
+           few seconds. */
+        .chat-messages.initial-load .chat-message { animation: chatMsgIn 0.22s ease both; }
+        .chat-input-area {
+            padding: 16px 20px; border-top: 1px solid var(--border);
+            display: flex; gap: 12px;
+        }
+        .chat-input-area input {
+            flex: 1; padding: 12px 16px; background: var(--bg);
+            border: 1px solid var(--border); border-radius: 8px;
+            color: var(--text); font-size: 14px;
+        }
+        .chat-input-area input:focus { outline: none; border-color: var(--primary); }
+
+        .chat-quick-actions {
+            padding: 10px 20px 0; display: flex; gap: 8px; flex-wrap: wrap; flex-shrink: 0;
+        }
+        .quick-action-btn {
+            background: var(--bg-hover); border: 1px solid var(--border); color: var(--text);
+            padding: 6px 12px; border-radius: 16px; font-size: 12px; cursor: pointer; white-space: nowrap;
+        }
+        .quick-action-btn:hover { background: var(--border); }
+
+        .icon-btn {
+            background: var(--bg-hover); border: 1px solid var(--border); color: var(--text-muted);
+            width: 40px; height: 40px; border-radius: 8px; font-size: 16px; cursor: pointer; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .icon-btn:hover { background: var(--border); color: var(--text); }
+
+        .chat-input-area { position: relative; flex-wrap: wrap; flex-shrink: 0; }
+
+        .emoji-palette {
+            position: absolute; bottom: 100%; left: 20px; margin-bottom: 8px;
+            background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px;
+            padding: 8px; display: none; flex-wrap: wrap; gap: 4px; max-width: 260px; z-index: 30;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+        .emoji-btn {
+            background: none; border: none; font-size: 18px; cursor: pointer;
+            padding: 4px; border-radius: 6px; line-height: 1;
+        }
+        .emoji-btn:hover { background: var(--bg-hover); }
+
+        .agent-attach-preview {
+            padding: 0 20px 12px; display: none; align-items: center; gap: 10px; flex-shrink: 0;
+        }
+        .agent-attach-preview img {
+            max-height: 60px; border-radius: 8px; border: 1px solid var(--border);
+        }
+        .agent-attach-preview button {
+            background: var(--bg-hover); border: 1px solid var(--border); color: var(--danger);
+            width: 26px; height: 26px; border-radius: 50%; cursor: pointer;
+        }
+
+        .no-chat-selected {
+            display: flex; align-items: center; justify-content: center;
+            height: 100%; color: var(--text-muted); font-size: 16px;
+        }
+
+        /* Loading & Empty */
+        .loading {
+            display: flex; align-items: center; justify-content: center;
+            padding: 40px; color: var(--text-muted);
+        }
+        .spinner {
+            width: 24px; height: 24px; border: 3px solid var(--border);
+            border-top-color: var(--primary); border-radius: 50%;
+            animation: spin 0.8s linear infinite; margin-right: 12px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .empty-state { text-align: center; padding: 60px 20px; color: var(--text-muted); }
+        .empty-state h3 { font-size: 18px; margin-bottom: 8px; color: var(--text); }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.7); display: none;
+            align-items: center; justify-content: center; z-index: 1000;
+        }
+        .modal {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 12px; padding: 32px; width: 100%; max-width: 500px;
+        }
+        .modal h3 { font-size: 20px; margin-bottom: 20px; }
+        .modal select {
+            width: 100%; padding: 12px 16px; background: var(--bg);
+            border: 1px solid var(--border); border-radius: 8px;
+            color: var(--text); font-size: 14px; margin-bottom: 20px;
+        }
+        .modal-actions { display: flex; gap: 12px; justify-content: flex-end; }
+        .notes-modal { max-width: 560px; }
+        .notes-original-message {
+            background: var(--bg); border: 1px solid var(--border); border-radius: 8px;
+            padding: 14px; font-size: 13px; line-height: 1.6; margin-bottom: 16px; max-height: 120px; overflow-y: auto;
+        }
+        .notes-list {
+            max-height: 260px; overflow-y: auto; border: 1px solid var(--border);
+            border-radius: 8px; margin-bottom: 16px; background: var(--bg);
+        }
+        .notes-add-row { display: flex; gap: 10px; }
+        .notes-add-row input {
+            flex: 1; padding: 10px 14px; background: var(--bg); border: 1px solid var(--border);
+            border-radius: 8px; color: var(--text); font-size: 13px;
+        }
+        .notes-add-row input:focus { outline: none; border-color: var(--primary); }
+
+        /* ── Tablet: collapse sidebar to an icon-only rail ─────────────── */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .sidebar { width: 72px; overflow-x: hidden; }
+            .sidebar-header { padding: 0 0 16px; display: flex; justify-content: center; }
+            /* The brand-logo SVG is a wide wordmark - at 72px the rail is
+               narrower than the logo itself, so shrinking its height alone
+               still let it overflow horizontally and get clipped/scrollable.
+               Hide it outright in the collapsed rail instead. */
+            .sidebar-header .brand-logo { display: none; }
+            .sidebar-header p { display: none; }
+            .nav-menu { padding: 16px 10px; }
+            .nav-item { justify-content: center; padding: 12px; position: relative; }
+            .nav-item .nav-label { display: none; }
+            .nav-item .nav-badge { position: absolute; top: 4px; right: 4px; margin-left: 0; padding: 0 5px; min-width: 16px; text-align: center; }
+            .sidebar-footer { padding: 12px 10px; }
+            .sidebar-footer .nav-item { justify-content: center; }
+            .main-content { margin-left: 72px; }
+            .chat-layout { grid-template-columns: 260px 1fr; }
+        }
+
+        /* ── Mobile: sidebar replaced by a top bar + bottom tab nav ────── */
+        @media (max-width: 768px) {
+            .sidebar { display: none; }
+            .main-content { margin-left: 0; padding: 16px 16px calc(76px + env(safe-area-inset-bottom, 0px)); padding-top: 76px; }
+
+            .mobile-topbar {
+                display: flex; align-items: center; gap: 10px;
+                position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+                height: 56px; padding: 0 16px;
+                background: var(--bg-card); border-bottom: 1px solid var(--border);
+            }
+            .mobile-topbar-logo { height: 20px; }
+            .mobile-topbar-title { font-size: 15px; font-weight: 600; flex: 1; }
+            .mobile-topbar-logout {
+                background: none; border: none; color: var(--danger);
+                width: 36px; height: 36px; border-radius: 8px; cursor: pointer;
+                display: flex; align-items: center; justify-content: center;
+            }
+            .mobile-topbar-logout:hover { background: var(--bg-hover); }
+            .mobile-topbar-logout svg { width: 20px; height: 20px; }
+
+            .mobile-bottom-nav {
+                display: flex; justify-content: space-around; align-items: stretch;
+                position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
+                background: var(--bg-card); border-top: 1px solid var(--border);
+                padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px));
+            }
+            .mobile-bottom-nav .nav-item {
+                flex-direction: column; gap: 3px; padding: 6px 4px;
+                border-radius: 10px; margin-bottom: 0; flex: 1;
+                font-size: 10px; text-align: center; position: relative;
+            }
+            .mobile-bottom-nav .nav-item svg { width: 20px; height: 20px; }
+            .mobile-bottom-nav .nav-item.active { background: none; color: var(--primary); }
+            .mobile-bottom-nav .nav-badge-dot {
+                position: absolute; top: 2px; right: 18%;
+                width: 8px; height: 8px; min-width: 0; padding: 0; border-radius: 50%;
+                font-size: 0;
+            }
+
+            /* Live Chat on mobile: the session list gets its own scrollable
+               panel; opening a conversation switches to a WhatsApp-style
+               full-screen overlay (fixed between the top bar and bottom
+               nav) so the header and message-input stay put while only
+               the messages themselves scroll. */
+            .chat-layout {
+                grid-template-columns: 1fr;
+                height: calc(100dvh - 76px - 78px - 60px);
+                position: relative;
+            }
+            .chat-sessions-list { height: 100%; max-height: none; }
+            .chat-view { display: none; }
+            .chat-back-btn { display: inline-flex; }
+
+            .chat-layout.chat-open {
+                height: auto;
+            }
+            .chat-layout.chat-open .chat-sessions-list { display: none; }
+            .chat-layout.chat-open .chat-view {
+                display: flex;
+                position: fixed;
+                top: 56px; bottom: calc(70px + env(safe-area-inset-bottom, 0px));
+                left: 0; right: 0;
+                z-index: 45; border-radius: 0; border-width: 0;
+            }
+
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+            .stat-card { padding: 16px; }
+            .stat-card .stat-value { font-size: 24px; }
+            .page-header { flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+            .page-header h1 { font-size: 20px; }
+            .table-header { flex-direction: column; align-items: stretch; gap: 12px; }
+            .search-box input { width: 100%; }
+            table { font-size: 12px; }
+            th, td { padding: 10px; }
+            .modal { padding: 20px; max-width: calc(100vw - 32px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../image/branding/sentra_white_1.svg" alt="Sentra" class="brand-logo">
+                <p>Admin Dashboard</p>
+            </div>
+            <nav class="nav-menu">
+                <a class="nav-item active" data-page="dashboard" onclick="navigate('dashboard')" title="Overview">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    <span class="nav-label">Overview</span>
+                </a>
+                <a class="nav-item" data-page="leads" onclick="navigate('leads')" title="Contact Leads">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                    <span class="nav-label">Contact Leads</span>
+                </a>
+                <a class="nav-item" data-page="newsletter" onclick="navigate('newsletter')" title="Newsletter">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <span class="nav-label">Newsletter</span>
+                </a>
+                <a class="nav-item" data-page="chatbot" onclick="navigate('chatbot')" title="Chatbot Leads">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    <span class="nav-label">Chatbot Leads</span>
+                </a>
+                <a class="nav-item" data-page="chat" onclick="navigate('chat')" title="Live Chat">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                    <span class="nav-label">Live Chat</span>
+                    <span class="nav-badge" id="chatUnreadBadge" style="display:none;"></span>
+                </a>
+                <a class="nav-item" data-page="accounts" onclick="navigate('accounts')" title="Manage Accounts">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+                    <span class="nav-label">Manage Accounts</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a class="nav-item" onclick="logout()" style="color: var(--danger);" title="Logout">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                    <span class="nav-label">Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Mobile-only slim top bar (brand + current page + logout) -->
+        <header class="mobile-topbar">
+            <img src="../image/branding/sentra_white_1.svg" alt="Sentra" class="mobile-topbar-logo">
+            <span class="mobile-topbar-title" id="mobilePageTitle">Overview</span>
+            <button type="button" class="mobile-topbar-logout" onclick="logout()" title="Logout" aria-label="Logout">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            </button>
+        </header>
+
+        <main class="main-content" id="mainContent">
+            <div class="loading"><div class="spinner"></div> Loading...</div>
+        </main>
+
+        <!-- Mobile-only bottom navigation -->
+        <nav class="mobile-bottom-nav">
+            <a class="nav-item active" data-page="dashboard" onclick="navigate('dashboard')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                <span class="nav-label">Overview</span>
+            </a>
+            <a class="nav-item" data-page="leads" onclick="navigate('leads')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                <span class="nav-label">Leads</span>
+            </a>
+            <a class="nav-item" data-page="newsletter" onclick="navigate('newsletter')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span class="nav-label">News</span>
+            </a>
+            <a class="nav-item" data-page="chatbot" onclick="navigate('chatbot')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <span class="nav-label">Chatbot</span>
+            </a>
+            <a class="nav-item" data-page="chat" onclick="navigate('chat')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                <span class="nav-label">Chat</span>
+                <span class="nav-badge nav-badge-dot" id="chatUnreadBadgeMobile" style="display:none;"></span>
+            </a>
+            <a class="nav-item" data-page="accounts" onclick="navigate('accounts')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+                <span class="nav-label">Accounts</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Status Update Modal -->
+    <div class="modal-overlay" id="statusModal">
+        <div class="modal">
+            <h3>Update Lead Status</h3>
+            <select id="statusSelect">
+                <option value="New">New</option>
+                <option value="Contacted">Contacted</option>
+                <option value="Qualified">Qualified</option>
+                <option value="Closed">Closed</option>
+            </select>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="saveStatus()">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Account Modal -->
+    <div class="modal-overlay" id="accountModal">
+        <div class="modal">
+            <h3>Add Admin Account</h3>
+            <div style="margin-bottom:20px;">
+                <label style="display:block;font-size:14px;font-weight:500;margin-bottom:8px;color:var(--text-muted);">Name</label>
+                <input type="text" id="newAccountName" placeholder="Full name" style="width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:14px;">
+            </div>
+            <div style="margin-bottom:20px;">
+                <label style="display:block;font-size:14px;font-weight:500;margin-bottom:8px;color:var(--text-muted);">Email</label>
+                <input type="email" id="newAccountEmail" placeholder="name@sentratech.in" style="width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:14px;">
+            </div>
+            <div style="margin-bottom:20px;">
+                <label style="display:block;font-size:14px;font-weight:500;margin-bottom:8px;color:var(--text-muted);">Password</label>
+                <input type="password" id="newAccountPassword" placeholder="Set a password" style="width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:14px;">
+            </div>
+            <select id="newAccountRole">
+                <option value="Admin">Admin</option>
+                <option value="Super Admin">Super Admin</option>
+            </select>
+            <div class="error-msg" id="accountErrorMsg" style="color:var(--danger);font-size:13px;margin-bottom:12px;display:none;"></div>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeAccountModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="saveAccount()">Create Account</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lead Conversation / Notes Modal -->
+    <div class="modal-overlay" id="notesModal">
+        <div class="modal notes-modal">
+            <h3>Lead Conversation Notes</h3>
+            <div class="notes-original-message" id="notesOriginalMessage"></div>
+            <div class="notes-list" id="notesList"></div>
+            <div class="notes-add-row">
+                <input type="text" id="newNoteText" placeholder="Add a note..." onkeypress="if(event.key==='Enter')addLeadNote()">
+                <button class="btn btn-primary" style="width:auto;" onclick="addLeadNote()">Add</button>
+            </div>
+            <div class="modal-actions" style="margin-top:16px;">
+                <button class="btn btn-secondary" onclick="closeNotesModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'https://veronica-sentra-prod.subharam-v.workers.dev';
+        const session = localStorage.getItem('admin_session');
+        if (!session) window.location.href = 'index.html';
+
+        const VALID_PAGES = ['dashboard', 'leads', 'newsletter', 'chatbot', 'chat', 'accounts'];
+        let currentPage = 'dashboard';
+        let currentLeadRow = null;
+        let currentLeadEmail = '';
+
+        // Auto-refresh timers - one for whatever page is active, one specifically
+        // for the currently-open chat session's messages (faster interval).
+        let pageTimer = null;
+        let chatSessionTimer = null;
+        let currentOpenSessionId = null;
+        let currentOpenSessionName = '';
+        let currentOpenSessionEmail = '';
+        let lastRenderedMsgCount = 0;
+
+        // Per-browser "seen" tracking for the unread badge / notification sound.
+        // sessionId -> message count the admin has already viewed.
+        function getSeenCounts() {
+            try { return JSON.parse(localStorage.getItem('admin_seen_msg_counts') || '{}'); } catch { return {}; }
+        }
+        function setSeenCount(sessionId, count) {
+            const seen = getSeenCounts();
+            seen[sessionId] = count;
+            localStorage.setItem('admin_seen_msg_counts', JSON.stringify(seen));
+        }
+
+        // A beep needs one prior user gesture on the page before browsers allow
+        // audio - grab the first click anywhere to unlock it.
+        let audioCtx = null;
+        document.addEventListener('click', () => {
+            if (!audioCtx) {
+                try { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch {}
+            }
+        }, { once: true });
+        function playNotifySound() {
+            if (!audioCtx) return;
+            try {
+                const o = audioCtx.createOscillator();
+                const g = audioCtx.createGain();
+                o.type = 'sine';
+                o.frequency.value = 880;
+                g.gain.value = 0.15;
+                o.connect(g);
+                g.connect(audioCtx.destination);
+                o.start();
+                g.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.4);
+                o.stop(audioCtx.currentTime + 0.4);
+            } catch {}
+        }
+
+        function updateUnreadBadge(count) {
+            // Sidebar badge shows a number; the mobile bottom-nav badge is
+            // just a small dot (no room for text at that size).
+            const badge = document.getElementById('chatUnreadBadge');
+            const mobileBadge = document.getElementById('chatUnreadBadgeMobile');
+            if (badge) {
+                badge.textContent = count;
+                badge.style.display = count > 0 ? 'inline-block' : 'none';
+            }
+            if (mobileBadge) {
+                mobileBadge.style.display = count > 0 ? 'inline-block' : 'none';
+            }
+            document.title = count > 0 ? `(${count}) Sentra Admin` : 'Sentra Admin Dashboard';
+        }
+
+        function logout() {
+            localStorage.removeItem('admin_session');
+            localStorage.removeItem('admin_last_page');
+            window.location.href = 'index.html';
+        }
+
+        function clearPageTimers() {
+            if (pageTimer) { clearInterval(pageTimer); pageTimer = null; }
+            if (chatSessionTimer) { clearInterval(chatSessionTimer); chatSessionTimer = null; }
+        }
+
+        const PAGE_TITLES = {
+            dashboard: 'Overview', leads: 'Contact Leads', newsletter: 'Newsletter',
+            chatbot: 'Chatbot Leads', chat: 'Live Chat', accounts: 'Manage Accounts'
+        };
+
+        function navigate(page) {
+            if (!VALID_PAGES.includes(page)) page = 'dashboard';
+            currentPage = page;
+            localStorage.setItem('admin_last_page', page);
+            clearPageTimers();
+            if (page !== 'chat') { currentOpenSessionId = null; }
+
+            // Both the sidebar and the mobile bottom nav share the same
+            // data-page attributes, so every matching element needs updating.
+            document.querySelectorAll('.nav-item[data-page]').forEach(n => n.classList.remove('active'));
+            document.querySelectorAll(`.nav-item[data-page="${page}"]`).forEach(n => n.classList.add('active'));
+
+            const mobileTitle = document.getElementById('mobilePageTitle');
+            if (mobileTitle) mobileTitle.textContent = PAGE_TITLES[page] || 'Admin Dashboard';
+
+            if (page === 'dashboard') {
+                loadDashboard();
+                pageTimer = setInterval(loadDashboard, 25000);
+            } else if (page === 'leads') {
+                loadLeads();
+                pageTimer = setInterval(() => loadLeads(true), 30000);
+            } else if (page === 'newsletter') {
+                loadNewsletter();
+                pageTimer = setInterval(() => loadNewsletter(true), 30000);
+            } else if (page === 'chatbot') {
+                loadChatbotLeads();
+                pageTimer = setInterval(() => loadChatbotLeads(true), 30000);
+            } else if (page === 'chat') {
+                loadChat();
+                pageTimer = setInterval(() => refreshChatSessions(), 8000);
+                chatSessionTimer = setInterval(() => refreshOpenChatMessages(), 5000);
+            } else if (page === 'accounts') {
+                loadAccounts();
+            }
+        }
+
+        async function apiCall(endpoint, options = {}) {
+            const res = await fetch(API_BASE + endpoint, {
+                ...options,
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + session,
+                    ...options.headers
+                }
+            });
+            if (res.status === 401) { logout(); return null; }
+            return res.json();
+        }
+
+        // ─── Dashboard Overview ───────────────────────────────────────
+        async function loadDashboard() {
+            document.getElementById('mainContent').innerHTML = '<div class="loading"><div class="spinner"></div> Loading...</div>';
+            const s = await apiCall('/api/admin/stats');
+            if (!s || s.error) return;
+            document.getElementById('mainContent').innerHTML = `
+                <div class="page-header">
+                    <h1>Dashboard Overview</h1>
+                    <button class="refresh-btn" onclick="loadDashboard()">↻ Refresh</button>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card primary stat-card-link" onclick="navigate('leads')"><div class="stat-label">Total Contact Leads</div><div class="stat-value">${s.totalLeads}</div></div>
+                    <div class="stat-card warning stat-card-link" onclick="navigate('leads')"><div class="stat-label">New Leads</div><div class="stat-value">${s.newLeads}</div></div>
+                    <div class="stat-card success stat-card-link" onclick="navigate('newsletter')"><div class="stat-label">Newsletter Subscribers</div><div class="stat-value">${s.totalSubscribers}</div></div>
+                    <div class="stat-card info stat-card-link" onclick="navigate('chatbot')"><div class="stat-label">Chatbot Leads</div><div class="stat-value">${s.totalChatLeads}</div></div>
+                    <div class="stat-card stat-card-link" style="border-left:3px solid var(--success)" onclick="navigate('chat')"><div class="stat-label">Active Chats</div><div class="stat-value" style="color:var(--success)">${s.activeChats}</div></div>
+                </div>`;
+        }
+
+        // ─── Contact Leads ────────────────────────────────────────────
+        async function loadLeads(silent) {
+            const prevSearch = silent ? getSearchValue('searchInputLeads') : '';
+            if (!silent) document.getElementById('mainContent').innerHTML = '<div class="loading"><div class="spinner"></div> Loading leads...</div>';
+            const d = await apiCall('/api/admin/leads');
+            if (!d || d.error) return;
+            let rows = '';
+            d.leads.forEach(l => {
+                const sc = l.status.toLowerCase().replace(' ', '-');
+                rows += `<tr>
+                    <td>${l.id}</td><td>${l.timestamp}</td>
+                    <td>${l.firstName} ${l.lastName}</td><td>${l.email}</td>
+                    <td>${l.subject}</td><td>${l.leadType}</td><td>${l.productInterest}</td>
+                    <td><span class="status-badge status-${sc}">${l.status}</span></td>
+                    <td>
+                        <button class="action-btn btn-info" onclick="openLeadNotes(this)" data-row="${l.id - 1}" data-email="${escapeAttr(l.email)}" data-msg="${encodeURIComponent(l.message)}">View</button>
+                        <button class="action-btn btn-warning" onclick="openStatusModal(${l.id - 1}, '${escapeAttr(l.email)}')">Update</button>
+                    </td>
+                </tr>`;
+            });
+            document.getElementById('mainContent').innerHTML = `
+                <div class="page-header"><h1>Contact Leads (${d.total})</h1><button class="refresh-btn" onclick="loadLeads()">↻ Refresh</button></div>
+                <div class="table-container">
+                    <div class="table-header"><h2>All Contact Form Submissions</h2><div class="search-box"><input type="text" id="searchInputLeads" placeholder="Search leads..." onkeyup="filterTable('leadsTable',this.value)"></div></div>
+                    <div style="overflow-x:auto"><table id="leadsTable"><thead><tr><th>#</th><th>Date (IST)</th><th>Name</th><th>Email</th><th>Subject</th><th>Lead Type</th><th>Product</th><th>Status</th><th>Actions</th></tr></thead><tbody>${rows}</tbody></table></div>
+                </div>`;
+            if (prevSearch) { document.getElementById('searchInputLeads').value = prevSearch; filterTable('leadsTable', prevSearch); }
+        }
+
+        // ─── Newsletter ───────────────────────────────────────────────
+        async function loadNewsletter(silent) {
+            const prevSearch = silent ? getSearchValue('searchInputSubs') : '';
+            if (!silent) document.getElementById('mainContent').innerHTML = '<div class="loading"><div class="spinner"></div> Loading...</div>';
+            const d = await apiCall('/api/admin/newsletter');
+            if (!d || d.error) return;
+            let rows = '';
+            d.subscribers.forEach(s => {
+                rows += `<tr><td>${s.id}</td><td>${s.timestamp}</td><td>${s.email}</td><td><span class="status-badge status-${s.status.toLowerCase()}">${s.status}</span></td></tr>`;
+            });
+            document.getElementById('mainContent').innerHTML = `
+                <div class="page-header"><h1>Newsletter Subscribers (${d.total})</h1><button class="refresh-btn" onclick="loadNewsletter()">↻ Refresh</button></div>
+                <div class="table-container">
+                    <div class="table-header"><h2>All Newsletter Subscriptions</h2><div class="search-box"><input type="text" id="searchInputSubs" placeholder="Search..." onkeyup="filterTable('subsTable',this.value)"></div></div>
+                    <div style="overflow-x:auto"><table id="subsTable"><thead><tr><th>#</th><th>Date (IST)</th><th>Email</th><th>Status</th></tr></thead><tbody>${rows}</tbody></table></div>
+                </div>`;
+            if (prevSearch) { document.getElementById('searchInputSubs').value = prevSearch; filterTable('subsTable', prevSearch); }
+        }
+
+        // ─── Chatbot Leads ────────────────────────────────────────────
+        async function loadChatbotLeads(silent) {
+            const prevSearch = silent ? getSearchValue('searchInputChatLeads') : '';
+            if (!silent) document.getElementById('mainContent').innerHTML = '<div class="loading"><div class="spinner"></div> Loading...</div>';
+            const d = await apiCall('/api/admin/chatbot-leads');
+            if (!d || d.error) return;
+            let rows = '';
+            d.leads.forEach(l => {
+                rows += `<tr><td>${l.id}</td><td>${l.timestamp}</td><td>${l.name}</td><td>${l.email}</td><td><span class="status-badge status-${l.status.toLowerCase()}">${l.status}</span></td></tr>`;
+            });
+            document.getElementById('mainContent').innerHTML = `
+                <div class="page-header"><h1>Chatbot Leads (${d.total})</h1><button class="refresh-btn" onclick="loadChatbotLeads()">↻ Refresh</button></div>
+                <div class="table-container">
+                    <div class="table-header"><h2>All Chatbot Registrations</h2><div class="search-box"><input type="text" id="searchInputChatLeads" placeholder="Search..." onkeyup="filterTable('chatLeadsTable',this.value)"></div></div>
+                    <div style="overflow-x:auto"><table id="chatLeadsTable"><thead><tr><th>#</th><th>Date (IST)</th><th>Name</th><th>Email</th><th>Status</th></tr></thead><tbody>${rows}</tbody></table></div>
+                </div>`;
+            if (prevSearch) { document.getElementById('searchInputChatLeads').value = prevSearch; filterTable('chatLeadsTable', prevSearch); }
+        }
+
+        // ─── Live Chat ────────────────────────────────────────────────
+        // totalUnread is a running total of UNSEEN MESSAGES (not unread
+        // sessions) so the badge/sound react to every new message, even
+        // when several arrive in a row in the same still-unread session.
+        function renderChatSessions(sessions) {
+            const seen = getSeenCounts();
+            let totalUnread = 0;
+            let sh = '';
+            sessions.forEach(s => {
+                const t = s.lastTimestamp ? new Date(s.lastTimestamp).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit' }) : '';
+                const seenCount = seen[s.sessionId] || 0;
+                const unseenDelta = Math.max(0, s.messageCount - seenCount);
+                const isUnread = unseenDelta > 0 && s.sessionId !== currentOpenSessionId;
+                if (isUnread) totalUnread += unseenDelta;
+                const dot = s.userOnline ? '<span class="online-dot" title="User online"></span>' : '<span class="offline-dot" title="User offline"></span>';
+                const agentTag = s.agentName && s.status !== 'closed' ? `<div class="session-agent-tag">🟢 ${escapeHtml(s.agentName)} connected</div>` : '';
+                sh += `<div class="chat-session-item ${isUnread ? 'has-unread' : ''}" data-session-id="${s.sessionId}">
+                    ${isUnread ? `<span class="unread-count-badge">${unseenDelta}</span>` : ''}
+                    <button type="button" class="session-delete-btn" data-action="delete-session" title="Delete conversation">🗑</button>
+                    <div class="session-clickable" data-action="open-session" data-name="${escapeAttr(s.leadName)}" data-email="${escapeAttr(s.leadEmail)}">
+                        <div class="session-name">${dot}${escapeHtml(s.leadName) || 'Anonymous'}</div>
+                        <div class="session-email">${escapeHtml(s.leadEmail)}</div>
+                        <div class="session-preview">${escapeHtml(s.lastMessage)}</div>
+                        <div class="session-time">${t} · ${s.messageCount} messages${s.status === 'closed' ? ' · closed' : ''}</div>
+                        ${agentTag}
+                    </div>
+                </div>`;
+            });
+            return { html: sh, totalUnread };
+        }
+
+        // Event delegation for the session list - handles both opening a
+        // conversation and deleting one, regardless of how often the list
+        // gets re-rendered by the auto-refresh timer.
+        document.getElementById('mainContent').addEventListener('click', (e) => {
+            const delBtn = e.target.closest('[data-action="delete-session"]');
+            if (delBtn) {
+                const item = delBtn.closest('.chat-session-item');
+                deleteSession(item.dataset.sessionId);
+                return;
+            }
+            const openArea = e.target.closest('[data-action="open-session"]');
+            if (openArea) {
+                const item = openArea.closest('.chat-session-item');
+                loadChatMessages(item.dataset.sessionId, openArea.dataset.name, openArea.dataset.email);
+            }
+        });
+
+        async function deleteSession(sid) {
+            if (!confirm('Delete this entire conversation? This cannot be undone.')) return;
+            await apiCall('/api/admin/chat-delete', { method: 'POST', body: JSON.stringify({ sessionId: sid }) });
+            if (currentOpenSessionId === sid) {
+                closeChatView();
+            }
+            refreshChatSessions();
+        }
+
+        async function loadChat() {
+            document.getElementById('mainContent').innerHTML = '<div class="loading"><div class="spinner"></div> Loading...</div>';
+            const d = await apiCall('/api/admin/chat-sessions');
+            if (!d || d.error) return;
+            const { html: sh, totalUnread } = renderChatSessions(d.sessions);
+            document.getElementById('mainContent').innerHTML = `
+                <div class="page-header"><h1>Live Chat</h1><button class="refresh-btn" onclick="loadChat()">↻ Refresh</button></div>
+                <div class="chat-layout">
+                    <div class="chat-sessions-list" id="chatSessionsList">
+                        <div style="padding:16px;border-bottom:1px solid var(--border);font-weight:600">Chat Sessions (${d.total})</div>
+                        ${sh || '<div class="empty-state"><p>No active chat sessions</p></div>'}
+                    </div>
+                    <div class="chat-view"><div class="no-chat-selected">Select a chat session to view messages</div></div>
+                </div>`;
+            updateUnreadBadge(totalUnread);
+        }
+
+        // Called on a timer while the Live Chat page is open - re-renders just
+        // the session list (online dots / unread counts / previews) without
+        // disturbing whichever conversation is currently open.
+        async function refreshChatSessions() {
+            const listEl = document.getElementById('chatSessionsList');
+            if (!listEl) return; // navigated away
+            const d = await apiCall('/api/admin/chat-sessions');
+            if (!d || d.error) return;
+
+            const { html: sh, totalUnread } = renderChatSessions(d.sessions);
+            listEl.innerHTML = `<div style="padding:16px;border-bottom:1px solid var(--border);font-weight:600">Chat Sessions (${d.total})</div>${sh || '<div class="empty-state"><p>No active chat sessions</p></div>'}`;
+            const prevBadge = document.getElementById('chatUnreadBadge');
+            const prevCount = prevBadge && prevBadge.style.display !== 'none' ? Number(prevBadge.textContent) : 0;
+            updateUnreadBadge(totalUnread);
+            if (totalUnread > prevCount) playNotifySound();
+        }
+
+        async function loadChatMessages(sid, name, email) {
+            currentOpenSessionId = sid;
+            currentOpenSessionName = name;
+            currentOpenSessionEmail = email;
+            document.querySelector('.chat-layout')?.classList.add('chat-open');
+            const d = await apiCall('/api/admin/chat-messages/' + encodeURIComponent(sid));
+            if (!d || d.error) return;
+            lastRenderedMsgCount = d.messages.length;
+            setSeenCount(sid, d.messages.length);
+            renderChatView(d.messages, true);
+        }
+
+        // Mobile only - the session list and conversation are two full-screen
+        // panels there (see .chat-layout.chat-open); this switches back.
+        function closeChatView() {
+            currentOpenSessionId = null;
+            document.querySelector('.chat-layout')?.classList.remove('chat-open');
+            const view = document.querySelector('.chat-view');
+            if (view) view.innerHTML = '<div class="no-chat-selected">Select a chat session to view messages</div>';
+        }
+
+        const QUALIFY_SENTINEL = '__QUALIFY_START__';
+        const IMG_MSG_PREFIX = '__IMG__';
+
+        function renderChatMessageBody(m) {
+            if (m.message === QUALIFY_SENTINEL) {
+                return '<span style="opacity:0.85;">📋 Sent qualification questionnaire</span>';
+            }
+            if (typeof m.message === 'string' && m.message.startsWith(IMG_MSG_PREFIX)) {
+                return `<img src="${m.message.slice(IMG_MSG_PREFIX.length)}" style="max-width:220px;border-radius:8px;display:block;margin-top:2px;">`;
+            }
+            return escapeHtml(m.message);
+        }
+
+        function formatChatTime(ts) {
+            if (!ts) return '';
+            try { return new Date(ts).toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit' }); }
+            catch { return ''; }
+        }
+
+        function renderChatView(messages, animate) {
+            // Re-renders happen every few seconds while a conversation is open
+            // (see refreshOpenChatMessages) - preserve whatever the admin is
+            // mid-typing / has attached so it isn't wiped out from under them.
+            const existingInput = document.getElementById('agentMessage');
+            const preservedValue = existingInput ? existingInput.value : '';
+
+            let mh = '';
+            let prevType = null;
+            messages.forEach(m => {
+                // Three distinct identities, not just "agent vs. everyone else" -
+                // a bot (AI) reply is not the same person as the visitor, even
+                // though both are "incoming" from the admin's point of view.
+                const type = m.sender === 'agent' ? 'agent' : (m.sender === 'bot' ? 'bot' : 'user');
+                const showLabel = type !== prevType;
+                prevType = type;
+
+                let label = '';
+                if (type === 'agent') label = escapeHtml(m.agentName || 'Agent');
+                else if (type === 'bot') label = 'Veronica';
+                else label = escapeHtml(m.leadName) || 'Visitor';
+
+                mh += `<div class="chat-message ${type}">
+                    ${showLabel ? `<div class="message-sender">${label}</div>` : ''}
+                    <div class="message-bubble">${renderChatMessageBody(m)}<span class="message-time">${formatChatTime(m.timestamp)}</span></div>
+                </div>`;
+            });
+            document.querySelector('.chat-view').innerHTML = `
+                <div class="chat-view-header">
+                    <button type="button" class="chat-back-btn" onclick="closeChatView()" aria-label="Back to conversations">←</button>
+                    <div><h3>${escapeHtml(currentOpenSessionName) || 'Anonymous'}</h3><div style="font-size:12px;color:var(--text-muted)">${escapeHtml(currentOpenSessionEmail)}</div></div>
+                    <button class="action-btn btn-danger" onclick="endChat('${currentOpenSessionId}')">End Chat</button>
+                </div>
+                <div class="chat-messages ${animate ? 'initial-load' : ''}" id="chatMessages">${mh || '<div class="empty-state"><p>No messages yet</p></div>'}</div>
+                <div class="chat-quick-actions">
+                    <button type="button" class="quick-action-btn" onclick="insertGreeting()">👋 Greet</button>
+                    <button type="button" class="quick-action-btn" onclick="insertAssist()">🙋 How can I help?</button>
+                    <button type="button" class="quick-action-btn" onclick="sendQuestionnaire()">📋 Send Questionnaire</button>
+                </div>
+                <div class="agent-attach-preview" id="agentAttachPreview">
+                    <img id="agentAttachPreviewImg" src="">
+                    <button type="button" onclick="clearAgentAttachment()">✕</button>
+                </div>
+                <div class="emoji-palette" id="emojiPalette"></div>
+                <div class="chat-input-area">
+                    <button type="button" class="icon-btn" title="Emoji" onclick="toggleEmojiPalette()">😊</button>
+                    <button type="button" class="icon-btn" title="Attach image" onclick="document.getElementById('agentFileInput').click()">📎</button>
+                    <input type="file" id="agentFileInput" accept="image/*" style="display:none;" onchange="handleAgentFileSelected(this)">
+                    <input type="text" id="agentMessage" placeholder="Type your response..." onkeypress="if(event.key==='Enter')sendAgentMessage()">
+                    <button class="btn btn-primary" onclick="sendAgentMessage()">Send</button>
+                </div>`;
+            const cm = document.getElementById('chatMessages');
+            if (cm) cm.scrollTop = cm.scrollHeight;
+
+            const newInput = document.getElementById('agentMessage');
+            if (newInput && preservedValue) newInput.value = preservedValue;
+            if (pendingAgentAttachment) {
+                document.getElementById('agentAttachPreviewImg').src = pendingAgentAttachment;
+                document.getElementById('agentAttachPreview').style.display = 'flex';
+            }
+        }
+
+        // Called on a timer while a conversation is open - pulls new messages
+        // in without a full page refresh (this is what makes Live Chat "live").
+        async function refreshOpenChatMessages() {
+            if (!currentOpenSessionId) return;
+            const d = await apiCall('/api/admin/chat-messages/' + encodeURIComponent(currentOpenSessionId));
+            if (!d || d.error) return;
+            if (d.messages.length === lastRenderedMsgCount) return;
+
+            const isNewInbound = d.messages.length > lastRenderedMsgCount &&
+                d.messages[d.messages.length - 1].sender !== 'agent';
+
+            lastRenderedMsgCount = d.messages.length;
+            setSeenCount(currentOpenSessionId, d.messages.length);
+            renderChatView(d.messages, false);
+            if (isNewInbound) playNotifySound();
+        }
+
+        async function sendAgentMessage() {
+            const i = document.getElementById('agentMessage');
+            const msg = i.value.trim();
+            if (!currentOpenSessionId || (!msg && !pendingAgentAttachment)) return;
+
+            if (pendingAgentAttachment) {
+                await apiCall('/api/admin/chat-send', { method: 'POST', body: JSON.stringify({ sessionId: currentOpenSessionId, message: IMG_MSG_PREFIX + pendingAgentAttachment, leadName: currentOpenSessionName, leadEmail: currentOpenSessionEmail }) });
+                clearAgentAttachment();
+            }
+            if (msg) {
+                await apiCall('/api/admin/chat-send', { method: 'POST', body: JSON.stringify({ sessionId: currentOpenSessionId, message: msg, leadName: currentOpenSessionName, leadEmail: currentOpenSessionEmail }) });
+            }
+            i.value = '';
+            loadChatMessages(currentOpenSessionId, currentOpenSessionName, currentOpenSessionEmail);
+        }
+
+        // ─── Quick actions: greeting / assist templates + questionnaire trigger
+        function insertGreeting() {
+            const input = document.getElementById('agentMessage');
+            input.value = `Hi ${currentOpenSessionName || 'there'}, how can I help you today?`;
+            input.focus();
+        }
+
+        function insertAssist() {
+            const input = document.getElementById('agentMessage');
+            input.value = 'How can I assist you further?';
+            input.focus();
+        }
+
+        async function sendQuestionnaire() {
+            if (!currentOpenSessionId) return;
+            await apiCall('/api/admin/chat-send', { method: 'POST', body: JSON.stringify({ sessionId: currentOpenSessionId, message: QUALIFY_SENTINEL, leadName: currentOpenSessionName, leadEmail: currentOpenSessionEmail }) });
+            loadChatMessages(currentOpenSessionId, currentOpenSessionName, currentOpenSessionEmail);
+        }
+
+        // ─── Emoji picker ───────────────────────────────────────────────
+        const EMOJI_LIST = ['😀','😅','😍','😊','🙏','👍','👋','🎉','🤔','✅','❌','⚡','📌','💡','🙌','😢'];
+
+        function toggleEmojiPalette() {
+            const el = document.getElementById('emojiPalette');
+            if (!el) return;
+            if (el.style.display === 'flex') { el.style.display = 'none'; return; }
+            el.innerHTML = EMOJI_LIST.map(e => `<button type="button" class="emoji-btn" onclick="insertEmoji('${e}')">${e}</button>`).join('');
+            el.style.display = 'flex';
+        }
+
+        function insertEmoji(emoji) {
+            const input = document.getElementById('agentMessage');
+            input.value += emoji;
+            input.focus();
+            document.getElementById('emojiPalette').style.display = 'none';
+        }
+
+        // ─── Image attachments ──────────────────────────────────────────
+        // Resized/compressed client-side before sending - the whole
+        // conversation lives in one Sheets cell as JSON, so keeping
+        // attachments small matters (see chat storage redesign).
+        let pendingAgentAttachment = null;
+
+        function handleAgentFileSelected(input) {
+            const file = input.files[0];
+            if (!file) return;
+            if (!file.type.startsWith('image/')) {
+                alert('Only image attachments are supported.');
+                input.value = '';
+                return;
+            }
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const img = new Image();
+                img.onload = () => {
+                    const maxW = 480;
+                    const scale = Math.min(1, maxW / img.width);
+                    const canvas = document.createElement('canvas');
+                    canvas.width = img.width * scale;
+                    canvas.height = img.height * scale;
+                    canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+                    pendingAgentAttachment = canvas.toDataURL('image/jpeg', 0.6);
+                    document.getElementById('agentAttachPreviewImg').src = pendingAgentAttachment;
+                    document.getElementById('agentAttachPreview').style.display = 'flex';
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+            input.value = '';
+        }
+
+        function clearAgentAttachment() {
+            pendingAgentAttachment = null;
+            const preview = document.getElementById('agentAttachPreview');
+            if (preview) preview.style.display = 'none';
+        }
+
+        async function endChat(sid) {
+            if (confirm('End this chat session?')) {
+                await apiCall('/api/admin/chat-end', { method: 'POST', body: JSON.stringify({ sessionId: sid }) });
+                currentOpenSessionId = null;
+                loadChat();
+            }
+        }
+
+        // ─── Manage Accounts ──────────────────────────────────────────
+        async function loadAccounts() {
+            document.getElementById('mainContent').innerHTML = '<div class="loading"><div class="spinner"></div> Loading accounts...</div>';
+            const d = await apiCall('/api/admin/accounts');
+            if (!d || d.error) return;
+            let rows = '';
+            d.accounts.forEach(a => {
+                rows += `<tr><td>${escapeHtml(a.name)}</td><td>${escapeHtml(a.email)}</td><td><span class="status-badge status-new">${escapeHtml(a.role || 'Admin')}</span></td></tr>`;
+            });
+            document.getElementById('mainContent').innerHTML = `
+                <div class="page-header">
+                    <h1>Manage Accounts (${d.total})</h1>
+                    <div style="display:flex;gap:12px;">
+                        <button class="refresh-btn" onclick="loadAccounts()">↻ Refresh</button>
+                        <button class="btn btn-primary" onclick="openAccountModal()" style="width:auto;">+ Add Account</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <div class="table-header"><h2>Admin Accounts</h2></div>
+                    <div style="overflow-x:auto"><table id="accountsTable"><thead><tr><th>Name</th><th>Email</th><th>Role</th></tr></thead><tbody>${rows}</tbody></table></div>
+                </div>`;
+        }
+
+        function openAccountModal() {
+            document.getElementById('newAccountName').value = '';
+            document.getElementById('newAccountEmail').value = '';
+            document.getElementById('newAccountPassword').value = '';
+            document.getElementById('newAccountRole').value = 'Admin';
+            document.getElementById('accountErrorMsg').style.display = 'none';
+            document.getElementById('accountModal').style.display = 'flex';
+        }
+        function closeAccountModal() { document.getElementById('accountModal').style.display = 'none'; }
+
+        async function saveAccount() {
+            const name = document.getElementById('newAccountName').value.trim();
+            const email = document.getElementById('newAccountEmail').value.trim();
+            const password = document.getElementById('newAccountPassword').value;
+            const role = document.getElementById('newAccountRole').value;
+            const errorEl = document.getElementById('accountErrorMsg');
+            errorEl.style.display = 'none';
+
+            if (!name || !email || !password) {
+                errorEl.textContent = 'Name, email and password are required.';
+                errorEl.style.display = 'block';
+                return;
+            }
+
+            const result = await apiCall('/api/admin/accounts', {
+                method: 'POST',
+                body: JSON.stringify({ name, email, password, role })
+            });
+
+            if (!result || result.error) {
+                errorEl.textContent = (result && result.error) || 'Failed to create account';
+                errorEl.style.display = 'block';
+                return;
+            }
+
+            closeAccountModal();
+            loadAccounts();
+        }
+
+        // ─── Contact Lead Notes ─────────────────────────────────────────
+        function openLeadNotes(btn) {
+            currentNotesLeadRow = Number(btn.dataset.row);
+            currentNotesLeadEmail = btn.dataset.email || '';
+            document.getElementById('notesOriginalMessage').textContent = decodeURIComponent(btn.dataset.msg);
+            document.getElementById('newNoteText').value = '';
+            document.getElementById('notesModal').style.display = 'flex';
+            loadLeadNotes();
+        }
+
+        async function loadLeadNotes() {
+            const list = document.getElementById('notesList');
+            list.innerHTML = '<div class="loading"><div class="spinner"></div></div>';
+            const d = await apiCall('/api/admin/lead-notes?leadRow=' + encodeURIComponent(currentNotesLeadRow));
+            if (!d || d.error) { list.innerHTML = '<div class="empty-state"><p>Failed to load notes</p></div>'; return; }
+            if (!d.notes.length) { list.innerHTML = '<div class="empty-state"><p>No notes yet</p></div>'; return; }
+            list.innerHTML = d.notes.map(n => `
+                <div style="padding:12px 14px;border-bottom:1px solid var(--border);">
+                    <div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">
+                        ${n.timestamp}${n.type === 'status_change' ? ' · <span style="color:var(--primary)">Status Change</span>' : ''}
+                    </div>
+                    <div style="font-size:13px;">${escapeHtml(n.content)}</div>
+                </div>
+            `).join('');
+            list.scrollTop = list.scrollHeight;
+        }
+
+        async function addLeadNote() {
+            const input = document.getElementById('newNoteText');
+            const text = input.value.trim();
+            if (!text) return;
+            await apiCall('/api/admin/lead-notes', {
+                method: 'POST',
+                body: JSON.stringify({ leadRow: currentNotesLeadRow, leadEmail: currentNotesLeadEmail, note: text })
+            });
+            input.value = '';
+            loadLeadNotes();
+        }
+
+        function closeNotesModal() { document.getElementById('notesModal').style.display = 'none'; }
+
+        // ─── Helpers ──────────────────────────────────────────────────
+        let currentNotesLeadRow = null;
+        let currentNotesLeadEmail = '';
+
+        function openStatusModal(row, email) { currentLeadRow = row; currentLeadEmail = email || ''; document.getElementById('statusModal').style.display = 'flex'; }
+        function closeModal() { document.getElementById('statusModal').style.display = 'none'; }
+        async function saveStatus() {
+            const st = document.getElementById('statusSelect').value;
+            await apiCall('/api/admin/leads/status', { method: 'POST', body: JSON.stringify({ row: currentLeadRow, status: st, leadEmail: currentLeadEmail }) });
+            closeModal();
+            loadLeads();
+        }
+        function filterTable(tableId, query) {
+            const q = query.toLowerCase();
+            document.querySelectorAll('#' + tableId + ' tbody tr').forEach(r => {
+                r.style.display = r.textContent.toLowerCase().includes(q) ? '' : 'none';
+            });
+        }
+        function getSearchValue(id) {
+            const el = document.getElementById(id);
+            return el ? el.value : '';
+        }
+        function escapeHtml(t) { const d = document.createElement('div'); d.textContent = t == null ? '' : t; return d.innerHTML; }
+        function escapeAttr(t) { return (t || '').replace(/'/g, "\\'").replace(/"/g, '&quot;'); }
+
+        // Initial load - resume whichever page the admin was last on instead
+        // of always bouncing back to Overview after a refresh.
+        navigate(localStorage.getItem('admin_last_page') || 'dashboard');
+    </script>
+</body>
+</html>

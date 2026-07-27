@@ -1,0 +1,1548 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Sentra — Request a Demo or Talk to Sales</title>
+    <meta name="description"
+        content="Contact Sentra for demos, pilots or technical queries. Request a demo of our structural health monitoring solutions or speak to our engineering team." />
+    <link rel="canonical" href="https://sentratech.in/contact.html" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Contact Sentra — Request a Demo or Talk to Sales" />
+    <meta property="og:description"
+        content="Get in touch to request a demo, pilot deployment or technical discussion about sensor monitoring and analytics." />
+    <meta property="og:url" content="https://sentratech.in/contact.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://sentratech.in/image/branding/sentra.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact Sentra — Request a Demo or Talk to Sales" />
+    <meta name="twitter:description"
+        content="Contact Sentra for demos, pilots or technical queries. Request a demo of our structural health monitoring solutions or speak to our engineering team." />
+    <meta name="twitter:image" content="https://sentratech.in/image/branding/sentra.webp" />
+    <meta name="twitter:site" content="@sentratech" />
+    <meta name="twitter:image:width" content="1200" />
+    <meta name="twitter:image:height" content="630" />
+
+    <script type="application/ld+json">
+    {
+    "@context":"https://schema.org",
+    "@type":"ContactPoint",
+    "telephone":"+91-7893023322",
+    "contactType":"customer service",
+    "areaServed":"IN",
+    "availableLanguage":["English"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/solutions-v2.css">
+    <link rel="stylesheet" href="./css/detail-page.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1001;
+        }
+        .contact-hero {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 180px 24px 80px;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            overflow: hidden;
+            min-height: 560px;
+        }
+        .contact-hero-media {
+            position: absolute;
+            inset: 130px 30px 20px 30px;
+            border-radius: 20px;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .contact-hero-video {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .contact-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.55);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+            pointer-events: none;
+            z-index: 2;
+        }
+        .contact-hero-glow1 {
+            position: absolute;
+            top: 0;
+            left: 25%;
+            width: 600px; height: 600px;
+            background: rgba(244,129,32,0.08);
+            border-radius: 50%;
+            filter: blur(130px);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .contact-hero-glow2 {
+            position: absolute;
+            bottom: 0;
+            right: 25%;
+            width: 400px; height: 400px;
+            background: rgba(65,105,225,0.05);
+            border-radius: 50%;
+            filter: blur(110px);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .contact-hero-dots {
+            position: absolute;
+            inset: 0;
+            opacity: 0.08;
+            pointer-events: none;
+            z-index: -1;
+            background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='9' cy='9' r='1' fill='%23fff'/%3E%3C/svg%3E");
+        }
+        body.lightmode .contact-hero-dots {
+            opacity: 0.12;
+            background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='9' cy='9' r='1' fill='%23000'/%3E%3C/svg%3E");
+        }
+
+        .contact-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(90deg, rgba(244,129,32,0.08), transparent);
+            border: 1px solid rgba(244,129,32,0.2);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            position: relative;
+            z-index: 1;
+            margin-bottom: 24px;
+        }
+        .contact-hero-badge i {
+            font-size: 0.65rem;
+            color: var(--accent-color);
+        }
+        .contact-hero h1 {
+            font-size: clamp(36px, 6vw, 72px);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            line-height: 1.0;
+            position: relative;
+            z-index: 1;
+            margin: 0 0 16px;
+        }
+        .contact-hero h1 .accent {
+            color: var(--accent-color);
+        }
+        body.lightmode .contact-hero h1 .accent {
+            color: var(--accent-color);
+        }
+        .contact-hero p {
+            font-size: 0.92rem;
+            color: #fff;
+            line-height: 1.6;
+            max-width: 480px;
+            position: relative;
+            z-index: 1;
+            margin: 0 0 20px;
+        }
+
+        .contact-section {
+            padding: 60px 0 40px;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        @media (min-width: 1024px) {
+            .contact-grid { grid-template-columns: 5fr 7fr; }
+        }
+
+        .contact-left h2 {
+            font-size: clamp(24px, 3vw, 36px);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+            margin: 0 0 12px;
+        }
+        body.lightmode .contact-left h2 { color: #1a1a1a; }
+        .contact-left h2 .accent { color: var(--accent-color); }
+        .contact-left > p {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.6;
+            max-width: 400px;
+            margin: 0 0 32px;
+        }
+        body.lightmode .contact-left > p { color: rgba(0,0,0,0.5); }
+
+        .contact-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .contact-card {
+            position: relative;
+            overflow: hidden;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 20px;
+            transition: border-color 0.3s ease;
+            cursor: default;
+        }
+        .contact-card:hover { border-color: rgba(244,129,32,0.15); }
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1.5px;
+            background: linear-gradient(90deg, transparent, rgba(244,129,32,0.2), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .contact-card:hover::before { opacity: 1; }
+        body.lightmode .contact-card {
+            background: #fff;
+            border-color: rgba(0,0,0,0.08);
+        }
+        body.lightmode .contact-card:hover { border-color: rgba(244,129,32,0.25); }
+
+        .contact-card-icon {
+            width: 36px; height: 36px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            border: 1px solid rgba(244,129,32,0.15);
+            background: rgba(244,129,32,0.06);
+            color: var(--accent-color);
+            font-size: 0.9rem;
+        }
+        .contact-card-label {
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.35);
+            margin-bottom: 4px;
+        }
+        body.lightmode .contact-card-label { color: rgba(0,0,0,0.35); }
+        .contact-card-value {
+            font-size: 0.88rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        body.lightmode .contact-card-value { color: #1a1a1a; }
+        .contact-card-value a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .contact-card-value a:hover { color: var(--accent-color); }
+        .contact-card-value.small { font-size: 0.82rem; font-weight: 500; opacity: 0.8; }
+
+        .contact-social {
+            display: flex;
+            gap: 8px;
+            margin-top: 4px;
+        }
+        .contact-social a {
+            width: 32px; height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.06);
+            background: rgba(255,255,255,0.02);
+            color: rgba(255,255,255,0.4);
+            text-decoration: none;
+            transition: all 0.25s ease;
+            font-size: 0.85rem;
+        }
+        .contact-social a:hover {
+            border-color: rgba(244,129,32,0.3);
+            color: var(--accent-color);
+            background: rgba(244,129,32,0.06);
+        }
+        body.lightmode .contact-social a {
+            border-color: rgba(0,0,0,0.08);
+            background: rgba(0,0,0,0.02);
+            color: rgba(0,0,0,0.4);
+        }
+        body.lightmode .contact-social a:hover {
+            border-color: rgba(244,129,32,0.25);
+            color: var(--accent-color);
+            background: rgba(244,129,32,0.04);
+        }
+
+        .contact-form-box {
+            position: relative;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 24px;
+            padding: 32px;
+        }
+        .contact-form-box::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1.5px;
+            background: linear-gradient(90deg, transparent, rgba(244,129,32,0.25), transparent);
+            border-radius: 24px 24px 0 0;
+        }
+        body.lightmode .contact-form-box {
+            background: #fff;
+            border-color: rgba(0,0,0,0.08);
+        }
+        .contact-form-box h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.3px;
+            margin: 0 0 6px;
+        }
+        .contact-form-box > p {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.4);
+            line-height: 1.6;
+            margin: 0 0 24px;
+        }
+        body.lightmode .contact-form-box > p { color: rgba(0,0,0,0.4); }
+
+        .map-wrap {
+            margin-top: 48px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            height: 340px;
+            position: relative;
+        }
+        body.lightmode .map-wrap { border-color: rgba(0,0,0,0.08); }
+        .map-wrap .leaflet-container { height: 100%; width: 100%; }
+
+        @media (max-width: 600px) {
+            .contact-cards { grid-template-columns: 1fr; }
+            .contact-form-box { padding: 20px; }
+        }
+
+        .contact-form-box .form-control, .contact-form-box input, .contact-form-box textarea {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 10px;
+            color: inherit;
+            padding: 12px 14px;
+            font-size: 0.9rem;
+            width: 100%;
+            outline: none;
+            transition: border-color 0.25s ease;
+        }
+        .contact-form-box input:focus, .contact-form-box textarea:focus {
+            border-color: var(--accent-color);
+        }
+        body.lightmode .contact-form-box .form-control,
+        body.lightmode .contact-form-box input,
+        body.lightmode .contact-form-box textarea {
+            background: rgba(0,0,0,0.02);
+            border-color: rgba(0,0,0,0.1);
+        }
+        .contact-form-box textarea { resize: vertical; min-height: 100px; }
+
+        .contact-form-box input::placeholder,
+        .contact-form-box textarea::placeholder {
+            color: rgba(255,255,255,0.2);
+        }
+        body.lightmode .contact-form-box input::placeholder,
+        body.lightmode .contact-form-box textarea::placeholder {
+            color: rgba(0,0,0,0.2);
+        }
+
+        .map-wrap .leaflet-control-attribution { display: none !important; }
+
+        .map-address-overlay {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            z-index: 1000;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            pointer-events: none;
+        }
+        .map-gmaps-link {
+            pointer-events: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            text-decoration: none;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            margin-left: auto;
+            align-self: flex-start;
+            padding: 2px;
+            background: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .map-gmaps-link:hover {
+            transform: scale(1.15);
+            opacity: 0.85;
+        }
+        .map-gmaps-link img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+        }
+        body.lightmode .map-address-overlay {
+            background: rgba(255,255,255,0.85);
+            border-color: rgba(0,0,0,0.08);
+        }
+        .map-address-icon {
+            height: 28px;
+            width: auto;
+            flex-shrink: 0;
+            display: block;
+            object-fit: contain;
+        }
+        .map-address-icon.light { display: none; }
+        body.lightmode .map-address-icon.dark { display: none; }
+        body.lightmode .map-address-icon.light { display: block; }
+        .map-address-name {
+            font-size: 0.78rem;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #fff;
+        }
+        body.lightmode .map-address-name { color: #1a1a1a; }
+        .map-address-detail {
+            font-size: 0.68rem;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.3;
+        }
+        body.lightmode .map-address-detail { color: rgba(0,0,0,0.45); }
+
+        .custom-map-pin {
+            background: none !important;
+            border: none !important;
+        }
+        .custom-map-pin i {
+            font-size: 2rem;
+            color: var(--accent-color);
+            filter: drop-shadow(0 2px 6px rgba(244,129,32,0.5));
+            display: block;
+            transform: translate(-50%, -100%);
+        }
+
+        /* Map pin permanent label */
+        .map-pin-label {
+            background: rgba(10, 10, 10, 0.78) !important;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.1) !important;
+            border-radius: 8px !important;
+            padding: 6px 10px !important;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.4) !important;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            white-space: nowrap;
+            pointer-events: none;
+        }
+        .map-pin-label::before { display: none !important; }
+        .map-pin-label-name {
+            display: block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+        .map-pin-label-sub {
+            display: block;
+            font-size: 0.62rem;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.3;
+        }
+        body.lightmode .map-pin-label {
+            background: rgba(255,255,255,0.92) !important;
+            border-color: rgba(0,0,0,0.08) !important;
+        }
+        body.lightmode .map-pin-label-name { color: #1a1a1a; }
+        body.lightmode .map-pin-label-sub  { color: rgba(0,0,0,0.45); }
+
+        .btn-contact-submit {
+            width: 50%;
+            align-self: flex-start;
+        }
+        @media (max-width: 600px) {
+            .btn-contact-submit { width: 100%; }
+        }
+
+        /* ── Stepper Styles ── */
+        .stepper-container {
+            margin-top: 20px;
+        }
+        .step-indicators {
+            display: flex;
+            align-items: center;
+            padding: 0 0 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        body.lightmode .step-indicators { border-bottom-color: rgba(0,0,0,0.06); }
+        .step-dot-wrap {
+            display: flex;
+            align-items: center;
+            flex: 0 1 auto;
+            min-width: 0;
+        }
+        .step-dot {
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.12);
+            background: transparent;
+            color: rgba(255,255,255,0.3);
+            flex-shrink: 0;
+            position: relative;
+        }
+        body.lightmode .step-dot { border-color: rgba(0,0,0,0.2); color: rgba(0,0,0,0.65); }
+        .step-dot.active {
+            border-color: #f48120;
+            background: #f48120;
+            color: #fff;
+            box-shadow: 0 0 0 4px rgba(244,129,32,0.15);
+        }
+        .step-dot.completed {
+            border-color: #22c55e;
+            background: #22c55e;
+            color: #fff;
+        }
+        .step-dot.completed::after {
+            content: '✓';
+            font-size: 14px;
+        }
+        .step-dot .step-label {
+            position: absolute;
+            top: calc(100% + 6px);
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 9px;
+            font-weight: 600;
+            white-space: nowrap;
+            color: rgba(255,255,255,0.3);
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+        body.lightmode .step-dot .step-label { color: rgba(0,0,0,0.3); }
+        .step-dot.active .step-label { color: #f48120; }
+        .step-dot.completed .step-label { color: #22c55e; }
+        .step-connector {
+            width: 48px;
+            height: 2px;
+            background: rgba(255,255,255,0.08);
+            margin: 0 8px;
+            border-radius: 2px;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        body.lightmode .step-connector { background: rgba(0,0,0,0.06); }
+        .step-connector-fill {
+            position: absolute;
+            left: 0; top: 0;
+            height: 100%;
+            background: #22c55e;
+            transition: width 0.4s ease;
+            width: 0;
+            border-radius: 2px;
+        }
+        .step-connector.filled .step-connector-fill { width: 100%; }
+
+        .step-content {
+            display: none;
+            animation: stepFadeIn 0.35s ease;
+        }
+        .step-content.active { display: block; }
+        @keyframes stepFadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .step-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        body.lightmode .step-footer { border-top-color: rgba(0,0,0,0.06); }
+        .step-footer.end { justify-content: flex-end; }
+        .btn-step-prev {
+            padding: 10px 24px;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: transparent;
+            color: rgba(255,255,255,0.5);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        body.lightmode .btn-step-prev { border-color: rgba(0,0,0,0.1); color: rgba(0,0,0,0.4); }
+        .btn-step-prev:hover { border-color: rgba(244,129,32,0.3); color: #f48120; }
+        .btn-step-next {
+            padding: 10px 28px;
+            border-radius: 50px;
+            border: none;
+            background: #f48120;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        body.lightmode .btn-step-next {
+            background: #f48120;
+            color: #fff;
+        }
+        .btn-step-next:hover { background: #e2711a; transform: translateY(-1px); }
+        .btn-step-next:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+        .step-review-grid {
+            display: grid;
+            gap: 8px;
+        }
+        .step-review-row {
+            display: flex;
+            gap: 8px;
+            font-size: 13px;
+        }
+        .step-review-label {
+            color: rgba(255,255,255,0.35);
+            min-width: 100px;
+            font-weight: 500;
+        }
+        body.lightmode .step-review-label { color: rgba(0,0,0,0.35); }
+        .step-review-value {
+            color: rgba(255,255,255,0.85);
+            font-weight: 600;
+        }
+        body.lightmode .step-review-value { color: rgba(0,0,0,0.8); }
+
+        /* Choice screen: Book a Call / Raise Enquiry */
+        .contact-choice {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .contact-choice-btn {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            width: 100%;
+            padding: 16px 18px;
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.03);
+            cursor: pointer;
+            text-align: left;
+            transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+        }
+        .contact-choice-btn:hover {
+            border-color: rgba(244,129,32,0.4);
+            background: rgba(244,129,32,0.06);
+            transform: translateY(-2px);
+        }
+        body.lightmode .contact-choice-btn {
+            border-color: rgba(0,0,0,0.08);
+            background: rgba(0,0,0,0.02);
+        }
+        body.lightmode .contact-choice-btn:hover {
+            border-color: rgba(244,129,32,0.35);
+            background: rgba(244,129,32,0.05);
+        }
+        .contact-choice-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            border-radius: 12px;
+            background: rgba(244,129,32,0.12);
+            color: #f48120;
+            font-size: 17px;
+        }
+        .contact-choice-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            flex: 1;
+        }
+        .contact-choice-text strong {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.9);
+        }
+        body.lightmode .contact-choice-text strong { color: rgba(0,0,0,0.85); }
+        .contact-choice-text small {
+            font-size: 12px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.45);
+        }
+        body.lightmode .contact-choice-text small { color: rgba(0,0,0,0.45); }
+        .contact-choice-arrow {
+            font-size: 12px;
+            color: rgba(255,255,255,0.3);
+            transition: transform 0.25s ease, color 0.25s ease;
+        }
+        .contact-choice-btn:hover .contact-choice-arrow { transform: translateX(4px); color: #f48120; }
+
+        .contact-back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: none;
+            padding: 0;
+            margin-bottom: 16px;
+            font-size: 12.5px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.4);
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+        .contact-back-btn:hover { color: #f48120; }
+        body.lightmode .contact-back-btn { color: rgba(0,0,0,0.4); }
+
+        /* Consultation modal */
+        .consult-modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0,0,0,0.65);
+            backdrop-filter: blur(4px);
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .consult-modal-overlay.active { display: flex; }
+        .consult-modal {
+            position: relative;
+            width: 100%;
+            max-width: 720px;
+            max-height: 90vh;
+            overflow-y: auto;
+            background: #161616;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 18px;
+            padding: 32px 28px 24px;
+            animation: consultModalIn 0.3s cubic-bezier(0.16,1,0.3,1);
+        }
+        body.lightmode .consult-modal { background: #fff; border-color: rgba(0,0,0,0.08); }
+        @keyframes consultModalIn {
+            from { opacity: 0; transform: translateY(16px) scale(0.98); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .consult-modal-close {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.04);
+            color: rgba(255,255,255,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 13px;
+        }
+        .consult-modal-close:hover { border-color: #f48120; color: #f48120; }
+        body.lightmode .consult-modal-close { border-color: rgba(0,0,0,0.1); background: rgba(0,0,0,0.03); color: rgba(0,0,0,0.5); }
+    </style>
+    <link rel="icon" href="/image/branding/favicon.webp" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/branding/favicon.webp">
+    <link rel="stylesheet" href="./css/chatbot.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        .form-field-group { margin-bottom: 12px; }
+        .form-field-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.55);
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
+        }
+        body.lightmode .form-field-label { color: rgba(0,0,0,0.5); }
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .checkbox-group.two-col { max-width: 460px; }
+        /* Shared checkmark indicator + liquid-fill used by checkbox-btn and checkbox-row */
+        .cb-indicator {
+            position: relative;
+            z-index: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            min-width: 18px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(255,255,255,0.22);
+            background: rgba(255,255,255,0.03);
+            transition: border-color 0.35s ease, background 0.35s ease, transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+        }
+        body.lightmode .cb-indicator { border-color: rgba(0,0,0,0.18); background: rgba(0,0,0,0.02); }
+        .cb-indicator svg {
+            width: 11px;
+            height: 11px;
+            fill: none;
+            stroke: #fff;
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 24;
+            stroke-dashoffset: 24;
+            opacity: 0;
+            transition: stroke-dashoffset 0.4s cubic-bezier(0.65,0,0.35,1) 0.08s, opacity 0.15s ease 0.08s;
+        }
+        /* Liquid-flow fill: a blob that grows from the indicator and settles into the pill/row shape */
+        .cb-liquid {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f48120 0%, #ff9d4d 100%);
+            transform: translate(-50%,-50%) scale(0);
+            transition: transform 0.65s cubic-bezier(0.16,1,0.3,1);
+            z-index: 0;
+            pointer-events: none;
+        }
+        @keyframes cbLiquidWobble {
+            0%, 100% { border-radius: 50%; }
+            33% { border-radius: 44% 56% 62% 38% / 56% 44% 56% 44%; }
+            66% { border-radius: 58% 42% 40% 60% / 46% 58% 42% 54%; }
+        }
+        label:has(input:checked) .cb-liquid {
+            transform: translate(-50%,-50%) scale(30);
+            animation: cbLiquidWobble 4s ease-in-out 0.65s infinite;
+        }
+        label:has(input:checked) .cb-indicator {
+            border-color: transparent;
+            background: transparent;
+            transform: scale(1.08);
+        }
+        label:has(input:checked) .cb-indicator svg {
+            opacity: 1;
+            stroke-dashoffset: 0;
+        }
+        .checkbox-btn {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 14px;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.04);
+            cursor: pointer;
+            transition: border-color 0.35s ease, background 0.35s ease, color 0.35s ease;
+            font-size: 12.5px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.6);
+            user-select: none;
+        }
+        .checkbox-btn .cb-indicator { width: 15px; height: 15px; min-width: 15px; }
+        .checkbox-btn .cb-indicator svg { width: 9px; height: 9px; }
+        .checkbox-btn .cb-liquid { left: 14px; width: 17px; height: 17px; }
+        .checkbox-btn:hover { border-color: rgba(244,129,32,0.3); background: rgba(244,129,32,0.06); color: #f48120; }
+        .checkbox-btn input { position: absolute; opacity: 0; width: 0; height: 0; margin: 0; }
+        .checkbox-btn:has(input:checked) {
+            border-color: #f48120;
+            color: #fff;
+        }
+        .checkbox-btn:has(input:checked) .checkbox-btn-label { color: #fff; }
+        body.lightmode .checkbox-btn {
+            border-color: rgba(0,0,0,0.1);
+            background: rgba(0,0,0,0.02);
+            color: rgba(0,0,0,0.55);
+        }
+        body.lightmode .checkbox-btn:hover {
+            border-color: rgba(244,129,32,0.35);
+            background: rgba(244,129,32,0.05);
+            color: #f48120;
+        }
+        body.lightmode .checkbox-btn:has(input:checked) {
+            border-color: #f48120;
+            color: #fff;
+        }
+        .checkbox-vertical {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .checkbox-vertical.two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width: 500px) {
+            .checkbox-vertical.two-col { grid-template-columns: 1fr; }
+        }
+        .checkbox-row {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.06);
+            background: rgba(255,255,255,0.02);
+            cursor: pointer;
+            transition: border-color 0.35s ease, color 0.35s ease;
+            font-size: 13px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.55);
+            user-select: none;
+        }
+        .checkbox-row .cb-text { position: relative; z-index: 1; }
+        .checkbox-row:hover {
+            border-color: rgba(244,129,32,0.25);
+            background: rgba(244,129,32,0.05);
+        }
+        .checkbox-row input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            width: 0; height: 0;
+            margin: 0;
+        }
+        .checkbox-row:has(input:checked) {
+            border-color: #f48120;
+            color: #fff;
+        }
+        body.lightmode .checkbox-row {
+            border-color: rgba(0,0,0,0.08);
+            background: rgba(0,0,0,0.02);
+            color: rgba(0,0,0,0.5);
+        }
+        body.lightmode .checkbox-row:hover {
+            border-color: rgba(244,129,32,0.3);
+            background: rgba(244,129,32,0.04);
+        }
+        body.lightmode .checkbox-row:has(input:checked) {
+            border-color: #f48120;
+            color: #fff;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .cb-liquid, .cb-indicator, .cb-indicator svg { transition: none !important; animation: none !important; }
+        }
+        .conditional-field {
+            padding-left: 12px;
+            border-left: 2px solid rgba(244,129,32,0.2);
+            margin-bottom: 12px;
+        }
+        body.lightmode .conditional-field { border-left-color: rgba(244,129,32,0.3); }
+        .form select.form-control {
+            appearance: auto;
+            -webkit-appearance: auto;
+            cursor: pointer;
+        }
+        .contact-form-box select.form-control {
+            color: rgba(255,255,255,0.8);
+        }
+        .contact-form-box select.form-control option {
+            background: #1a1a1a;
+            color: #fff;
+        }
+        body.lightmode .contact-form-box select.form-control {
+            color: rgba(0,0,0,0.8);
+        }
+        body.lightmode .contact-form-box select.form-control option {
+            background: #fff;
+            color: #1a1a1a;
+        }
+        .contact-grid > div:last-child {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .contact-form-box {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin-bottom: 24px;
+        }
+        .contact-form-box #contactForm {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        #calendlyContainer {
+            transition: opacity 0.4s ease;
+        }
+        .stepper-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .step-indicators {
+            justify-content: center;
+        }
+        .steps-wrapper {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .step-content {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo"><img src="./image/branding/sentra_white_1.svg" alt="Sentra"></div>
+            <div class="preloader-logo-sub">Smart · Secure · Scalable</div>
+            <div class="preloader-counter">
+                <span id="preloader-count">0</span>
+                <span class="preloader-percent">%</span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-bar-fill"></div>
+            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+
+    <header>
+        <div id="header"></div>
+    </header>
+    <aside>
+        <div id="edit-sidebar"></div>
+    </aside>
+    <aside>
+        <div id="sidebar"></div>
+    </aside>
+
+    <main>
+        <div class="contact-hero">
+            <div class="contact-hero-media">
+                <div class="contact-hero-dots"></div>
+                <video class="contact-hero-video" autoplay muted loop playsinline poster="https://assets.mixkit.co/videos/1948/1948-thumb-720-0.webp">
+                    <source src="./image/videos/contact-bg.mp4" type="video/mp4">
+                </video>
+                <div class="contact-hero-overlay"></div>
+            </div>
+            <div class="contact-hero-glow1"></div>
+            <div class="contact-hero-glow2"></div>
+            <div class="contact-hero-badge">
+                <i class="fa-regular fa-circle"></i>
+                <span>Support System // Active</span>
+            </div>
+            <h1>We're Ready<br><span class="accent">To Assist</span></h1>
+            <p>Connect with our team for fast support, product insights, or any questions you may have.</p>
+
+        </div>
+
+        <div class="section">
+            <div class="hero-container">
+                <div class="contact-grid">
+                    <div class="contact-left">
+                        <h2>We're Here To<br>Connect And<br><span class="accent">Assist You</span></h2>
+                        <p>Have questions about our platform? Need help with a demo, BIM support, or structural monitoring services? Our team is ready.</p>
+                        <div class="contact-cards">
+                            <div class="contact-card">
+                                <div class="contact-card-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                                <div class="contact-card-label">Contact Us</div>
+                                <div class="contact-card-value"><a href="tel:+917893023322">+91 7893023322</a></div>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="contact-card-label">Location</div>
+                                <div class="contact-card-value small">Visakhapatnam, Andhra Pradesh, India</div>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="contact-card-label">Email</div>
+                                <div class="contact-card-value"><a href="mailto:sentra@clovetech.com">sentra@clovetech.com</a></div>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-card-icon"><i class="fa-solid fa-share-nodes"></i></div>
+                                <div class="contact-card-label">Follow Us</div>
+                                <div class="contact-social">
+                                    <a href="https://www.linkedin.com/company/sentra-clovetech/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="https://www.facebook.com/clovetechnologiesofficial/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/clove_technologies/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://x.com/clovetech_offl" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://www.youtube.com/@CloveTechnologiesInc" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="contact-form-box">
+                            <h3>Let's Talk</h3>
+                            <p>Ready to start your next monitoring project? Book a call with our team or send us your requirements directly — a specialist will respond within 24 hours.</p>
+                            <div id="success-message" class="alert success hidden">
+                                <span class="check-icon"><i class="fa-solid fa-check"></i></span>
+                                <p>Thank you! Form submitted successfully.</p>
+                            </div>
+                            <div id="error-message" class="alert error hidden">
+                                <span class="cross-icon"><i class="fa-solid fa-xmark"></i></span>
+                                <p>Oops! Form submission failed. Please try again.</p>
+                            </div>
+
+                            <div class="contact-choice" id="contactChoice">
+                                <button type="button" class="contact-choice-btn" onclick="openCalendlyModal()">
+                                    <span class="contact-choice-icon"><i class="fa-solid fa-phone-volume"></i></span>
+                                    <span class="contact-choice-text"><strong>Book a Call</strong><small>Schedule a personalised consultation</small></span>
+                                    <i class="fa-solid fa-arrow-right contact-choice-arrow"></i>
+                                </button>
+                                <button type="button" class="contact-choice-btn" onclick="showEnquiryForm()">
+                                    <span class="contact-choice-icon"><i class="fa-solid fa-paper-plane"></i></span>
+                                    <span class="contact-choice-text"><strong>Raise Enquiry</strong><small>Tell us about your project requirements</small></span>
+                                    <i class="fa-solid fa-arrow-right contact-choice-arrow"></i>
+                                </button>
+                            </div>
+
+                            <form action="./php/form_process.php" method="post" id="contactForm" class="form" style="display:none;">
+                                <button type="button" class="contact-back-btn" onclick="backToChoice()"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                                <!-- Step Indicators -->
+                                <div class="stepper-container">
+                                    <div class="step-indicators" id="stepIndicators">
+                                        <div class="step-dot-wrap">
+                                            <div class="step-dot active" data-step="1">
+                                                <span class="step-num">1</span>
+                                                <span class="step-label">Personal</span>
+                                            </div>
+                                            <div class="step-connector" data-connector="1"><div class="step-connector-fill"></div></div>
+                                        </div>
+                                        <div class="step-dot-wrap">
+                                            <div class="step-dot" data-step="2">
+                                                <span class="step-num">2</span>
+                                                <span class="step-label">Interest</span>
+                                            </div>
+                                            <div class="step-connector" data-connector="2"><div class="step-connector-fill"></div></div>
+                                        </div>
+                                        <div class="step-dot-wrap">
+                                            <div class="step-dot" data-step="3">
+                                                <span class="step-num">3</span>
+                                                <span class="step-label">Details</span>
+                                            </div>
+                                            <div class="step-connector" data-connector="3"><div class="step-connector-fill"></div></div>
+                                        </div>
+                                        <div class="step-dot-wrap">
+                                            <div class="step-dot" data-step="4">
+                                                <span class="step-num">4</span>
+                                                <span class="step-label">Review</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="steps-wrapper">
+                                    <!-- Step 1: Personal Info -->
+                                    <div class="step-content active" data-step="1">
+                                        <div class="row row-cols-md-2 row-cols-1 g-3 mb-3">
+                                            <div class="col"><input type="text" name="first-name" id="first-name" class="form-control" placeholder="First Name"></div>
+                                            <div class="col"><input type="text" name="last-name" id="last-name" class="form-control" placeholder="Last Name"></div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col"><input type="email" name="email" id="email" class="form-control" placeholder="Email Address" required></div>
+                                        </div>
+                                        <div class="step-footer end">
+                                            <button type="button" class="btn-step-next" onclick="goStep(2)">Next Step</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 2: Interest -->
+                                    <div class="step-content" data-step="2">
+                                        <div class="form-field-group">
+                                            <label class="form-field-label">I'm interested in</label>
+                                            <div class="checkbox-group" id="leadTypeGroup">
+                                                <label class="checkbox-btn"><input type="checkbox" name="lead-type" value="Products" class="lead-type-cb"><span class="cb-liquid"></span><span class="cb-indicator"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span><span class="checkbox-btn-label">Products</span></label>
+                                                <label class="checkbox-btn"><input type="checkbox" name="lead-type" value="Solutions" class="lead-type-cb"><span class="cb-liquid"></span><span class="cb-indicator"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span><span class="checkbox-btn-label">Solutions</span></label>
+                                                <label class="checkbox-btn"><input type="checkbox" name="lead-type" value="General Inquiry" class="lead-type-cb"><span class="cb-liquid"></span><span class="cb-indicator"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span><span class="checkbox-btn-label">General Inquiry</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="form-field-group conditional-field" id="productInterestGroup" style="display:none;">
+                                            <label class="form-field-label">Product Interest</label>
+                                            <div class="checkbox-vertical">
+                                                <label class="checkbox-row"><input type="checkbox" name="product-interest" value="Edge Devices"><span class="cb-liquid"></span><span class="cb-indicator"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span><span class="cb-text">Edge Devices</span></label>
+                                                <label class="checkbox-row"><input type="checkbox" name="product-interest" value="Core Communications"><span class="cb-liquid"></span><span class="cb-indicator"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span><span class="cb-text">Core Communications</span></label>
+                                                <label class="checkbox-row"><input type="checkbox" name="product-interest" value="Wired Sensors"><span class="cb-liquid"></span><span class="cb-indicator"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span><span class="cb-text">Wired Sensors</span></label>
+                                                <label class="checkbox-row"><input type="checkbox" name="product-interest" value="Laser Scanners" class="laser-scanner-cb"><span class="cb-liquid"></span><span class="cb-indicator"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span><span class="cb-text">Laser Scanners</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="form-field-group conditional-field" id="laserScannerInterestGroup" style="display:none;">
+                                            <label class="form-field-label">Laser Scanner Products</label>
+                                            <div class="checkbox-vertical">
+                                                <label class="checkbox-row"><input type="checkbox" name="laser-scanner-interest" value="Lixel K2"><span class="cb-liquid"></span><span class="cb-indicator"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span><span class="cb-text">Lixel K2</span></label>
+                                                <label class="checkbox-row"><input type="checkbox" name="laser-scanner-interest" value="PortalCam"><span class="cb-liquid"></span><span class="cb-indicator"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span><span class="cb-text">PortalCam</span></label>
+                                                <label class="checkbox-row"><input type="checkbox" name="laser-scanner-interest" value="Lixel L2 Pro"><span class="cb-liquid"></span><span class="cb-indicator"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span><span class="cb-text">Lixel L2 Pro</span></label>
+                                                <label class="checkbox-row"><input type="checkbox" name="laser-scanner-interest" value="LixelKity K1"><span class="cb-liquid"></span><span class="cb-indicator"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span><span class="cb-text">LixelKity K1</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="form-field-group conditional-field" id="solutionInterestGroup" style="display:none;">
+                                            <label class="form-field-label">Solution Interest</label>
+                                            <div class="checkbox-vertical two-col">
+                                                <label class="checkbox-row"><input type="checkbox" name="solution-interest" value="Structural Health Monitoring"><span class="cb-liquid"></span><span class="cb-indicator"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span><span class="cb-text">Structural Health Monitoring</span></label>
+                                                <label class="checkbox-row"><input type="checkbox" name="solution-interest" value="Advanced NDT"><span class="cb-liquid"></span><span class="cb-indicator"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span><span class="cb-text">Advanced NDT</span></label>
+                                                <label class="checkbox-row"><input type="checkbox" name="solution-interest" value="Bridge Inspection"><span class="cb-liquid"></span><span class="cb-indicator"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span><span class="cb-text">Bridge Inspection</span></label>
+                                                <label class="checkbox-row"><input type="checkbox" name="solution-interest" value="Asset Monitoring"><span class="cb-liquid"></span><span class="cb-indicator"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span><span class="cb-text">Asset Monitoring</span></label>
+                                                <label class="checkbox-row"><input type="checkbox" name="solution-interest" value="Consulting Services"><span class="cb-liquid"></span><span class="cb-indicator"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span><span class="cb-text">Consulting Services</span></label>
+                                                <label class="checkbox-row"><input type="checkbox" name="solution-interest" value="Geotechnical Monitoring"><span class="cb-liquid"></span><span class="cb-indicator"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span><span class="cb-text">Geotechnical Monitoring</span></label>
+                                                <label class="checkbox-row"><input type="checkbox" name="solution-interest" value="Fatigue Assessment"><span class="cb-liquid"></span><span class="cb-indicator"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span><span class="cb-text">Fatigue Assessment</span></label>
+                                                <label class="checkbox-row"><input type="checkbox" name="solution-interest" value="Digital Engineering"><span class="cb-liquid"></span><span class="cb-indicator"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span><span class="cb-text">Digital Engineering</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="step-footer">
+                                            <button type="button" class="btn-step-prev" onclick="goStep(1)">Previous</button>
+                                            <button type="button" class="btn-step-next" onclick="goStep(3)">Next Step</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 3: Project Details -->
+                                    <div class="step-content" data-step="3">
+                                        <div class="form-field-group">
+                                            <label class="form-field-label">Project Timeline</label>
+                                            <select name="timeline" id="timeline" class="form-control form-select">
+                                                <option value="">Select timeline...</option>
+                                                <option value="Immediate (within 1 month)">Immediate (within 1 month)</option>
+                                                <option value="Short-term (1-3 months)">Short-term (1-3 months)</option>
+                                                <option value="Long-term (3+ months)">Long-term (3+ months)</option>
+                                                <option value="Just exploring">Just exploring</option>
+                                            </select>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col"><input type="text" name="subject" id="subject" class="form-control" placeholder="Subject"></div>
+                                        </div>
+                                        <textarea name="message" id="message" class="form-control" rows="4" placeholder="Tell us about your project requirements"></textarea>
+                                        <div class="step-footer">
+                                            <button type="button" class="btn-step-prev" onclick="goStep(2)">Previous</button>
+                                            <button type="button" class="btn-step-next" onclick="goStep(4)">Review</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 4: Review & Submit -->
+                                    <div class="step-content" data-step="4">
+                                        <div class="step-review-grid" id="reviewGrid"></div>
+                                        <div class="step-footer" style="margin-top:16px;">
+                                            <button type="button" class="btn-step-prev" onclick="goStep(3)">Previous</button>
+                                            <button type="submit" class="btn-step-next" id="finalSubmitBtn">Send a Message</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="contactMap" class="map-wrap">
+                    <div class="map-address-overlay">
+                        <img class="map-address-icon dark" src="./image/branding/sentra_white_1.svg" alt="Sentra">
+                        <img class="map-address-icon light" src="./image/branding/sentra_dark.svg" alt="Sentra">
+                        <a href="https://maps.app.goo.gl/kgiD3cXAFKYrBRjS6" target="_blank" rel="noopener noreferrer" class="map-gmaps-link" aria-label="Open in Google Maps">
+                            <img src="./image/google-maps-icon.webp" alt="Open in Google Maps">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="consult-modal-overlay" id="consultModalOverlay" onclick="if(event.target===this) closeCalendlyModal();">
+        <div class="consult-modal">
+            <button type="button" class="consult-modal-close" onclick="closeCalendlyModal()" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="text-center" style="margin-bottom:12px;">
+                <div class="sub-heading align-self-center">
+                    <i class="fa-regular fa-circle-dot"></i>
+                    <span>Book a Consultation</span>
+                </div>
+                <h2 class="title-heading intro-heading-compact" style="font-size:clamp(20px,3vw,28px);">Schedule a Call</h2>
+                <p class="intro-text-compact" style="font-size:13.5px;">Discuss your project requirements for real-time infrastructure intelligence with our experts. Choose a convenient time for a personalized consultation.</p>
+            </div>
+            <div id="calendlyContainer" class="calendly-inline-widget"
+                data-url="https://calendly.com/sentra-clovetech/30min?primary_color=f47b0a"
+                style="min-width:280px;height:650px;"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer"></div>
+    </footer>
+
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/vendor/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/swiper-script.js"></script>
+    <script>
+        // Stepper
+        var currentStep = 1;
+        function goStep(n) {
+            document.querySelectorAll('.step-content').forEach(function(el) { el.classList.remove('active'); });
+            document.querySelectorAll('.step-dot').forEach(function(el) { el.classList.remove('active'); });
+            document.querySelectorAll('.step-connector-fill').forEach(function(el) { el.style.width = '0'; });
+
+            document.querySelector('.step-content[data-step="' + n + '"]').classList.add('active');
+            for (var i = 1; i <= 4; i++) {
+                var dot = document.querySelector('.step-dot[data-step="' + i + '"]');
+                if (i < n) { dot.classList.add('completed'); dot.innerHTML = '<span class="step-label">' + dot.querySelector('.step-label').textContent + '</span>'; }
+                else if (i === n) { dot.classList.remove('completed'); dot.classList.add('active'); dot.innerHTML = '<span class="step-num">' + i + '</span><span class="step-label">' + dot.querySelector('.step-label').textContent + '</span>'; }
+                else { dot.classList.remove('completed', 'active'); dot.innerHTML = '<span class="step-num">' + i + '</span><span class="step-label">' + dot.querySelector('.step-label').textContent + '</span>'; }
+                if (i < n) {
+                    var conn = document.querySelector('.step-connector[data-connector="' + i + '"] .step-connector-fill');
+                    if (conn) conn.style.width = '100%';
+                }
+            }
+            currentStep = n;
+            if (n === 4) buildReview();
+        }
+
+        function buildReview() {
+            var fields = [
+                { label: 'First Name', val: document.getElementById('first-name').value.trim() || '—' },
+                { label: 'Last Name', val: document.getElementById('last-name').value.trim() || '—' },
+                { label: 'Email', val: document.getElementById('email').value.trim() || '—' },
+                { label: 'Subject', val: document.getElementById('subject').value.trim() || '—' },
+                { label: 'Lead Type', val: (function(){ var v=[]; document.querySelectorAll('input[name="lead-type"]:checked').forEach(function(cb){ v.push(cb.value); }); return v.join(', ') || '—'; })() },
+                { label: 'Products', val: (function(){ var v=[]; document.querySelectorAll('input[name="product-interest"]:checked').forEach(function(cb){ v.push(cb.value); }); return v.join(', ') || '—'; })() },
+                { label: 'Laser Scanner Products', val: (function(){ var v=[]; document.querySelectorAll('input[name="laser-scanner-interest"]:checked').forEach(function(cb){ v.push(cb.value); }); return v.join(', ') || '—'; })() },
+                { label: 'Solutions', val: (function(){ var v=[]; document.querySelectorAll('input[name="solution-interest"]:checked').forEach(function(cb){ v.push(cb.value); }); return v.join(', ') || '—'; })() },
+                { label: 'Timeline', val: document.getElementById('timeline').value || '—' },
+                { label: 'Message', val: document.getElementById('message').value.trim() || '—' }
+            ];
+            var html = '';
+            fields.forEach(function(f) {
+                html += '<div class="step-review-row"><span class="step-review-label">' + f.label + '</span><span class="step-review-value">' + f.val + '</span></div>';
+            });
+            document.getElementById('reviewGrid').innerHTML = html;
+        }
+
+        // Conditional fields (same as before)
+        document.addEventListener('DOMContentLoaded', function() {
+            var leadCbs = document.querySelectorAll('.lead-type-cb');
+            var productGroup = document.getElementById('productInterestGroup');
+            var solutionGroup = document.getElementById('solutionInterestGroup');
+            var laserScannerCb = document.querySelector('.laser-scanner-cb');
+            var laserScannerGroup = document.getElementById('laserScannerInterestGroup');
+            function toggleConditionalFields() {
+                var hasProducts = false, hasSolutions = false;
+                leadCbs.forEach(function(cb) {
+                    if (cb.checked && cb.value === 'Products') hasProducts = true;
+                    if (cb.checked && cb.value === 'Solutions') hasSolutions = true;
+                });
+                productGroup.style.display = hasProducts ? '' : 'none';
+                solutionGroup.style.display = hasSolutions ? '' : 'none';
+                toggleLaserScannerField();
+            }
+            function toggleLaserScannerField() {
+                var show = productGroup.style.display !== 'none' && laserScannerCb.checked;
+                laserScannerGroup.style.display = show ? '' : 'none';
+            }
+            leadCbs.forEach(function(cb) { cb.addEventListener('change', toggleConditionalFields); });
+            laserScannerCb.addEventListener('change', toggleLaserScannerField);
+        });
+    </script>
+    <script src="js/submit-form.js"></script>
+    <script src="js/video_embedded.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+    <script src="./js/chatbot-widget.js"></script>
+
+    <script>
+        var sentraMap = null;
+        var sentraTileLayer = null;
+
+        function initSentraMap() {
+            var lat = 17.807439;
+            var lng = 83.391451;
+            var isDark = document.body.classList.contains('dark-mode') || !document.body.classList.contains('lightmode');
+            var tileUrl = isDark
+                ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+                : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+            var attr = '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>';
+
+            if (!sentraMap) {
+                sentraMap = L.map('contactMap', {
+                    center: [lat, lng],
+                    zoom: 14,
+                    zoomControl: false,
+                    scrollWheelZoom: false,
+                    touchZoom: true
+                });
+                var orangeIcon = L.divIcon({
+                    html: '<i class="fa-solid fa-location-dot"></i>',
+                    className: 'custom-map-pin',
+                    iconSize: [24, 32],
+                    iconAnchor: [12, 32],
+                    popupAnchor: [0, -36]
+                });
+                L.marker([lat, lng], { icon: orangeIcon }).addTo(sentraMap)
+                    .bindTooltip('<span class="map-pin-label-name">Sentra</span><span class="map-pin-label-sub">Visakhapatnam, Andhra Pradesh, India</span>', {
+                        direction: 'top',
+                        offset: [0, -10],
+                        className: 'map-pin-label'
+                    });
+            }
+
+            if (sentraTileLayer) sentraMap.removeLayer(sentraTileLayer);
+            sentraTileLayer = L.tileLayer(tileUrl, { attribution: attr, maxZoom: 19 }).addTo(sentraMap);
+
+            setTimeout(function () { sentraMap.invalidateSize(); }, 500);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var mapEl = document.getElementById('contactMap');
+            if (mapEl && typeof L !== 'undefined') {
+                initSentraMap();
+            }
+
+            var observer = new MutationObserver(function () {
+                if (sentraMap && sentraTileLayer) {
+                    var isDark = document.body.classList.contains('dark-mode') || !document.body.classList.contains('lightmode');
+                    var tileUrl = isDark
+                        ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+                        : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+                    if (sentraTileLayer._url !== tileUrl) {
+                        sentraTileLayer.setUrl(tileUrl);
+                    }
+                }
+            });
+            observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+        });
+
+        function openCalendlyModal() {
+            document.getElementById('consultModalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeCalendlyModal() {
+            document.getElementById('consultModalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeCalendlyModal();
+        });
+
+        function showEnquiryForm() {
+            document.getElementById('contactChoice').style.display = 'none';
+            document.getElementById('contactForm').style.display = 'block';
+        }
+        function backToChoice() {
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('contactChoice').style.display = '';
+            goStep(1);
+        }
+
+        // Deep-link support: ?call=1 opens the booking modal; ?enquiry=1&product=X
+        // jumps straight into the enquiry form with the right interest pre-checked.
+        document.addEventListener('DOMContentLoaded', function () {
+            var params = new URLSearchParams(window.location.search);
+
+            if (params.get('call') === '1') {
+                openCalendlyModal();
+            }
+
+            if (params.get('enquiry') === '1') {
+                showEnquiryForm();
+                var product = params.get('product');
+                var scannerNames = ['Lixel K2', 'PortalCam', 'Lixel L2 Pro', 'LixelKity K1'];
+
+                if (product) {
+                    var leadCb = document.querySelector('input[name="lead-type"][value="Products"]');
+                    if (leadCb) { leadCb.checked = true; leadCb.dispatchEvent(new Event('change', { bubbles: true })); }
+
+                    if (product === 'Laser Scanners' || scannerNames.indexOf(product) !== -1) {
+                        var laserCb = document.querySelector('input[name="product-interest"][value="Laser Scanners"]');
+                        if (laserCb) { laserCb.checked = true; laserCb.dispatchEvent(new Event('change', { bubbles: true })); }
+                        if (scannerNames.indexOf(product) !== -1) {
+                            var scannerCb = document.querySelector('input[name="laser-scanner-interest"][value="' + product + '"]');
+                            if (scannerCb) scannerCb.checked = true;
+                        }
+                    } else {
+                        var prodCb = document.querySelector('input[name="product-interest"][value="' + product + '"]');
+                        if (prodCb) prodCb.checked = true;
+                    }
+                }
+
+                var subject = params.get('subject');
+                if (subject) {
+                    var subjectEl = document.getElementById('subject');
+                    if (subjectEl) subjectEl.value = subject;
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

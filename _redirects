@@ -1,0 +1,13 @@
+# 301 Redirects for renamed folders (uppercase → lowercase)
+/Products/*  /products/:splat  301
+/Solutions/* /solutions/:splat  301
+/Industries/* /industries/:splat  301
+
+# 301 Redirects for old product URLs that no longer exist
+/products/gateway-cloud.html     /products/gateway.html     301
+/products/gateway-edge.html      /products/gateway.html     301
+/products/gateway-edge-915r.html /products/gateway.html     301
+/products/k20-edge-repeater.html /products/repeater.html    301
+/products/thread-x3.html         /products/thread.html      301
+
+/api/* https://veronica-sentra-prod.subharam-v.workers.dev/api/:splat 200

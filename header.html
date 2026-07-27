@@ -1,0 +1,1036 @@
+﻿<!-- Mega nav styles live in css/style.css -->
+<style>
+    /* Self-contained import so the theme-toggle glyph renders even on pages
+       whose <head> doesn't already link Material Symbols. */
+    @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+
+    /* ── Theme Toggle (Material Symbols, animated morph) ── */
+    .themeswitch {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .theme-toggle-icon {
+        font-family: 'Material Symbols Rounded';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 22px;
+        line-height: 1;
+        display: inline-block;
+        user-select: none;
+        -webkit-font-smoothing: antialiased;
+        font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+        transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1), filter 0.5s ease;
+        transform: rotate(0deg) scale(1);
+    }
+
+    .themeswitch:hover .theme-toggle-icon {
+        transform: rotate(-18deg) scale(1.12);
+    }
+
+    .theme-toggle-icon.rotating {
+        animation: themeIconMorph 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    @keyframes themeIconMorph {
+        0% {
+            transform: rotate(0deg) scale(1);
+            filter: blur(0px);
+        }
+
+        45% {
+            transform: rotate(160deg) scale(0.35);
+            filter: blur(2px);
+        }
+
+        55% {
+            transform: rotate(200deg) scale(0.35);
+            filter: blur(2px);
+        }
+
+        100% {
+            transform: rotate(360deg) scale(1);
+            filter: blur(0px);
+        }
+    }
+
+    /* ── Header Call Pill ── */
+    .navbar-call-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 4px 18px 4px 4px;
+        border-radius: 100px;
+        background: #f48120;
+        text-decoration: none;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+        box-shadow: 0 4px 14px rgba(244, 129, 32, 0.25);
+    }
+
+    .navbar-call-pill:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 20px rgba(244, 129, 32, 0.35);
+        background: #2d2e2f;
+    }
+
+    .navbar-call-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: #fff;
+        color: #f48120;
+        font-size: 15px;
+        flex-shrink: 0;
+        transition: color 0.25s ease;
+    }
+
+    .navbar-call-pill:hover .navbar-call-icon {
+        color: #2d2e2f;
+    }
+
+    .navbar-call-text {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+    }
+
+    body.lightmode .navbar-call-pill {
+        background: #2d2e2f;
+        box-shadow: 0 4px 14px rgba(45, 46, 47, 0.2);
+    }
+
+    body.lightmode .navbar-call-pill:hover {
+        background: #f48120;
+        box-shadow: 0 8px 20px rgba(244, 129, 32, 0.3);
+    }
+
+    body.lightmode .navbar-call-icon {
+        color: #2d2e2f;
+    }
+
+    body.lightmode .navbar-call-pill:hover .navbar-call-icon {
+        color: #f48120;
+    }
+
+    @media (max-width: 1282px) {
+        .navbar-call-pill {
+            display: none !important;
+        }
+    }
+
+    /* ── About Us: Industry Verticals Row ── */
+    .mega-industries-row {
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        margin-top: 8px;
+        padding-top: 12px;
+    }
+
+    body.lightmode .mega-industries-row {
+        border-top-color: rgba(0, 0, 0, 0.07);
+    }
+
+    .mega-industries-label {
+        display: block;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
+        margin-bottom: 10px;
+        padding: 0 4px;
+    }
+
+    body.lightmode .mega-industries-label {
+        color: rgba(0, 0, 0, 0.3);
+    }
+
+    .mega-industries-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .mega-industry-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        transition: background 0.2s, color 0.2s;
+    }
+
+    .mega-industry-link i {
+        font-size: 10px;
+        color: var(--accent-color);
+        opacity: 0.7;
+    }
+
+    .mega-industry-link:hover {
+        background: rgba(244, 129, 32, 0.1);
+        color: #fff;
+    }
+
+    body.lightmode .mega-industry-link {
+        color: rgba(0, 0, 0, 0.55);
+    }
+
+    body.lightmode .mega-industry-link:hover {
+        background: rgba(244, 129, 32, 0.08);
+        color: #111;
+    }
+
+    .mega-new-badge {
+        display: inline-block;
+        font-size: 8px;
+        font-weight: 800;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+        color: #fff;
+        background: #f48120;
+        padding: 1px 5px;
+        border-radius: 999px;
+        vertical-align: middle;
+        margin-left: 2px;
+    }
+
+    /* ── Brand Logo Carousel ── */
+    .mega-brand-carousel {
+        margin-top: auto;
+        overflow: hidden;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 16px 0 18px;
+    }
+
+    body.lightmode .mega-brand-carousel {
+        background: rgba(0, 0, 0, 0.03);
+        border-color: rgba(0, 0, 0, 0.07);
+    }
+
+    .mega-brand-label {
+        display: block;
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
+        padding: 0 10px 6px;
+    }
+
+    body.lightmode .mega-brand-label {
+        color: rgba(0, 0, 0, 0.35);
+    }
+
+    .mega-brand-track {
+        display: flex;
+        gap: 20px;
+        width: max-content;
+        animation: megaBrandScroll 12s linear infinite;
+    }
+
+    .mega-brand-track:hover {
+        animation-play-state: paused;
+    }
+
+    .mega-brand-slide {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 114px;
+        height: 89px;
+    }
+
+    .mega-brand-slide img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+        opacity: 0.5;
+        transition: opacity 0.25s ease, filter 0.25s ease;
+    }
+
+    .mega-brand-slide img:hover {
+        filter: none;
+        opacity: 0.9;
+    }
+
+    .mega-brand-slide.brand-dark img {
+        filter: grayscale(1) brightness(0.85);
+        opacity: 0.5;
+    }
+
+    .mega-brand-slide.brand-dark img:hover {
+        filter: grayscale(0) brightness(1);
+        opacity: 1;
+    }
+
+    body.lightmode .mega-brand-slide img {
+        filter: none;
+        opacity: 0.6;
+    }
+
+    body.lightmode .mega-brand-slide img:hover {
+        opacity: 1;
+    }
+
+    @keyframes megaBrandScroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+</style>
+
+<div class="navbar-wrapper">
+    <nav class="navbar navbar-expand-xl">
+        <div class="navbar-container">
+
+            <div class="logo-container">
+                <a class="navbar-brand" href="./index.html" aria-label="Sentra home">
+                    <img src="./image/branding/sentra_white_1.svg" class="site-logo img-fluid" alt="Sentra logo">
+                </a>
+            </div>
+
+            <button class="navbar-toggler nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">HOME</a>
+                    </li>
+
+                    <!-- â•â• SOLUTIONS BENTO â•â• -->
+                    <li class="nav-item dropdown">
+                        <a id="solutions-link" class="nav-link dropdown-toggle" href="./solutions.html" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            SOLUTIONS <i class="fa-solid fa-angle-down accent-color"></i>
+                        </a>
+                        <div class="dropdown-menu mega-solutions">
+                            <div class="solutions-bento">
+
+                                <!-- Row 1: SHM (wide) + Bridge (narrow) -->
+                                <div class="sol-bento-img-row">
+                                    <a class="sol-img-card" href="./solutions/structural-health-monitoring.html">
+                                        <div class="sol-img-card-bg"
+                                            style="background-image:url('./image/solutions/Homepage/Structural%20Health%20Monitoring.webp');">
+                                        </div>
+                                        <div class="sol-img-card-overlay"></div>
+                                        <i class="fa-solid fa-arrow-right sol-img-card-arrow"></i>
+                                        <div class="sol-img-card-body">
+                                            <div class="sol-img-card-icon"><i class="fas fa-chart-line"></i></div>
+                                            <div class="sol-img-card-title">Structural Health Monitoring</div>
+                                            <div class="sol-img-card-sub">Real-time sensing for critical infrastructure
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="sol-img-card"
+                                        href="./solutions/bridge-inspection-and-condition-assessment.html">
+                                        <div class="sol-img-card-bg"
+                                            style="background-image:url('./image/solutions/Homepage/Bridge%20Inspection%20%26%20Condition%20Assessment.webp');">
+                                        </div>
+                                        <div class="sol-img-card-overlay"></div>
+                                        <i class="fa-solid fa-arrow-right sol-img-card-arrow"></i>
+                                        <div class="sol-img-card-body">
+                                            <div class="sol-img-card-icon"><i class="fas fa-bridge"></i></div>
+                                            <div class="sol-img-card-title">Bridge Inspection</div>
+                                            <div class="sol-img-card-sub">Condition assessment</div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- Row 2: Asset (narrow) + Digital Twin (wide) -->
+                                <div class="sol-bento-img-row2">
+                                    <a class="sol-img-card"
+                                        href="./solutions/asset-monitoring-and-management-solutions.html">
+                                        <div class="sol-img-card-bg"
+                                            style="background-image:url('./image/solutions/Homepage/Asset%20Monitoring%20%26%20Management%20Solutions.webp');">
+                                        </div>
+                                        <div class="sol-img-card-overlay"></div>
+                                        <i class="fa-solid fa-arrow-right sol-img-card-arrow"></i>
+                                        <div class="sol-img-card-body">
+                                            <div class="sol-img-card-icon"><i class="fas fa-database"></i></div>
+                                            <div class="sol-img-card-title">Asset Monitoring</div>
+                                            <div class="sol-img-card-sub">Lifecycle management</div>
+                                        </div>
+                                    </a>
+                                    <a class="sol-img-card" href="./solutions/digital-twin.html">
+                                        <div class="sol-img-card-bg"
+                                            style="background-image:url('./image/solutions/Homepage/Facility-Management.webp');">
+                                        </div>
+                                        <div class="sol-img-card-overlay"></div>
+                                        <i class="fa-solid fa-arrow-right sol-img-card-arrow"></i>
+                                        <div class="sol-img-card-body">
+                                            <div class="sol-img-card-icon"><i class="fas fa-cubes"></i></div>
+                                            <div class="sol-img-card-title">Digital Twin</div>
+                                            <div class="sol-img-card-sub">Real-time asset simulation</div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- Row 3: 5 small fill cards (3+2 bento grid) -->
+                                <div class="sol-bento-small-row">
+                                    <a class="sol-fill-card sol-fill-card--ndt" data-color="orange"
+                                        href="./solutions/advanced-non-destructive-testing-ndt.html">
+                                        <i class="fas fa-microscope"></i>
+                                        <span class="sol-fill-title">Advanced NDT</span>
+                                        <span class="sol-fill-sub">Non-destructive evaluation techniques</span>
+                                    </a>
+                                    <a class="sol-fill-card sol-fill-card--contour" data-color="dark"
+                                        href="./solutions/geotechnical-and-foundation-monitoring.html">
+                                        <i class="fas fa-mountain"></i>
+                                        <span class="sol-fill-title">Geotechnical</span>
+                                        <span class="sol-fill-sub">Slope & foundation monitoring</span>
+                                    </a>
+                                    <a class="sol-fill-card sol-fill-card--corner-img" data-color="white"
+                                        href="./solutions/fatigue-and-residual-life-assessment.html">
+                                        <img class="sol-fill-card-corner-img" src="./image/svg/fatigue%20life.svg"
+                                            alt="" aria-hidden="true">
+                                        <i class="fas fa-tachometer-alt"></i>
+                                        <span class="sol-fill-title">Fatigue Assessment</span>
+                                        <span class="sol-fill-sub">Residual life & load cycles</span>
+                                    </a>
+                                    <a class="sol-fill-card sol-fill-card--corner-img" data-color="black"
+                                        href="./solutions/consulting-and-advisory-services.html">
+                                        <img class="sol-fill-card-corner-img" src="./image/svg/consulting.svg" alt=""
+                                            aria-hidden="true">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <span class="sol-fill-title">Consulting</span>
+                                        <span class="sol-fill-sub">Expert advisory services</span>
+                                    </a>
+                                    <a class="sol-fill-card" data-color="orange"
+                                        href="./solutions/digital-engineering-and-documentation.html">
+                                        <i class="fas fa-file-contract"></i>
+                                        <span class="sol-fill-title">Digital Engineering</span>
+                                        <span class="sol-fill-sub">Documentation & digital workflows</span>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- â•â• PRODUCTS â•â• -->
+                    <li class="nav-item dropdown">
+                        <a id="products-link" class="nav-link dropdown-toggle" href="./products.html" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            PRODUCTS <i class="fa-solid fa-angle-down accent-color"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-products">
+                            <div class="dropdown-products-container">
+
+                                <!-- TOP: Quick Access horizontal bar (spans full width) -->
+                                <div class="mega-quickbar">
+                                    <span class="mega-quickbar-label">Quick Access</span>
+                                    <a class="mega-qb-link" href="./products.html">
+                                        <i class="fa-solid fa-border-all"></i> All Products
+                                    </a>
+                                    <a class="mega-qb-link" href="./products/edge-devices.html">
+                                        <i class="fa-solid fa-microchip"></i> Edge Devices
+                                    </a>
+                                    <a class="mega-qb-link" href="./products/core-communications.html">
+                                        <i class="fa-solid fa-wifi"></i> Core Communications
+                                    </a>
+                                    <a class="mega-qb-link" href="./products/wired-sensors.html">
+                                        <i class="fa-solid fa-network-wired"></i> Wired Sensors
+                                    </a>
+                                    <a class="mega-qb-link" href="./products/laser-scanners.html">
+                                        <i class="fa-solid fa-camera"></i> Laser Scanners
+                                    </a>
+                                    <a class="mega-qb-link" href="./products/lcc.html">
+                                        <i class="fa-solid fa-cubes"></i> Softwares
+                                    </a>
+                                </div>
+
+                                <!-- LEFT: Edge Devices -->
+                                <div class="mega-prod-left">
+                                    <a class="mega-cat-section-label" href="./products/edge-devices.html"
+                                        style="margin-top:0">Edge Devices <i class="fa-solid fa-arrow-right"
+                                            style="font-size:9px;opacity:0.7;margin-left:4px;"></i></a>
+
+                                    <div class="mega-edge-card">
+                                        <span class="mega-cat-label" style="margin-top:0"><i
+                                                class="fa-solid fa-satellite-dish"
+                                                style="font-size:9px;margin-right:4px;opacity:0.8;"></i>Wireless
+                                            Sensors</span>
+                                        <a class="mega-prod-link" href="./products/tiltmeter.html"
+                                            data-img="./image/products/tiltmeter-1.webp" data-name="Tiltmeter 90°"
+                                            data-sub="High-resolution wireless tilt sensing"
+                                            data-url="./products/tiltmeter.html">
+                                            <i class="fa-solid fa-arrow-right"></i>Tiltmeter
+                                        </a>
+                                        <a class="mega-prod-link" href="./products/tiltmeter-event-detection.html"
+                                            data-img="./image/products/tiltmeter-2.webp"
+                                            data-name="Tiltmeter Event Detection"
+                                            data-sub="Event-triggered high-speed tilt monitoring"
+                                            data-url="./products/tiltmeter-event-detection.html">
+                                            <i class="fa-solid fa-arrow-right"></i>Tiltmeter Event Detection
+                                        </a>
+                                        <a class="mega-prod-link" href="./products/vibration-meter.html"
+                                            data-img="./image/products/vibration-meter.webp" data-name="Vibration Meter"
+                                            data-sub="Multi-axis vibration & dynamic load sensing"
+                                            data-url="./products/vibration-meter.html">
+                                            <i class="fa-solid fa-arrow-right"></i>Vibration Meter
+                                        </a>
+                                        <a class="mega-prod-link" href="./products/laser-tiltmeter.html"
+                                            data-img="./image/products/laser-tiltmeter-1.webp"
+                                            data-name="Laser Tiltmeter" data-sub="Precision laser-based inclination"
+                                            data-url="./products/laser-tiltmeter.html">
+                                            <i class="fa-solid fa-arrow-right"></i>Laser Tiltmeter
+                                        </a>
+                                        <a class="mega-prod-link" href="./products/gnss-meter.html"
+                                            data-img="./image/products/gnss-meter-1.webp" data-name="GNSS Meter"
+                                            data-sub="Millimetre-precision GNSS displacement"
+                                            data-url="./products/gnss-meter.html">
+                                            <i class="fa-solid fa-arrow-right"></i>GNSS Meter
+                                        </a>
+                                    </div>
+
+                                    <div class="mega-edge-card">
+                                        <span class="mega-cat-label" style="margin-top:0"><i
+                                                class="fa-solid fa-tower-broadcast"
+                                                style="font-size:9px;margin-right:4px;opacity:0.8;"></i>Wireless Data
+                                            Acquisition</span>
+                                        <a class="mega-prod-link" href="./products/vibrating-wire.html"
+                                            data-img="./image/products/vibration-meter.webp" data-name="Vibrating Wire"
+                                            data-sub="Frequency-based geotechnical sensing"
+                                            data-url="./products/vibrating-wire.html">
+                                            <i class="fa-solid fa-arrow-right"></i>Vibrating Wire
+                                        </a>
+                                        <a class="mega-prod-link" href="./products/vibrating-wire-rcr.html"
+                                            data-img="./image/products/vibration-meter.webp"
+                                            data-name="Vibrating Wire RCR" data-sub="Vibrating wire data readout unit"
+                                            data-url="./products/vibrating-wire-rcr.html">
+                                            <i class="fa-solid fa-arrow-right"></i>Vibrating Wire RCR
+                                        </a>
+                                        <a class="mega-prod-link" href="./products/digital-data-logger.html"
+                                            data-img="./image/products/digital-data-logger-1.webp"
+                                            data-name="Digital Data Logger" data-sub="Wireless digital acquisition node"
+                                            data-url="./products/digital-data-logger.html">
+                                            <i class="fa-solid fa-arrow-right"></i>Digital Data Logger
+                                        </a>
+                                        <a class="mega-prod-link" href="./products/analog-data-logger.html"
+                                            data-img="./image/products/analog-data-logger.webp"
+                                            data-name="Analog Data Logger" data-sub="Multi-channel analog acquisition"
+                                            data-url="./products/analog-data-logger.html">
+                                            <i class="fa-solid fa-arrow-right"></i>Analog Data Logger
+                                        </a>
+                                        <a class="mega-prod-link" href="./products/piconode-data-logger.html"
+                                            data-img="./image/products/piconode-data-logger-1.webp"
+                                            data-name="Piconode Data Logger"
+                                            data-sub="Ultra-compact edge acquisition unit"
+                                            data-url="./products/piconode-data-logger.html">
+                                            <i class="fa-solid fa-arrow-right"></i>Piconode Data Logger
+                                        </a>
+                                    </div>
+
+                                    <div class="mega-brand-carousel">
+                                        <span class="mega-brand-label">Our Partners</span>
+                                        <div class="mega-brand-track">
+                                            <div class="mega-brand-slide"><img
+                                                    src="./image/reseller_logo/worldsensing.png" alt="Worldsensing">
+                                            </div>
+                                            <div class="mega-brand-slide"><img
+                                                    src="./image/reseller_logo/GEOKON-Logos-H.png" alt="Geokon"></div>
+                                            <div class="mega-brand-slide brand-dark"><img
+                                                    src="./image/reseller_logo/rockfiled.png" alt="Rockfield"></div>
+                                            <div class="mega-brand-slide"><img src="./image/reseller_logo/xgrids.avif"
+                                                    alt="XGRIDS"></div>
+                                            <div class="mega-brand-slide"><img
+                                                    src="./image/reseller_logo/worldsensing.png" alt="Worldsensing">
+                                            </div>
+                                            <div class="mega-brand-slide"><img
+                                                    src="./image/reseller_logo/GEOKON-Logos-H.png" alt="Geokon"></div>
+                                            <div class="mega-brand-slide brand-dark"><img
+                                                    src="./image/reseller_logo/rockfiled.png" alt="Rockfield"></div>
+                                            <div class="mega-brand-slide"><img src="./image/reseller_logo/xgrids.avif"
+                                                    alt="XGRIDS"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CENTRE: wired sensors + resources (top), image (bottom) -->
+                                <div class="mega-preview-panel">
+
+                                    <!-- TOP: 2-col grid â€” (core comms + wired sensors) | (laser scanners + resources) -->
+                                    <div class="mega-center-top">
+
+                                        <!-- Left: Core Communications card (top) + Wired Sensors card (bottom) -->
+                                        <div class="mega-center-left">
+                                            <div class="mega-center-wired">
+                                                <a class="mega-cat-section-label"
+                                                    href="./products/core-communications.html" style="margin-top:0">Core
+                                                    Communications <i class="fa-solid fa-arrow-right"
+                                                        style="font-size:9px;opacity:0.7;margin-left:4px;"></i></a>
+                                                <span class="mega-cat-label" style="margin-top:4px">Narrowband</span>
+                                                <a class="mega-prod-link" href="./products/gateway.html"
+                                                    data-img="./image/products/4g-rugged-gateway-1cloud.webp"
+                                                    data-name="4G Rugged Gateway"
+                                                    data-sub="Cloud-connected field gateway"
+                                                    data-url="./products/gateway.html">
+                                                    <i class="fa-solid fa-arrow-right"></i>Gateway
+                                                </a>
+                                                <a class="mega-prod-link" href="./products/repeater.html"
+                                                    data-img="./image/products/k20-edge-repeater-1.webp"
+                                                    data-name="K20 Edge Repeater"
+                                                    data-sub="Long-range mesh repeater node"
+                                                    data-url="./products/repeater.html">
+                                                    <i class="fa-solid fa-arrow-right"></i>Repeater
+                                                </a>
+                                                <span class="mega-cat-label" style="margin-top:4px">Broadband</span>
+                                                <a class="mega-prod-link" href="./products/thread.html"
+                                                    data-img="./image/products/thread-x3-1.webp" data-name="Thread X3"
+                                                    data-sub="Broadband mesh communications"
+                                                    data-url="./products/thread.html">
+                                                    <i class="fa-solid fa-arrow-right"></i>Thread
+                                                </a>
+                                            </div>
+
+                                            <div class="mega-center-wiredsensors">
+                                                <a class="mega-cat-section-label" href="./products/wired-sensors.html"
+                                                    style="margin-top:0"><i class="fa-solid fa-plug-circle-bolt"
+                                                        style="font-size:9px;margin-right:4px;opacity:0.8;"></i>Wired
+                                                    Sensors <i class="fa-solid fa-arrow-right"
+                                                        style="font-size:9px;opacity:0.7;margin-left:4px;"></i></a>
+                                                <div class="mega-cat-row">
+                                                    <a class="mega-prod-link" href="./products/accelerometers.html"
+                                                        data-img="./image/products/accelerometer_cardnav.png"
+                                                        data-name="Accelerometer"
+                                                        data-sub="High-precision wired acceleration sensing"
+                                                        data-url="./products/accelerometers.html">
+                                                        <i class="fa-solid fa-arrow-right"></i>Accelerometer
+                                                    </a>
+                                                    <a class="mega-prod-link" href="./products/strain-gauges.html"
+                                                        data-img="./image/products/strain_gauge.png"
+                                                        data-name="Strain Gauge"
+                                                        data-sub="Structural strain & stress monitoring"
+                                                        data-url="./products/strain-gauges.html">
+                                                        <i class="fa-solid fa-arrow-right"></i>Strain Gauge
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Right: Laser Scanners card (top) + Resources card (bottom) -->
+                                        <div class="mega-center-right">
+                                            <div class="mega-center-scanners">
+                                                <a class="mega-cat-section-label" href="./products/laser-scanners.html"
+                                                    style="margin-top:0"><i class="fa-solid fa-camera"
+                                                        style="font-size:9px;margin-right:4px;opacity:0.8;"></i>Laser
+                                                    Scanners <span class="mega-new-badge">New</span> <i
+                                                        class="fa-solid fa-arrow-right"
+                                                        style="font-size:9px;opacity:0.7;margin-left:4px;"></i></a>
+                                                <a class="mega-prod-link" href="./products/lixel-k2.html"
+                                                    data-img="./image/products/scanners/lixel-k2-hero.webp"
+                                                    data-name="Lixel K2"
+                                                    data-sub="The gold standard in lightweight scanning"
+                                                    data-url="./products/lixel-k2.html">
+                                                    <i class="fa-solid fa-arrow-right"></i>Lixel K2
+                                                </a>
+                                                <a class="mega-prod-link" href="./products/portalcam.html"
+                                                    data-img="./image/products/scanners/KV%20Horizontal.jpg"
+                                                    data-name="PortalCam" data-sub="The first true spatial camera"
+                                                    data-url="./products/portalcam.html">
+                                                    <i class="fa-solid fa-arrow-right"></i>PortalCam
+                                                </a>
+                                                <a class="mega-prod-link" href="./products/lixel-l2-pro.html"
+                                                    data-img="./image/products/scanners/lixel-l2-pro.jpg"
+                                                    data-name="Lixel L2 Pro" data-sub="Precision redefined"
+                                                    data-url="./products/lixel-l2-pro.html">
+                                                    <i class="fa-solid fa-arrow-right"></i>Lixel L2 Pro
+                                                </a>
+                                                <a class="mega-prod-link" href="./products/lixelkity-k1.html"
+                                                    data-img="./image/products/scanners/lixelkity-k1-hero.png"
+                                                    data-name="LixelKity K1" data-sub="Compact yet powerful"
+                                                    data-url="./products/lixelkity-k1.html">
+                                                    <i class="fa-solid fa-arrow-right"></i>LixelKity K1
+                                                </a>
+                                            </div>
+
+                                            <div class="mega-center-softwares" style="margin-top:14px;">
+                                                <a class="mega-cat-section-label" href="./products/lcc.html"
+                                                    style="margin-top:0"><i class="fa-solid fa-cubes"
+                                                        style="font-size:9px;margin-right:4px;opacity:0.8;"></i>Softwares <i
+                                                        class="fa-solid fa-arrow-right"
+                                                        style="font-size:9px;opacity:0.7;margin-left:4px;"></i></a>
+                                                <a class="mega-prod-link" href="./products/lixelstudio.html"
+                                                    data-img="./image/products/software/ls_hero.png"
+                                                    data-name="LixelStudio"
+                                                    data-sub="A revolutionary 3D data processing workstation"
+                                                    data-url="./products/lixelstudio.html">
+                                                    <i class="fa-solid fa-arrow-right"></i>LixelStudio
+                                                </a>
+                                                <a class="mega-prod-link" href="./products/lcc.html"
+                                                    data-img="./image/products/software/lcc_hero_logo.png"
+                                                    data-name="LCC"
+                                                    data-sub="3D content production powered by 3D Gaussian Splatting"
+                                                    data-url="./products/lcc.html">
+                                                    <i class="fa-solid fa-arrow-right"></i>LCC
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- BOTTOM: cinematic image preview -->
+                                    <div class="mega-preview-img-box">
+                                        <img id="megaPreviewImg" class="mega-preview-full-img"
+                                            src="./image/products/tiltmeter-1.webp" alt="Product preview">
+                                        <div class="mega-preview-overlay"></div>
+                                        <div class="mega-preview-vignette"></div>
+                                        <div class="mega-preview-content">
+                                            <span class="mega-preview-badge">Featured</span>
+                                            <p class="mega-preview-name" id="megaPreviewName">Tiltmeter 90°</p>
+                                            <p class="mega-preview-sub" id="megaPreviewSub">High-resolution wireless
+                                                tilt sensing</p>
+                                            <a class="mega-preview-cta" id="megaPreviewCta"
+                                                href="./products/tiltmeter.html">
+                                                View Product <i class="fa-solid fa-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- RIGHT: resources/contact links card + contact card -->
+                                <div class="mega-quick">
+                                    <!-- Resources + Book Demo card -->
+                                    <div class="mega-quick-links-card">
+                                        <p class="mega-quick-label">Resources</p>
+                                        <a class="mega-quick-link" href="/resources.html">
+                                            <i class="fas fa-book-open"></i> Insights &amp; Updates
+                                        </a>
+                                        <a class="mega-quick-link" href="/feed.html">
+                                            <i class="fas fa-bullhorn"></i> Social Feed
+                                        </a>
+                                        <a class="mega-quick-link" href="/glossary.html">
+                                            <i class="fas fa-book"></i> Glossary
+                                        </a>
+                                        <a class="mega-quick-link" href="/faq.html">
+                                            <i class="fas fa-question-circle"></i> FAQ
+                                        </a>
+                                        <div class="mega-quick-divider"></div>
+                                        <a class="mega-quick-cta"
+                                            href="https://calendly.com/sentra-clovetech/30min?primary_color=f47b0a"
+                                            target="_blank" rel="noopener">
+                                            <i class="fa-solid fa-calendar-check"></i> Book Demo
+                                        </a>
+                                    </div>
+
+                                    <!-- Contact card: eyebrow + heading + phone/email + social -->
+                                    <div class="mega-quick-contact mega-contact-card">
+                                        <span class="mega-contact-card-eyebrow">Let's Talk</span>
+                                        <p class="mega-contact-card-title">Talk to Our Experts</p>
+                                        <p class="mega-contact-card-sub">Get in touch with our team for product demos,
+                                            solutions &amp; support.</p>
+                                        <div class="mega-contact-card-divider"></div>
+                                        <div class="mega-quick-phone">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <a href="tel:+917893023322">+91 78930 23322</a>
+                                        </div>
+                                        <div class="mega-quick-email">
+                                            <i class="fa-solid fa-envelope"></i>
+                                            <a href="mailto:sentra@clovetech.com">sentra@clovetech.com</a>
+                                        </div>
+                                        <div class="mega-contact-card-divider"></div>
+                                        <span class="mega-contact-card-follow">Follow us on</span>
+                                        <div class="mega-quick-social-row">
+                                            <a class="mega-q-social"
+                                                href="https://www.linkedin.com/company/sentra-clovetech/"
+                                                target="_blank" rel="noopener" aria-label="LinkedIn">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                            <a class="mega-q-social" href="https://x.com/clovetech_offl" target="_blank"
+                                                rel="noopener" aria-label="X (Twitter)">
+                                                <i class="fab fa-x-twitter"></i>
+                                            </a>
+                                            <a class="mega-q-social"
+                                                href="https://www.instagram.com/clove_technologies/" target="_blank"
+                                                rel="noopener" aria-label="Instagram">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                            <a class="mega-q-social"
+                                                href="https://www.facebook.com/clovetechnologiesofficial/"
+                                                target="_blank" rel="noopener" aria-label="Facebook">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                            <a class="mega-q-social"
+                                                href="https://www.youtube.com/@CloveTechnologiesInc" target="_blank"
+                                                rel="noopener" aria-label="YouTube">
+                                                <i class="fab fa-youtube"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- â•â• ABOUT US â•â• -->
+                    <li class="nav-item dropdown">
+                        <a id="about-link" class="nav-link dropdown-toggle" href="./about.html" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            ABOUT US <i class="fa-solid fa-angle-down accent-color"></i>
+                        </a>
+                        <div class="dropdown-menu mega-bento" style="width:min(92vw,560px) !important;">
+                            <div class="mega-bento-grid mega-bento-grid-2col">
+                                <a class="mega-bento-item" href="./about.html">
+                                    <div class="mega-bento-icon"><i class="fas fa-question-circle"></i></div>
+                                    <div class="mega-bento-title">Why Sentra</div>
+                                    <div class="mega-bento-sub">Our mission, vision & values</div>
+                                </a>
+                                <a class="mega-bento-item" href="./testimonial.html">
+                                    <div class="mega-bento-icon"><i class="fas fa-comments"></i></div>
+                                    <div class="mega-bento-title">Their Voices</div>
+                                    <div class="mega-bento-sub">Client testimonials & stories</div>
+                                </a>
+                                <a class="mega-bento-item" href="./industries.html">
+                                    <div class="mega-bento-icon"><i class="fas fa-industry"></i></div>
+                                    <div class="mega-bento-title">Industries</div>
+                                    <div class="mega-bento-sub">Sectors we serve</div>
+                                </a>
+                                <a class="mega-bento-item" href="./partnership.html">
+                                    <div class="mega-bento-icon"><i class="fas fa-handshake"></i></div>
+                                    <div class="mega-bento-title">Partners</div>
+                                    <div class="mega-bento-sub">Collaborate with us</div>
+                                </a>
+                            </div>
+                            <div class="mega-industries-row">
+                                <span class="mega-industries-label">Industry Verticals</span>
+                                <div class="mega-industries-links">
+                                    <a class="mega-industry-link"
+                                        href="./industries/railway-infrastructure-monitoring.html"><i
+                                            class="fa-solid fa-train"></i> Railway</a>
+                                    <a class="mega-industry-link"
+                                        href="./industries/bridges-highways-monitoring.html"><i
+                                            class="fa-solid fa-bridge"></i> Bridges</a>
+                                    <a class="mega-industry-link"
+                                        href="./industries/buildings-highrise-monitoring.html"><i
+                                            class="fa-solid fa-building"></i> Buildings</a>
+                                    <a class="mega-industry-link" href="./industries/dams-reservoirs-monitoring.html"><i
+                                            class="fa-solid fa-water"></i> Dams</a>
+                                    <a class="mega-industry-link"
+                                        href="./industries/mining-geotechnical-monitoring.html"><i
+                                            class="fa-solid fa-helmet-safety"></i> Mining</a>
+                                    <a class="mega-industry-link" href="./industries/ports-marine-monitoring.html"><i
+                                            class="fa-solid fa-anchor"></i> Ports</a>
+                                    <a class="mega-industry-link"
+                                        href="./industries/construction-tunnelling-monitoring.html"><i
+                                            class="fa-solid fa-person-digging"></i> Construction</a>
+                                    <a class="mega-industry-link"
+                                        href="./industries/industrial-facilities-monitoring.html"><i
+                                            class="fa-solid fa-industry"></i> Industrial</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- â•â• RESOURCES â•â• -->
+                    <li class="nav-item dropdown">
+                        <a id="resources-link" class="nav-link dropdown-toggle" href="/resources.html" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            RESOURCES <i class="fa-solid fa-angle-down accent-color"></i>
+                        </a>
+                        <div class="dropdown-menu mega-bento" style="width:min(92vw,580px) !important;">
+                            <div class="mega-bento-grid mega-bento-grid-3col">
+                                <a class="mega-bento-item" href="/resources.html#blogs">
+                                    <div class="mega-bento-icon"><i class="fas fa-blog"></i></div>
+                                    <div class="mega-bento-title">Blogs</div>
+                                    <div class="mega-bento-sub">Expert insights & updates</div>
+                                </a>
+                                <a class="mega-bento-item" href="/resources.html#case-studies">
+                                    <div class="mega-bento-icon"><i class="fas fa-file-alt"></i></div>
+                                    <div class="mega-bento-title">Case Studies</div>
+                                    <div class="mega-bento-sub">Real-world deployments</div>
+                                </a>
+                                <div class="mega-bento-split">
+                                    <a class="mega-bento-split-half" href="/resources.html#articles">
+                                        <i class="fas fa-newspaper"></i> Articles
+                                    </a>
+                                    <a class="mega-bento-split-half" href="/feed.html">
+                                        <i class="fas fa-bullhorn"></i> Social Feed
+                                    </a>
+                                </div>
+                                <a class="mega-bento-item" href="/videos.html">
+                                    <div class="mega-bento-icon"><i class="fas fa-video"></i></div>
+                                    <div class="mega-bento-title">Videos &amp; Podcasts</div>
+                                    <div class="mega-bento-sub">Watch &amp; listen</div>
+                                </a>
+                                <div class="mega-bento-split">
+                                    <a class="mega-bento-split-half" href="/glossary.html">
+                                        <i class="fas fa-book"></i> Glossary
+                                    </a>
+                                    <a class="mega-bento-split-half" href="/faq.html">
+                                        <i class="fas fa-question"></i> FAQ
+                                    </a>
+                                </div>
+                                <a class="mega-bento-item" href="/document-center.html">
+                                    <div class="mega-bento-icon"><i class="fas fa-folder-open"></i></div>
+                                    <div class="mega-bento-title">Document Center</div>
+                                    <div class="mega-bento-sub">Product datasheets</div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">CONTACT US</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="navbar-action-container">
+                <div class="navbar-action-button">
+                    <button id="themeSwitch" class="themeswitch" aria-label="Toggle Theme">
+                        <span id="themeIcon" class="theme-toggle-icon">light_mode</span>
+                    </button>
+                </div>
+                <a href="tel:+917893023322" class="navbar-call-pill">
+                    <span class="navbar-call-icon"><i class="fa-solid fa-phone"></i></span>
+                    <span class="navbar-call-text">+91 78930 23322</span>
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    <script src="js/themeswitch.js"></script>
+    <script>
+        /* Header is fetched & injected via jQuery .html() which runs scripts immediately.
+           DOMContentLoaded has already fired â€” run init directly, no wrapper needed. */
+        (function initMegaNav() {
+
+            /* â”€â”€ Active nav highlighting â”€â”€ */
+            var pathname = window.location.pathname.toLowerCase();
+            var el = {
+                products: document.getElementById('products-link'),
+                solutions: document.getElementById('solutions-link'),
+                about: document.getElementById('about-link'),
+                resources: document.getElementById('resources-link')
+            };
+            if (pathname.endsWith('/products.html') || pathname.includes('/products/')) {
+                el.products && el.products.classList.add('active');
+            } else if (pathname.endsWith('/solutions.html') || pathname.includes('/solutions/')) {
+                el.solutions && el.solutions.classList.add('active');
+            } else if (['/about.html', '/testimonial.html', '/partnership.html', '/industries.html'].some(function (p) { return pathname.endsWith(p); }) || pathname.includes('/industries/')) {
+                el.about && el.about.classList.add('active');
+            } else if (['/resources.html', '/feed.html', '/glossary.html', '/faq.html', '/videos.html', '/document-center.html'].some(function (p) { return pathname.endsWith(p); })) {
+                el.resources && el.resources.classList.add('active');
+            }
+
+            /* â”€â”€ Product image preview hover swap â”€â”€ */
+            var previewImg = document.getElementById('megaPreviewImg');
+            var previewName = document.getElementById('megaPreviewName');
+            var previewSub = document.getElementById('megaPreviewSub');
+            var previewCta = document.getElementById('megaPreviewCta');
+
+            if (previewImg) {
+                var prodLinks = document.querySelectorAll('.mega-prod-link[data-img]');
+                var swapTimer = null;
+
+                function swapPreview(link) {
+                    var img = link.getAttribute('data-img');
+                    var name = link.getAttribute('data-name');
+                    var sub = link.getAttribute('data-sub');
+                    var url = link.getAttribute('data-url');
+
+                    /* Skip if already showing this product */
+                    if (previewImg.getAttribute('src').indexOf(img.split('/').pop()) !== -1) {
+                        prodLinks.forEach(function (l) { l.classList.remove('is-active'); });
+                        link.classList.add('is-active');
+                        return;
+                    }
+
+                    previewImg.classList.add('is-fading');
+                    clearTimeout(swapTimer);
+                    swapTimer = setTimeout(function () {
+                        previewImg.src = img;
+                        previewImg.alt = name;
+                        previewName.textContent = name;
+                        previewSub.textContent = sub;
+                        previewCta.href = url;
+                        previewImg.classList.remove('is-fading');
+                    }, 220);
+
+                    prodLinks.forEach(function (l) { l.classList.remove('is-active'); });
+                    link.classList.add('is-active');
+                }
+
+                prodLinks.forEach(function (link) {
+                    link.addEventListener('mouseenter', function () { swapPreview(link); });
+                });
+
+                /* Highlight first link on open */
+                var productDropdown = document.querySelector('.dropdown-menu-products');
+                if (productDropdown) {
+                    var parentLi = productDropdown.closest('.nav-item');
+                    if (parentLi && prodLinks.length) {
+                        parentLi.addEventListener('mouseenter', function () {
+                            prodLinks[0].classList.add('is-active');
+                        });
+                        parentLi.addEventListener('mouseleave', function () {
+                            prodLinks.forEach(function (l) { l.classList.remove('is-active'); });
+                        });
+                    }
+                }
+            }
+
+            /* â”€â”€ Hover-hold: keep dropdown open when cursor travels to fixed card â”€â”€ */
+            document.querySelectorAll('.nav-item.dropdown').forEach(function (item) {
+                var dropdown = item.querySelector(
+                    '.dropdown-menu-products, .mega-solutions, .mega-bento'
+                );
+                if (!dropdown) return;
+                var closeTimer = null;
+
+                function openMenu() {
+                    if (window.innerWidth < 1024) return;
+                    clearTimeout(closeTimer);
+                    item.classList.add('mega-open');
+                }
+                function scheduleClose(delay) {
+                    clearTimeout(closeTimer);
+                    closeTimer = setTimeout(function () {
+                        item.classList.remove('mega-open');
+                    }, delay);
+                }
+
+                item.addEventListener('mouseenter', function () { openMenu(); });
+                item.addEventListener('mouseleave', function () { scheduleClose(280); });
+                dropdown.addEventListener('mouseenter', function () { openMenu(); });
+                dropdown.addEventListener('mouseleave', function () { scheduleClose(150); });
+            });
+
+            /* â”€â”€ Set --mega-menu-top so fixed dropdown sits just below navbar â”€â”€ */
+            requestAnimationFrame(function () {
+                var headerEl = document.querySelector('header');
+                if (headerEl) {
+                    var bottom = headerEl.getBoundingClientRect().bottom;
+                    if (bottom > 0) {
+                        document.documentElement.style.setProperty('--mega-menu-top', (bottom - 37) + 'px');
+                    }
+                }
+            });
+
+        })();
+    </script>
+</div>
