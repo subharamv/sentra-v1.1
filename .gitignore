@@ -20,5 +20,3 @@ sentra video.mp4
 image/videos/*.mp4
 image/products/scanners/*-demo.mp4
 products/Datasheets/*.pdf
-# LCC brochure exceeds ImageKit's 25MB upload limit, so it's still tracked here
-!products/Datasheets/LCC Studio Brochure.pdf
