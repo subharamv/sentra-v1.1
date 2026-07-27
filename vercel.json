@@ -1,0 +1,41 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/Products/:path*", "destination": "/products/:path*", "permanent": true },
+    { "source": "/Solutions/:path*", "destination": "/solutions/:path*", "permanent": true },
+    { "source": "/Industries/:path*", "destination": "/industries/:path*", "permanent": true },
+    { "source": "/products/gateway-cloud.html", "destination": "/products/gateway.html", "permanent": true },
+    { "source": "/products/gateway-edge.html", "destination": "/products/gateway.html", "permanent": true },
+    { "source": "/products/gateway-edge-915r.html", "destination": "/products/gateway.html", "permanent": true },
+    { "source": "/products/k20-edge-repeater.html", "destination": "/products/repeater.html", "permanent": true },
+    { "source": "/products/thread-x3.html", "destination": "/products/thread.html", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "https://veronica-sentra-prod.subharam-v.workers.dev/api/:path*" }
+  ],
+  "headers": [
+    {
+      "source": "/image/:path*",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/css/:path*",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/js/:path*",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" }
+      ]
+    }
+  ]
+}
