@@ -5,7 +5,6 @@ node_modules
 admin_wrangler
 php
 sentra-cpanel-deploy.zip
-sentra video.mp4
 *.zip
 .git
 .claude
